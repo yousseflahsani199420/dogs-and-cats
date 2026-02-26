@@ -1,75 +1,81 @@
-baseURL = 'https://petzone.website/'
-languageCode = 'en-us'
-title = 'Paws & Care - Dog & Cat Tips'
-theme = 'PaperMod'
+name: Deploy Hugo site to Pages
 
-[params]
-  author = 'Your Name'
-  description = 'Expert tips for dog and cat care, training guides, and pet health advice'
-  keywords = ['dog care', 'cat care', 'pet training', 'pet health', 'veterinary tips']
-  defaultTheme = 'auto'
-  ShowReadingTime = true
-  ShowShareButtons = true
-  ShowPostNavLinks = true
-  ShowBreadCrumbs = true
-  ShowCodeCopyButtons = true
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
 
-[params.profileMode]
-  enabled = true
-  title = "Paws & Care"
-  subtitle = "🐕 Dog Training • 🐈 Cat Care • 🏥 Health Advice"
-  imageUrl = "/images/logo.png"
-  imageWidth = 150
-  imageHeight = 150
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
-[[params.profileMode.buttons]]
-  name = "Dog Tips"
-  url = "/dogs/"
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
-[[params.profileMode.buttons]]
-  name = "Cat Tips"
-  url = "/cats/"
+defaults:
+  run:
+    shell: bash
 
-[[params.profileMode.buttons]]
-  name = "Health Advice"
-  url = "/health/"
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      HUGO_VERSION: 0.146.0
+    steps:
+      - name: Install Hugo CLI
+        run: |
+          wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb
+          sudo dpkg -i ${{ runner.temp }}/hugo.deb
+          hugo version
+      
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          fetch-depth: 0
+      
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v5
+      
+      - name: Install Node.js dependencies (if needed)
+        run: |
+          if [ -f package-lock.json ] || [ -f yarn.lock ]; then
+            echo "Installing Node.js dependencies..."
+            npm ci || true
+          fi
+      
+      - name: Build with Hugo
+        env:
+          HUGO_ENVIRONMENT: production
+          HUGO_ENV: production
+        run: |
+          hugo \
+            --gc \
+            --minify \
+            --baseURL "https://petzone.website/"
+      
+      - name: List build output (debug)
+        run: |
+          echo "Contents of public directory:"
+          ls -la public/
+          echo "Checking for index.html:"
+          ls -la public/index.html || echo "❌ index.html NOT FOUND!"
+      
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./public
 
-[[params.socialIcons]]
-  name = "twitter"
-  url = "https://twitter.com/"
-
-[[params.socialIcons]]
-  name = "github"
-  url = "https://github.com/"
-
-[menu]
-  [[menu.main]]
-    identifier = 'home'
-    name = '🏠 Home'
-    url = '/'
-    weight = 10
-  [[menu.main]]
-    identifier = 'dogs'
-    name = '🐕 Dogs'
-    url = '/dogs/'
-    weight = 20
-  [[menu.main]]
-    identifier = 'cats'
-    name = '🐈 Cats'
-    url = '/cats/'
-    weight = 30
-  [[menu.main]]
-    identifier = 'health'
-    name = '🏥 Health'
-    url = '/health/'
-    weight = 40
-  [[menu.main]]
-    identifier = 'training'
-    name = '🎓 Training'
-    url = '/training/'
-    weight = 50
-  [[menu.main]]
-    identifier = 'about'
-    name = 'About'
-    url = '/about/'
-    weight = 60
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
