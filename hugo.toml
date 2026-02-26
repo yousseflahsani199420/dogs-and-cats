@@ -1,0 +1,75 @@
+baseURL = 'https://yousseflahsani199420.github.io/dogs-and-cats/'
+languageCode = 'en-us'
+title = 'Paws & Care - Dog & Cat Tips'
+theme = 'PaperMod'
+
+[params]
+  author = 'Your Name'
+  description = 'Expert tips for dog and cat care, training guides, and pet health advice'
+  keywords = ['dog care', 'cat care', 'pet training', 'pet health', 'veterinary tips']
+  defaultTheme = 'auto'
+  ShowReadingTime = true
+  ShowShareButtons = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+
+[params.profileMode]
+  enabled = true
+  title = "Paws & Care"
+  subtitle = "🐕 Dog Training • 🐈 Cat Care • 🏥 Health Advice"
+  imageUrl = "/images/logo.png"
+  imageWidth = 150
+  imageHeight = 150
+
+[[params.profileMode.buttons]]
+  name = "Dog Tips"
+  url = "/dogs/"
+
+[[params.profileMode.buttons]]
+  name = "Cat Tips"
+  url = "/cats/"
+
+[[params.profileMode.buttons]]
+  name = "Health Advice"
+  url = "/health/"
+
+[[params.socialIcons]]
+  name = "twitter"
+  url = "https://twitter.com/"
+
+[[params.socialIcons]]
+  name = "github"
+  url = "https://github.com/"
+
+[menu]
+  [[menu.main]]
+    identifier = 'home'
+    name = '🏠 Home'
+    url = '/'
+    weight = 10
+  [[menu.main]]
+    identifier = 'dogs'
+    name = '🐕 Dogs'
+    url = '/dogs/'
+    weight = 20
+  [[menu.main]]
+    identifier = 'cats'
+    name = '🐈 Cats'
+    url = '/cats/'
+    weight = 30
+  [[menu.main]]
+    identifier = 'health'
+    name = '🏥 Health'
+    url = '/health/'
+    weight = 40
+  [[menu.main]]
+    identifier = 'training'
+    name = '🎓 Training'
+    url = '/training/'
+    weight = 50
+  [[menu.main]]
+    identifier = 'about'
+    name = 'About'
+    url = '/about/'
+    weight = 60

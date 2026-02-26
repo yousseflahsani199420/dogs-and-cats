@@ -1,0 +1,4 @@
+---
+title: "training"
+url: "/training/"
+---
