@@ -28,7 +28,7 @@ jobs:
         run: |
           wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb
           sudo dpkg -i ${{ runner.temp }}/hugo.deb
-          hugo version  # Verify installation
+          hugo version
       
       - name: Checkout
         uses: actions/checkout@v4
@@ -38,7 +38,14 @@ jobs:
       
       - name: Setup Pages
         id: pages
-        uses: actions/configure-pages@v5  # Updated to v5
+        uses: actions/configure-pages@v5
+      
+      - name: Install Node.js dependencies (if needed)
+        run: |
+          if [ -f package-lock.json ] || [ -f yarn.lock ]; then
+            echo "Installing Node.js dependencies..."
+            npm ci || true
+          fi
       
       - name: Build with Hugo
         env:
@@ -49,6 +56,13 @@ jobs:
             --gc \
             --minify \
             --baseURL "https://petzone.website/"
+      
+      - name: List build output (debug)
+        run: |
+          echo "Contents of public directory:"
+          ls -la public/
+          echo "Checking for index.html:"
+          ls -la public/index.html || echo "❌ index.html NOT FOUND!"
       
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
