@@ -9,6 +9,7 @@ theme = 'PaperMod'
   priority = 0.5
 
 [params]
+googleAnalytics = 'G-G94YSLLJZC'
   author = 'dr. lahsani youssef'
   description = 'Expert tips for dog and cat care, training guides, and pet health advice'
   keywords = ['dog care', 'cat care', 'pet training', 'pet health', 'veterinary tips']
