@@ -2,6 +2,7 @@ baseURL = 'https://petzone.website/'
 languageCode = 'en-us'
 title = 'Paws & Care - Dog & Cat Tips'
 theme = 'PaperMod'
+googleAnalytics = 'G-G94YSLLJZC'
 
 [sitemap]
   changefreq = 'weekly'
