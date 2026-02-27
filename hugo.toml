@@ -3,8 +3,13 @@ languageCode = 'en-us'
 title = 'Paws & Care - Dog & Cat Tips'
 theme = 'PaperMod'
 
+[sitemap]
+  changefreq = 'weekly'
+  filename = 'sitemap.xml'
+  priority = 0.5
+
 [params]
-  author = 'Your Name'
+  author = 'dr. lahsani youssef'
   description = 'Expert tips for dog and cat care, training guides, and pet health advice'
   keywords = ['dog care', 'cat care', 'pet training', 'pet health', 'veterinary tips']
   defaultTheme = 'auto'
