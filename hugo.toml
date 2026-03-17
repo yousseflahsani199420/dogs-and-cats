@@ -46,6 +46,14 @@ enableRobotsTXT = true
   name = 'Pet Health'
   url = '/pet-health/'
 
+[[params.profileMode.buttons]]
+  name = 'Pet Food'
+  url = '/pet-food/'
+
+[[params.profileMode.buttons]]
+  name = 'Pet Training'
+  url = '/pet-training/'
+
 [[params.socialIcons]]
   name = 'github'
   url = 'https://github.com/yousseflahsani199420'
