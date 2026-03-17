@@ -1,0 +1,27 @@
+.header .nav {
+    justify-content: center;
+}
+
+.header .logo {
+    margin-inline: auto;
+}
+
+.header #menu {
+    width: 100%;
+    justify-content: center;
+    margin-inline: auto;
+    padding-inline: var(--gap);
+    box-sizing: border-box;
+}
+
+.header #menu li a span {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+@media (max-width: 900px) {
+    .header #menu {
+        justify-content: flex-start;
+    }
+}

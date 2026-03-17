@@ -23,6 +23,9 @@ enableRobotsTXT = true
 [params.assets]
   disableFingerprinting = true
 
+[params.label]
+  text = 'PetZone'
+
 [params.profileMode]
   enabled = true
   title = 'PetZone'
@@ -51,35 +54,42 @@ enableRobotsTXT = true
   [[menu.main]]
     identifier = 'home'
     name = 'Home'
+    pre = '🏠 '
     url = '/'
     weight = 10
   [[menu.main]]
     identifier = 'dog-care'
     name = 'Dog Care'
+    pre = '🐶 '
     url = '/dog-care/'
     weight = 20
   [[menu.main]]
     identifier = 'cat-care'
     name = 'Cat Care'
+    pre = '🐱 '
     url = '/cat-care/'
     weight = 30
   [[menu.main]]
     identifier = 'pet-health'
     name = 'Pet Health'
+    pre = '🩺 '
     url = '/pet-health/'
     weight = 40
   [[menu.main]]
     identifier = 'pet-food'
     name = 'Pet Food'
+    pre = '🍖 '
     url = '/pet-food/'
     weight = 50
   [[menu.main]]
     identifier = 'pet-training'
     name = 'Pet Training'
+    pre = '🎯 '
     url = '/pet-training/'
     weight = 60
   [[menu.main]]
     identifier = 'about'
     name = 'About'
+    pre = 'ℹ️ '
     url = '/about/'
     weight = 70
