@@ -1,6 +1,6 @@
 ---
 title: "How to Track a Healthy Pet Weight at Home"
-date: 2026-03-17T09:22:00Z
+date: 2025-10-21T03:51:36Z
 draft: false
 slug: "healthy-pet-weight-chart-at-home"
 description: "Learn healthy pet weight chart at home with practical steps, pro tips, common mistakes, and FAQ to improve your pet routine fast."

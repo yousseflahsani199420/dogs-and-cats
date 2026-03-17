@@ -1,6 +1,6 @@
 ---
 title: "Kitten Litter Training in a Small Apartment"
-date: 2026-03-17T09:12:00Z
+date: 2025-03-12T05:36:45Z
 draft: false
 slug: "kitten-litter-training-in-small-apartment"
 description: "Learn kitten litter training in small apartment with practical steps, pro tips, common mistakes, and FAQ to improve your pet routine fast."

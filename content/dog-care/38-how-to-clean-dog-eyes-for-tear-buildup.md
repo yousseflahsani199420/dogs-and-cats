@@ -1,6 +1,6 @@
 ---
 title: "How to clean dog eyes for tear buildup"
-date: 2026-03-17T12:38:00Z
+date: 2025-07-18T01:56:02Z
 draft: false
 slug: "how-to-clean-dog-eyes-for-tear-buildup"
 description: "Learn how to clean dog eyes for tear buildup with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

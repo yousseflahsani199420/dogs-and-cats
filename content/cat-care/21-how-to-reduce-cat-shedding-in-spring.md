@@ -1,6 +1,6 @@
 ---
 title: "How to reduce cat shedding in spring"
-date: 2026-03-17T12:21:00Z
+date: 2025-04-09T11:10:10Z
 draft: false
 slug: "how-to-reduce-cat-shedding-in-spring"
 description: "Learn how to reduce cat shedding in spring with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

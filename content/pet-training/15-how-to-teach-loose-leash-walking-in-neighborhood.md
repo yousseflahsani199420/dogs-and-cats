@@ -1,6 +1,6 @@
 ---
 title: "How to teach loose leash walking in neighborhood"
-date: 2026-03-17T12:15:00Z
+date: 2026-01-22T17:30:26Z
 draft: false
 slug: "how-to-teach-loose-leash-walking-in-neighborhood"
 description: "Learn how to teach loose leash walking in neighborhood with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

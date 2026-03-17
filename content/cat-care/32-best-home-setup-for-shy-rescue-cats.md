@@ -1,6 +1,6 @@
 ---
 title: "Best home setup for shy rescue cats"
-date: 2026-03-17T12:32:00Z
+date: 2025-04-25T19:11:31Z
 draft: false
 slug: "best-home-setup-for-shy-rescue-cats"
 description: "Learn best home setup for shy rescue cats with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

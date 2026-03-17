@@ -1,6 +1,6 @@
 ---
 title: "How to train dog to settle on mat"
-date: 2026-03-17T12:21:00Z
+date: 2026-01-31T16:49:59Z
 draft: false
 slug: "how-to-train-dog-to-settle-on-mat"
 description: "Learn how to train dog to settle on mat with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

@@ -1,6 +1,6 @@
 ---
 title: "How to reduce hairballs in long-haired cats"
-date: 2026-03-17T12:33:00Z
+date: 2025-04-27T07:28:17Z
 draft: false
 slug: "how-to-reduce-hairballs-in-long-haired-cats"
 description: "Learn how to reduce hairballs in long-haired cats with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

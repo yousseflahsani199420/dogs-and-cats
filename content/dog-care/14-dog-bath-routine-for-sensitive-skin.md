@@ -1,6 +1,6 @@
 ---
 title: "Dog bath routine for sensitive skin"
-date: 2026-03-17T12:14:00Z
+date: 2025-06-12T09:19:49Z
 draft: false
 slug: "dog-bath-routine-for-sensitive-skin"
 description: "Learn dog bath routine for sensitive skin with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

@@ -1,6 +1,6 @@
 ---
 title: "Best grooming tools for sensitive skin cats"
-date: 2026-03-17T12:48:00Z
+date: 2025-05-19T14:15:40Z
 draft: false
 slug: "best-grooming-tools-for-sensitive-skin-cats"
 description: "Learn best grooming tools for sensitive skin cats with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

@@ -1,6 +1,6 @@
 ---
 title: "Cat target training basics for beginners"
-date: 2026-03-17T12:14:00Z
+date: 2026-01-21T07:34:40Z
 draft: false
 slug: "cat-target-training-basics-for-beginners"
 description: "Learn cat target training basics for beginners with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

@@ -1,6 +1,6 @@
 ---
 title: "Cat scratching post training for new owners"
-date: 2026-03-17T12:30:00Z
+date: 2025-04-22T20:59:00Z
 draft: false
 slug: "cat-scratching-post-training-for-new-owners"
 description: "Learn cat scratching post training for new owners with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

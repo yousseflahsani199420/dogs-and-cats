@@ -1,6 +1,6 @@
 ---
 title: "How to calm cat during fireworks and storms"
-date: 2026-03-17T12:27:00Z
+date: 2025-04-18T10:29:44Z
 draft: false
 slug: "how-to-calm-cat-during-fireworks-and-storms"
 description: "Learn how to calm cat during fireworks and storms with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

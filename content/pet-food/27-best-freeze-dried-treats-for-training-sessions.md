@@ -1,6 +1,6 @@
 ---
 title: "Best freeze dried treats for training sessions"
-date: 2026-03-17T12:27:00Z
+date: 2025-09-13T22:58:38Z
 draft: false
 slug: "best-freeze-dried-treats-for-training-sessions"
 description: "Learn best freeze dried treats for training sessions with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

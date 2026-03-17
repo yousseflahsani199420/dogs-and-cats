@@ -1,6 +1,6 @@
 ---
 title: "How to handle cat zoomies at night"
-date: 2026-03-17T12:41:00Z
+date: 2025-05-09T05:00:21Z
 draft: false
 slug: "how-to-handle-cat-zoomies-at-night"
 description: "Learn how to handle cat zoomies at night with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

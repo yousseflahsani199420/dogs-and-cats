@@ -1,6 +1,6 @@
 ---
 title: "How to train dog to ignore food on floor"
-date: 2026-03-17T12:47:00Z
+date: 2026-03-11T07:38:43Z
 draft: false
 slug: "how-to-train-dog-to-ignore-food-on-floor"
 description: "Learn how to train dog to ignore food on floor with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

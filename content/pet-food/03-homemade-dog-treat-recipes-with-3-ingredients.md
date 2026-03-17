@@ -1,6 +1,6 @@
 ---
 title: "Homemade Dog Treat Recipes with 3 Ingredients"
-date: 2026-03-17T09:33:00Z
+date: 2025-08-09T08:43:25Z
 draft: false
 slug: "homemade-dog-treat-recipes-with-3-ingredients"
 description: "Learn homemade dog treat recipes with 3 ingredients with practical steps, pro tips, common mistakes, and FAQ to improve your pet routine fast."

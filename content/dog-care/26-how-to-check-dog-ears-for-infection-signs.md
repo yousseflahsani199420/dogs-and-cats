@@ -1,6 +1,6 @@
 ---
 title: "How to check dog ears for infection signs"
-date: 2026-03-17T12:26:00Z
+date: 2025-06-30T05:37:55Z
 draft: false
 slug: "how-to-check-dog-ears-for-infection-signs"
 description: "Learn how to check dog ears for infection signs with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

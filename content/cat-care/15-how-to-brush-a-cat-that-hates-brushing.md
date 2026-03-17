@@ -1,6 +1,6 @@
 ---
 title: "How to brush a cat that hates brushing"
-date: 2026-03-17T12:15:00Z
+date: 2025-03-31T14:11:37Z
 draft: false
 slug: "how-to-brush-a-cat-that-hates-brushing"
 description: "Learn how to brush a cat that hates brushing with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

@@ -1,6 +1,6 @@
 ---
 title: "Dog grooming checklist for beginners"
-date: 2026-03-17T12:18:00Z
+date: 2025-06-18T08:05:51Z
 draft: false
 slug: "dog-grooming-checklist-for-beginners"
 description: "Learn dog grooming checklist for beginners with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

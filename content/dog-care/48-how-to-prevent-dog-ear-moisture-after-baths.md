@@ -1,6 +1,6 @@
 ---
 title: "How to prevent dog ear moisture after baths"
-date: 2026-03-17T12:48:00Z
+date: 2025-08-01T21:40:37Z
 draft: false
 slug: "how-to-prevent-dog-ear-moisture-after-baths"
 description: "Learn how to prevent dog ear moisture after baths with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

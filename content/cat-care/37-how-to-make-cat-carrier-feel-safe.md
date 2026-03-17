@@ -1,6 +1,6 @@
 ---
 title: "How to make cat carrier feel safe"
-date: 2026-03-17T12:37:00Z
+date: 2025-05-03T06:14:19Z
 draft: false
 slug: "how-to-make-cat-carrier-feel-safe"
 description: "Learn how to make cat carrier feel safe with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

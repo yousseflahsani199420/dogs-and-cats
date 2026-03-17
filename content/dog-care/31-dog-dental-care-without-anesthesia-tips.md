@@ -1,6 +1,6 @@
 ---
 title: "Dog dental care without anesthesia tips"
-date: 2026-03-17T12:31:00Z
+date: 2025-07-07T16:40:43Z
 draft: false
 slug: "dog-dental-care-without-anesthesia-tips"
 description: "Learn dog dental care without anesthesia tips with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

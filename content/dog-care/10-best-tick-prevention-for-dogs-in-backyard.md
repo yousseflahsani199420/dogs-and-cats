@@ -1,6 +1,6 @@
 ---
 title: "Best Tick Prevention for Dogs in Backyards"
-date: 2026-03-17T09:10:00Z
+date: 2025-06-06T10:33:46Z
 draft: false
 slug: "best-tick-prevention-for-dogs-in-backyard"
 description: "Learn best tick prevention for dogs in backyard with practical steps, pro tips, common mistakes, and FAQ to improve your pet routine fast."

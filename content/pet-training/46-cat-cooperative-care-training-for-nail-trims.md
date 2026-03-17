@@ -1,6 +1,6 @@
 ---
 title: "Cat cooperative care training for nail trims"
-date: 2026-03-17T12:46:00Z
+date: 2026-03-09T19:21:57Z
 draft: false
 slug: "cat-cooperative-care-training-for-nail-trims"
 description: "Learn cat cooperative care training for nail trims with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

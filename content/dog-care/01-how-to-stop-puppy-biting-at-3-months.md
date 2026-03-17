@@ -1,6 +1,6 @@
 ---
 title: "How to Stop Puppy Biting at 3 Months"
-date: 2026-03-17T09:01:00Z
+date: 2025-05-24T00:44:57Z
 draft: false
 slug: "how-to-stop-puppy-biting-at-3-months"
 description: "Learn how to stop puppy biting at 3 months with practical steps, pro tips, common mistakes, and FAQ to improve your pet routine fast."

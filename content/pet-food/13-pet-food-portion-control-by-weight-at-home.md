@@ -1,6 +1,6 @@
 ---
 title: "Pet food portion control by weight at home"
-date: 2026-03-17T12:13:00Z
+date: 2025-08-24T04:28:00Z
 draft: false
 slug: "pet-food-portion-control-by-weight-at-home"
 description: "Learn pet food portion control by weight at home with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

@@ -1,6 +1,6 @@
 ---
 title: "How to spot urinary issues in cats and dogs"
-date: 2026-03-17T12:25:00Z
+date: 2025-11-24T08:11:04Z
 draft: false
 slug: "how-to-spot-urinary-issues-in-cats-and-dogs"
 description: "Learn how to spot urinary issues in cats and dogs with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

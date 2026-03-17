@@ -1,6 +1,6 @@
 ---
 title: "How to clean cat eyes safely at home"
-date: 2026-03-17T12:19:00Z
+date: 2025-04-06T12:57:39Z
 draft: false
 slug: "how-to-clean-cat-eyes-safely-at-home"
 description: "Learn how to clean cat eyes safely at home with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

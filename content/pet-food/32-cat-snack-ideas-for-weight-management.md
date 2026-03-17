@@ -1,6 +1,6 @@
 ---
 title: "Cat snack ideas for weight management"
-date: 2026-03-17T12:32:00Z
+date: 2025-09-21T10:01:26Z
 draft: false
 slug: "cat-snack-ideas-for-weight-management"
 description: "Learn cat snack ideas for weight management with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

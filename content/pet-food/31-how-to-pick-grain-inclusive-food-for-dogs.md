@@ -1,6 +1,6 @@
 ---
 title: "How to pick grain inclusive food for dogs"
-date: 2026-03-17T12:31:00Z
+date: 2025-09-19T21:44:40Z
 draft: false
 slug: "how-to-pick-grain-inclusive-food-for-dogs"
 description: "Learn how to pick grain inclusive food for dogs with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

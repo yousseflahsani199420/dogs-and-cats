@@ -1,6 +1,6 @@
 ---
 title: "Teach Your Dog to Stay with Distractions at Home"
-date: 2026-03-17T09:50:00Z
+date: 2026-01-15T08:48:38Z
 draft: false
 slug: "teach-dog-to-stay-with-distractions-at-home"
 description: "Learn teach dog to stay with distractions at home with practical steps, pro tips, common mistakes, and FAQ to improve your pet routine fast."

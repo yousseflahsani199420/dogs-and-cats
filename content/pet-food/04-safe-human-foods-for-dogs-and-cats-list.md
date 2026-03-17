@@ -1,6 +1,6 @@
 ---
 title: "Safe Human Foods for Dogs and Cats List"
-date: 2026-03-17T09:34:00Z
+date: 2025-08-10T18:39:10Z
 draft: false
 slug: "safe-human-foods-for-dogs-and-cats-list"
 description: "Learn safe human foods for dogs and cats list with practical steps, pro tips, common mistakes, and FAQ to improve your pet routine fast."

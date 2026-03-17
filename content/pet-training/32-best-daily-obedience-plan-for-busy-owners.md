@@ -1,6 +1,6 @@
 ---
 title: "Best daily obedience plan for busy owners"
-date: 2026-03-17T12:32:00Z
+date: 2026-02-17T00:51:20Z
 draft: false
 slug: "best-daily-obedience-plan-for-busy-owners"
 description: "Learn best daily obedience plan for busy owners with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

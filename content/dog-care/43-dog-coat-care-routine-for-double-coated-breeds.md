@@ -1,6 +1,6 @@
 ---
 title: "Dog coat care routine for double coated breeds"
-date: 2026-03-17T12:43:00Z
+date: 2025-07-25T10:37:49Z
 draft: false
 slug: "dog-coat-care-routine-for-double-coated-breeds"
 description: "Learn dog coat care routine for double coated breeds with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

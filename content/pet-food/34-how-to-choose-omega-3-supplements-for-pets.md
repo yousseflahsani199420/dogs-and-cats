@@ -1,6 +1,6 @@
 ---
 title: "How to choose omega 3 supplements for pets"
-date: 2026-03-17T12:34:00Z
+date: 2025-09-24T10:34:57Z
 draft: false
 slug: "how-to-choose-omega-3-supplements-for-pets"
 description: "Learn how to choose omega 3 supplements for pets with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

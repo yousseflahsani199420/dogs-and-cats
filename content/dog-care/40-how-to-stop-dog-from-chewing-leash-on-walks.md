@@ -1,6 +1,6 @@
 ---
 title: "How to stop dog from chewing leash on walks"
-date: 2026-03-17T12:40:00Z
+date: 2025-07-21T00:08:33Z
 draft: false
 slug: "how-to-stop-dog-from-chewing-leash-on-walks"
 description: "Learn how to stop dog from chewing leash on walks with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

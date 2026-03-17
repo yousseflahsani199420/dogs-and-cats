@@ -1,6 +1,6 @@
 ---
 title: "How Often Should You Bathe a Golden Retriever?"
-date: 2026-03-17T09:03:00Z
+date: 2025-05-27T01:18:28Z
 draft: false
 slug: "how-often-should-you-bathe-a-golden-retriever"
 description: "Learn how often should you bathe a golden retriever with practical steps, pro tips, common mistakes, and FAQ to improve your pet routine fast."

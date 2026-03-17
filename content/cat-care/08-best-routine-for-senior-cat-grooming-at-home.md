@@ -1,6 +1,6 @@
 ---
 title: "Best Grooming Routine for Senior Cats at Home"
-date: 2026-03-17T09:18:00Z
+date: 2025-03-21T04:56:18Z
 draft: false
 slug: "best-routine-for-senior-cat-grooming-at-home"
 description: "Learn best routine for senior cat grooming at home with practical steps, pro tips, common mistakes, and FAQ to improve your pet routine fast."

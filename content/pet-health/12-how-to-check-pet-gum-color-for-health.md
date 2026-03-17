@@ -1,6 +1,6 @@
 ---
 title: "How to check pet gum color for health"
-date: 2026-03-17T12:12:00Z
+date: 2025-11-04T23:36:12Z
 draft: false
 slug: "how-to-check-pet-gum-color-for-health"
 description: "Learn how to check pet gum color for health with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

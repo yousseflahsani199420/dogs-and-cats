@@ -1,6 +1,6 @@
 ---
 title: "How Much Should I Feed My Puppy by Age?"
-date: 2026-03-17T09:35:00Z
+date: 2025-08-12T06:55:56Z
 draft: false
 slug: "how-much-should-i-feed-my-puppy-by-age"
 description: "Learn how much should i feed my puppy by age with practical steps, pro tips, common mistakes, and FAQ to improve your pet routine fast."

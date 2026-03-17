@@ -1,6 +1,6 @@
 ---
 title: "Best carrier training plan for nervous cats"
-date: 2026-03-17T12:20:00Z
+date: 2025-04-08T01:14:25Z
 draft: false
 slug: "best-carrier-training-plan-for-nervous-cats"
 description: "Learn best carrier training plan for nervous cats with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

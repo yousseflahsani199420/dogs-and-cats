@@ -1,6 +1,6 @@
 ---
 title: "Cat-safe houseplants for indoor homes"
-date: 2026-03-17T12:22:00Z
+date: 2025-04-10T23:26:56Z
 draft: false
 slug: "cat-safe-houseplants-for-indoor-homes"
 description: "Learn cat-safe houseplants for indoor homes with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

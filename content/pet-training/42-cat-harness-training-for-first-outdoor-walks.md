@@ -1,6 +1,6 @@
 ---
 title: "Cat harness training for first outdoor walks"
-date: 2026-03-17T12:42:00Z
+date: 2026-03-03T20:35:55Z
 draft: false
 slug: "cat-harness-training-for-first-outdoor-walks"
 description: "Learn cat harness training for first outdoor walks with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

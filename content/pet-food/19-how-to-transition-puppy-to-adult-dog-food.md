@@ -1,6 +1,6 @@
 ---
 title: "How to transition puppy to adult dog food"
-date: 2026-03-17T12:19:00Z
+date: 2025-09-02T03:47:33Z
 draft: false
 slug: "how-to-transition-puppy-to-adult-dog-food"
 description: "Learn how to transition puppy to adult dog food with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

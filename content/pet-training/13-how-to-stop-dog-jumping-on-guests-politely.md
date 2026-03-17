@@ -1,6 +1,6 @@
 ---
 title: "How to stop dog jumping on guests politely"
-date: 2026-03-17T12:13:00Z
+date: 2026-01-19T19:17:54Z
 draft: false
 slug: "how-to-stop-dog-jumping-on-guests-politely"
 description: "Learn how to stop dog jumping on guests politely with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

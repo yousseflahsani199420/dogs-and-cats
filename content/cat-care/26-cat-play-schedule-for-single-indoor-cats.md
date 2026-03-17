@@ -1,6 +1,6 @@
 ---
 title: "Cat play schedule for single indoor cats"
-date: 2026-03-17T12:26:00Z
+date: 2025-04-16T22:12:58Z
 draft: false
 slug: "cat-play-schedule-for-single-indoor-cats"
 description: "Learn cat play schedule for single indoor cats with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

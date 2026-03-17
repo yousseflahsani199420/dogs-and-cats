@@ -1,6 +1,6 @@
 ---
 title: "How to avoid overfeeding treats every day"
-date: 2026-03-17T12:25:00Z
+date: 2025-09-11T00:46:07Z
 draft: false
 slug: "how-to-avoid-overfeeding-treats-every-day"
 description: "Learn how to avoid overfeeding treats every day with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

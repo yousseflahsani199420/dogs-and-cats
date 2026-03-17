@@ -1,6 +1,6 @@
 ---
 title: "Pet food allergy elimination diet steps"
-date: 2026-03-17T12:44:00Z
+date: 2025-10-09T06:19:32Z
 draft: false
 slug: "pet-food-allergy-elimination-diet-steps"
 description: "Learn pet food allergy elimination diet steps with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

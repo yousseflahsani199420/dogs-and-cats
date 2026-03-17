@@ -1,6 +1,6 @@
 ---
 title: "Best treats for dogs with dental issues"
-date: 2026-03-17T12:45:00Z
+date: 2025-10-10T18:36:18Z
 draft: false
 slug: "best-treats-for-dogs-with-dental-issues"
 description: "Learn best treats for dogs with dental issues with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

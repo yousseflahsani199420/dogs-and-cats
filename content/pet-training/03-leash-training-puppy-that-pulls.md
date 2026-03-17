@@ -1,6 +1,6 @@
 ---
 title: "Leash Training for Puppies That Pull"
-date: 2026-03-17T09:43:00Z
+date: 2026-01-04T21:12:19Z
 draft: false
 slug: "leash-training-puppy-that-pulls"
 description: "Learn leash training puppy that pulls with practical steps, pro tips, common mistakes, and FAQ to improve your pet routine fast."

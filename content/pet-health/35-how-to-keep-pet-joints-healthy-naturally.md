@@ -1,6 +1,6 @@
 ---
 title: "How to keep pet joints healthy naturally"
-date: 2026-03-17T12:35:00Z
+date: 2025-12-09T03:55:39Z
 draft: false
 slug: "how-to-keep-pet-joints-healthy-naturally"
 description: "Learn how to keep pet joints healthy naturally with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

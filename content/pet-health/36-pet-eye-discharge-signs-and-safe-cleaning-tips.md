@@ -1,6 +1,6 @@
 ---
 title: "Pet eye discharge signs and safe cleaning tips"
-date: 2026-03-17T12:36:00Z
+date: 2025-12-10T16:12:25Z
 draft: false
 slug: "pet-eye-discharge-signs-and-safe-cleaning-tips"
 description: "Learn pet eye discharge signs and safe cleaning tips with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

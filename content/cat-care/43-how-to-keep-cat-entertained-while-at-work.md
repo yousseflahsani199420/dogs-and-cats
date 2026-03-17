@@ -1,6 +1,6 @@
 ---
 title: "How to keep cat entertained while at work"
-date: 2026-03-17T12:43:00Z
+date: 2025-05-12T03:12:52Z
 draft: false
 slug: "how-to-keep-cat-entertained-while-at-work"
 description: "Learn how to keep cat entertained while at work with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

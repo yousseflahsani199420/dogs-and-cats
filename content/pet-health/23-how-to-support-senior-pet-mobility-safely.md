@@ -1,6 +1,6 @@
 ---
 title: "How to support senior pet mobility safely"
-date: 2026-03-17T12:23:00Z
+date: 2025-11-21T07:37:33Z
 draft: false
 slug: "how-to-support-senior-pet-mobility-safely"
 description: "Learn how to support senior pet mobility safely with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

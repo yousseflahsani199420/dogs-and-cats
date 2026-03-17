@@ -1,6 +1,6 @@
 ---
 title: "How to teach dog heel for city walks"
-date: 2026-03-17T12:43:00Z
+date: 2026-03-05T08:52:41Z
 draft: false
 slug: "how-to-teach-dog-heel-for-city-walks"
 description: "Learn how to teach dog heel for city walks with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

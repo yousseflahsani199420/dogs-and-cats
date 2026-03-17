@@ -1,6 +1,6 @@
 ---
 title: "Cat Not Drinking Water: What to Do First"
-date: 2026-03-17T09:15:00Z
+date: 2025-03-16T16:06:02Z
 draft: false
 slug: "cat-not-drinking-water-what-to-do"
 description: "Learn cat not drinking water what to do with practical steps, pro tips, common mistakes, and FAQ to improve your pet routine fast."

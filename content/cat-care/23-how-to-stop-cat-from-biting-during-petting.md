@@ -1,6 +1,6 @@
 ---
 title: "How to stop cat from biting during petting"
-date: 2026-03-17T12:23:00Z
+date: 2025-04-12T11:43:41Z
 draft: false
 slug: "how-to-stop-cat-from-biting-during-petting"
 description: "Learn how to stop cat from biting during petting with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

@@ -1,6 +1,6 @@
 ---
 title: "How to Stop a Cat from Scratching Furniture at Night"
-date: 2026-03-17T09:11:00Z
+date: 2025-03-10T17:20:00Z
 draft: false
 slug: "how-to-stop-cat-from-scratching-furniture-at-night"
 description: "Learn how to stop cat from scratching furniture at night with practical steps, pro tips, common mistakes, and FAQ to improve your pet routine fast."

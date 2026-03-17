@@ -1,6 +1,6 @@
 ---
 title: "Potty Training Schedule for an 8 Week Puppy"
-date: 2026-03-17T09:48:00Z
+date: 2026-01-12T08:15:07Z
 draft: false
 slug: "potty-training-schedule-for-8-week-puppy"
 description: "Learn potty training schedule for 8 week puppy with practical steps, pro tips, common mistakes, and FAQ to improve your pet routine fast."

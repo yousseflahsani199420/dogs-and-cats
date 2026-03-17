@@ -1,6 +1,6 @@
 ---
 title: "Best litter box setup for small apartments"
-date: 2026-03-17T12:12:00Z
+date: 2025-03-27T03:42:20Z
 draft: false
 slug: "best-litter-box-setup-for-small-apartments"
 description: "Learn best litter box setup for small apartments with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

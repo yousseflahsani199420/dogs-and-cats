@@ -20,6 +20,55 @@
     gap: 0.35rem;
 }
 
+.header #menu .menu-ico {
+    width: 1rem;
+    height: 1rem;
+    display: inline-block;
+    flex: 0 0 1rem;
+    background-color: currentColor;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    -webkit-mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+}
+
+.header #menu .menu-ico-home {
+    -webkit-mask-image: url('/images/menu-icons/home.svg');
+    mask-image: url('/images/menu-icons/home.svg');
+}
+
+.header #menu .menu-ico-dog {
+    -webkit-mask-image: url('/images/menu-icons/dog.svg');
+    mask-image: url('/images/menu-icons/dog.svg');
+}
+
+.header #menu .menu-ico-cat {
+    -webkit-mask-image: url('/images/menu-icons/cat.svg');
+    mask-image: url('/images/menu-icons/cat.svg');
+}
+
+.header #menu .menu-ico-health {
+    -webkit-mask-image: url('/images/menu-icons/health.svg');
+    mask-image: url('/images/menu-icons/health.svg');
+}
+
+.header #menu .menu-ico-food {
+    -webkit-mask-image: url('/images/menu-icons/food.svg');
+    mask-image: url('/images/menu-icons/food.svg');
+}
+
+.header #menu .menu-ico-training {
+    -webkit-mask-image: url('/images/menu-icons/training.svg');
+    mask-image: url('/images/menu-icons/training.svg');
+}
+
+.header #menu .menu-ico-about {
+    -webkit-mask-image: url('/images/menu-icons/about.svg');
+    mask-image: url('/images/menu-icons/about.svg');
+}
+
 @media (max-width: 900px) {
     .header #menu {
         justify-content: flex-start;

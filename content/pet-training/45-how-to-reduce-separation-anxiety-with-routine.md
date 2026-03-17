@@ -1,6 +1,6 @@
 ---
 title: "How to reduce separation anxiety with routine"
-date: 2026-03-17T12:45:00Z
+date: 2026-03-08T07:05:12Z
 draft: false
 slug: "how-to-reduce-separation-anxiety-with-routine"
 description: "Learn how to reduce separation anxiety with routine with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

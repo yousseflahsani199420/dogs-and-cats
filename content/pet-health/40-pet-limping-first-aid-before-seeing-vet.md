@@ -1,6 +1,6 @@
 ---
 title: "Pet limping first aid before seeing vet"
-date: 2026-03-17T12:40:00Z
+date: 2025-12-16T14:58:27Z
 draft: false
 slug: "pet-limping-first-aid-before-seeing-vet"
 description: "Learn pet limping first aid before seeing vet with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

@@ -1,6 +1,6 @@
 ---
 title: "Pet pantry checklist for monthly budgeting"
-date: 2026-03-17T12:47:00Z
+date: 2025-10-13T16:48:49Z
 draft: false
 slug: "pet-pantry-checklist-for-monthly-budgeting"
 description: "Learn pet pantry checklist for monthly budgeting with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

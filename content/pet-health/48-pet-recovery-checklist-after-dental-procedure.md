@@ -1,6 +1,6 @@
 ---
 title: "Pet recovery checklist after dental procedure"
-date: 2026-03-17T12:48:00Z
+date: 2025-12-28T12:30:31Z
 draft: false
 slug: "pet-recovery-checklist-after-dental-procedure"
 description: "Learn pet recovery checklist after dental procedure with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

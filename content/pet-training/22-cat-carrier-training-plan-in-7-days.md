@@ -1,6 +1,6 @@
 ---
 title: "Cat carrier training plan in 7 days"
-date: 2026-03-17T12:22:00Z
+date: 2026-02-02T05:06:44Z
 draft: false
 slug: "cat-carrier-training-plan-in-7-days"
 description: "Learn cat carrier training plan in 7 days with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

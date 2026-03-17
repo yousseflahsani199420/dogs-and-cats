@@ -1,6 +1,6 @@
 ---
 title: "How to pet-proof home for toxic exposure risks"
-date: 2026-03-17T12:43:00Z
+date: 2025-12-21T01:27:44Z
 draft: false
 slug: "how-to-pet-proof-home-for-toxic-exposure-risks"
 description: "Learn how to pet-proof home for toxic exposure risks with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

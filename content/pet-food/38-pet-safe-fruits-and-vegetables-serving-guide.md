@@ -1,6 +1,6 @@
 ---
 title: "Pet safe fruits and vegetables serving guide"
-date: 2026-03-17T12:38:00Z
+date: 2025-09-30T09:20:59Z
 draft: false
 slug: "pet-safe-fruits-and-vegetables-serving-guide"
 description: "Learn pet safe fruits and vegetables serving guide with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

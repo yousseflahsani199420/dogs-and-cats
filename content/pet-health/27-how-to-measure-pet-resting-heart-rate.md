@@ -1,6 +1,6 @@
 ---
 title: "How to measure pet resting heart rate"
-date: 2026-03-17T12:27:00Z
+date: 2025-11-27T06:23:35Z
 draft: false
 slug: "how-to-measure-pet-resting-heart-rate"
 description: "Learn how to measure pet resting heart rate with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

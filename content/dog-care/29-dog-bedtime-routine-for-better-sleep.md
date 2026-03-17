@@ -1,6 +1,6 @@
 ---
 title: "Dog bedtime routine for better sleep"
-date: 2026-03-17T12:29:00Z
+date: 2025-07-04T16:07:12Z
 draft: false
 slug: "dog-bedtime-routine-for-better-sleep"
 description: "Learn dog bedtime routine for better sleep with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

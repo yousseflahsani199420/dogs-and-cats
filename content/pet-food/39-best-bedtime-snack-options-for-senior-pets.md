@@ -1,6 +1,6 @@
 ---
 title: "Best bedtime snack options for senior pets"
-date: 2026-03-17T12:39:00Z
+date: 2025-10-01T19:16:44Z
 draft: false
 slug: "best-bedtime-snack-options-for-senior-pets"
 description: "Learn best bedtime snack options for senior pets with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

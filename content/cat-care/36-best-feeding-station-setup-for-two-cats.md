@@ -1,6 +1,6 @@
 ---
 title: "Best feeding station setup for two cats"
-date: 2026-03-17T12:36:00Z
+date: 2025-05-01T17:57:33Z
 draft: false
 slug: "best-feeding-station-setup-for-two-cats"
 description: "Learn best feeding station setup for two cats with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

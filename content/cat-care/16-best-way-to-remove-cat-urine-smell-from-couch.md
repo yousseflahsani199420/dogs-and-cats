@@ -1,6 +1,6 @@
 ---
 title: "Best way to remove cat urine smell from couch"
-date: 2026-03-17T12:16:00Z
+date: 2025-04-02T02:28:23Z
 draft: false
 slug: "best-way-to-remove-cat-urine-smell-from-couch"
 description: "Learn best way to remove cat urine smell from couch with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

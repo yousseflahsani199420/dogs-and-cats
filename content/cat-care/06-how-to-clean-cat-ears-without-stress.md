@@ -1,6 +1,6 @@
 ---
 title: "How to Clean Cat Ears Without Stress"
-date: 2026-03-17T09:16:00Z
+date: 2025-03-18T04:22:47Z
 draft: false
 slug: "how-to-clean-cat-ears-without-stress"
 description: "Learn how to clean cat ears without stress with practical steps, pro tips, common mistakes, and FAQ to improve your pet routine fast."

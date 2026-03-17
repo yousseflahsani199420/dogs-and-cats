@@ -1,6 +1,6 @@
 ---
 title: "How to trim cat nails without being scratched"
-date: 2026-03-17T12:17:00Z
+date: 2025-04-03T12:24:08Z
 draft: false
 slug: "how-to-trim-cat-nails-without-being-scratched"
 description: "Learn how to trim cat nails without being scratched with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

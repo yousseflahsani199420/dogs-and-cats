@@ -1,6 +1,6 @@
 ---
 title: "Cat scratch post training without punishment"
-date: 2026-03-17T12:38:00Z
+date: 2026-02-25T21:49:53Z
 draft: false
 slug: "cat-scratch-post-training-without-punishment"
 description: "Learn cat scratch post training without punishment with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

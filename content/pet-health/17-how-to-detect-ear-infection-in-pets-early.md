@@ -1,6 +1,6 @@
 ---
 title: "How to detect ear infection in pets early"
-date: 2026-03-17T12:17:00Z
+date: 2025-11-12T10:39:00Z
 draft: false
 slug: "how-to-detect-ear-infection-in-pets-early"
 description: "Learn how to detect ear infection in pets early with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

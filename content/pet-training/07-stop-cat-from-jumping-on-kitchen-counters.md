@@ -1,6 +1,6 @@
 ---
 title: "How to Stop Cats from Jumping on Kitchen Counters"
-date: 2026-03-17T09:47:00Z
+date: 2026-01-10T19:58:21Z
 draft: false
 slug: "stop-cat-from-jumping-on-kitchen-counters"
 description: "Learn stop cat from jumping on kitchen counters with practical steps, pro tips, common mistakes, and FAQ to improve your pet routine fast."

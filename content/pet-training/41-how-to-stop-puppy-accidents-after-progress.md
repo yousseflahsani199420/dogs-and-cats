@@ -1,6 +1,6 @@
 ---
 title: "How to stop puppy accidents after progress"
-date: 2026-03-17T12:41:00Z
+date: 2026-03-02T10:40:10Z
 draft: false
 slug: "how-to-stop-puppy-accidents-after-progress"
 description: "Learn how to stop puppy accidents after progress with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

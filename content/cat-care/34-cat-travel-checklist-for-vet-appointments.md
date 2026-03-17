@@ -1,6 +1,6 @@
 ---
 title: "Cat travel checklist for vet appointments"
-date: 2026-03-17T12:34:00Z
+date: 2025-04-28T19:45:02Z
 draft: false
 slug: "cat-travel-checklist-for-vet-appointments"
 description: "Learn cat travel checklist for vet appointments with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

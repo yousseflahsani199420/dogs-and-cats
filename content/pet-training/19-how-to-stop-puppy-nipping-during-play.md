@@ -1,6 +1,6 @@
 ---
 title: "How to stop puppy nipping during play"
-date: 2026-03-17T12:19:00Z
+date: 2026-01-28T16:16:28Z
 draft: false
 slug: "how-to-stop-puppy-nipping-during-play"
 description: "Learn how to stop puppy nipping during play with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

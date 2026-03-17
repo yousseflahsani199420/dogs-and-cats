@@ -1,6 +1,6 @@
 ---
 title: "Dog food for itchy skin ingredients to look for"
-date: 2026-03-17T12:41:00Z
+date: 2025-10-04T19:50:15Z
 draft: false
 slug: "dog-food-for-itchy-skin-ingredients-to-look-for"
 description: "Learn dog food for itchy skin ingredients to look for with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

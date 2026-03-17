@@ -1,6 +1,6 @@
 ---
 title: "How to teach puppy name recognition fast"
-date: 2026-03-17T12:11:00Z
+date: 2026-01-16T18:44:23Z
 draft: false
 slug: "how-to-teach-puppy-name-recognition-fast"
 description: "Learn how to teach puppy name recognition fast with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

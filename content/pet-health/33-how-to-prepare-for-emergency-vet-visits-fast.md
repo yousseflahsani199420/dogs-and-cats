@@ -1,6 +1,6 @@
 ---
 title: "How to prepare for emergency vet visits fast"
-date: 2026-03-17T12:33:00Z
+date: 2025-12-06T05:43:08Z
 draft: false
 slug: "how-to-prepare-for-emergency-vet-visits-fast"
 description: "Learn how to prepare for emergency vet visits fast with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

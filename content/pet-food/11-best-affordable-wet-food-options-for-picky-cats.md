@@ -1,6 +1,6 @@
 ---
 title: "Best affordable wet food options for picky cats"
-date: 2026-03-17T12:11:00Z
+date: 2025-08-21T06:15:29Z
 draft: false
 slug: "best-affordable-wet-food-options-for-picky-cats"
 description: "Learn best affordable wet food options for picky cats with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

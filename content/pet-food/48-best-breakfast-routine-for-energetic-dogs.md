@@ -1,6 +1,6 @@
 ---
 title: "Best breakfast routine for energetic dogs"
-date: 2026-03-17T12:48:00Z
+date: 2025-10-15T05:05:34Z
 draft: false
 slug: "best-breakfast-routine-for-energetic-dogs"
 description: "Learn best breakfast routine for energetic dogs with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

@@ -1,6 +1,6 @@
 ---
 title: "How to build confidence in fearful cats"
-date: 2026-03-17T12:49:00Z
+date: 2025-05-21T02:32:26Z
 draft: false
 slug: "how-to-build-confidence-in-fearful-cats"
 description: "Learn how to build confidence in fearful cats with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

@@ -1,6 +1,6 @@
 ---
 title: "Pet seizure first aid what to do immediately"
-date: 2026-03-17T12:34:00Z
+date: 2025-12-07T15:38:54Z
 draft: false
 slug: "pet-seizure-first-aid-what-to-do-immediately"
 description: "Learn pet seizure first aid what to do immediately with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

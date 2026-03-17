@@ -1,6 +1,6 @@
 ---
 title: "Best socialization checklist for young puppies"
-date: 2026-03-17T12:44:00Z
+date: 2026-03-06T21:09:26Z
 draft: false
 slug: "best-socialization-checklist-for-young-puppies"
 description: "Learn best socialization checklist for young puppies with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

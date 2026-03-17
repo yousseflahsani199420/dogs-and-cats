@@ -1,6 +1,6 @@
 ---
 title: "Remove tear stains on white dogs at home"
-date: 2026-03-17T12:16:00Z
+date: 2025-06-15T07:32:20Z
 draft: false
 slug: "remove-tear-stains-on-white-dogs-at-home"
 description: "Learn remove tear stains on white dogs at home with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

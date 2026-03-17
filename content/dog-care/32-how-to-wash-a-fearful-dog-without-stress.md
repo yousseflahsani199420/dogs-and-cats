@@ -1,6 +1,6 @@
 ---
 title: "How to wash a fearful dog without stress"
-date: 2026-03-17T12:32:00Z
+date: 2025-07-09T02:36:28Z
 draft: false
 slug: "how-to-wash-a-fearful-dog-without-stress"
 description: "Learn how to wash a fearful dog without stress with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

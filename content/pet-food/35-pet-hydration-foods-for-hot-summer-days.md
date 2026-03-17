@@ -1,6 +1,6 @@
 ---
 title: "Pet hydration foods for hot summer days"
-date: 2026-03-17T12:35:00Z
+date: 2025-09-25T20:30:42Z
 draft: false
 slug: "pet-hydration-foods-for-hot-summer-days"
 description: "Learn pet hydration foods for hot summer days with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

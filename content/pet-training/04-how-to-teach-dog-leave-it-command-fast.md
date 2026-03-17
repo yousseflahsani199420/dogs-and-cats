@@ -1,6 +1,6 @@
 ---
 title: "How to Teach the Leave It Command Fast"
-date: 2026-03-17T09:44:00Z
+date: 2026-01-06T09:29:05Z
 draft: false
 slug: "how-to-teach-dog-leave-it-command-fast"
 description: "Learn how to teach dog leave it command fast with practical steps, pro tips, common mistakes, and FAQ to improve your pet routine fast."

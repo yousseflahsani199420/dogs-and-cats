@@ -1,6 +1,6 @@
 ---
 title: "Pet obesity warning signs and home action plan"
-date: 2026-03-17T12:30:00Z
+date: 2025-12-01T19:13:52Z
 draft: false
 slug: "pet-obesity-warning-signs-and-home-action-plan"
 description: "Learn pet obesity warning signs and home action plan with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

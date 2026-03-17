@@ -1,6 +1,6 @@
 ---
 title: "Best low ingredient dog treats for allergies"
-date: 2026-03-17T12:15:00Z
+date: 2025-08-27T05:01:31Z
 draft: false
 slug: "best-low-ingredient-dog-treats-for-allergies"
 description: "Learn best low ingredient dog treats for allergies with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

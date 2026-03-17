@@ -1,6 +1,6 @@
 ---
 title: "How to protect dogs from cold weather walks"
-date: 2026-03-17T12:36:00Z
+date: 2025-07-15T01:22:31Z
 draft: false
 slug: "how-to-protect-dogs-from-cold-weather-walks"
 description: "Learn how to protect dogs from cold weather walks with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

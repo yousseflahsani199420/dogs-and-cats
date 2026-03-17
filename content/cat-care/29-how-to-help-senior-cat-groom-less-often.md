@@ -1,6 +1,6 @@
 ---
 title: "How to help senior cat groom less often"
-date: 2026-03-17T12:29:00Z
+date: 2025-04-21T08:42:15Z
 draft: false
 slug: "how-to-help-senior-cat-groom-less-often"
 description: "Learn how to help senior cat groom less often with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

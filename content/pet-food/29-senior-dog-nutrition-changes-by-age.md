@@ -1,6 +1,6 @@
 ---
 title: "Senior dog nutrition changes by age"
-date: 2026-03-17T12:29:00Z
+date: 2025-09-16T23:32:09Z
 draft: false
 slug: "senior-dog-nutrition-changes-by-age"
 description: "Learn senior dog nutrition changes by age with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

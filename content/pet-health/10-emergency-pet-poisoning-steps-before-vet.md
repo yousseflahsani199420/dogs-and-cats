@@ -1,6 +1,6 @@
 ---
 title: "Emergency Pet Poisoning Steps Before the Vet"
-date: 2026-03-17T09:30:00Z
+date: 2025-11-02T01:23:41Z
 draft: false
 slug: "emergency-pet-poisoning-steps-before-vet"
 description: "Learn emergency pet poisoning steps before vet with practical steps, pro tips, common mistakes, and FAQ to improve your pet routine fast."

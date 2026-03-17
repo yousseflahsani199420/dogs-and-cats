@@ -1,6 +1,6 @@
 ---
 title: "How to manage mild pet allergies at home"
-date: 2026-03-17T12:39:00Z
+date: 2025-12-15T02:41:41Z
 draft: false
 slug: "how-to-manage-mild-pet-allergies-at-home"
 description: "Learn how to manage mild pet allergies at home with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

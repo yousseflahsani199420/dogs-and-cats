@@ -1,6 +1,6 @@
 ---
 title: "How to rotate pet food without stomach upset"
-date: 2026-03-17T12:28:00Z
+date: 2025-09-15T11:15:23Z
 draft: false
 slug: "how-to-rotate-pet-food-without-stomach-upset"
 description: "Learn how to rotate pet food without stomach upset with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

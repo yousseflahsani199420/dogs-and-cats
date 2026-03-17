@@ -1,6 +1,6 @@
 ---
 title: "How to train dog not to pull toward dogs"
-date: 2026-03-17T12:33:00Z
+date: 2026-02-18T13:08:05Z
 draft: false
 slug: "how-to-train-dog-not-to-pull-toward-dogs"
 description: "Learn how to train dog not to pull toward dogs with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

@@ -1,6 +1,6 @@
 ---
 title: "How to create a pet medication schedule"
-date: 2026-03-17T12:31:00Z
+date: 2025-12-03T05:09:37Z
 draft: false
 slug: "how-to-create-a-pet-medication-schedule"
 description: "Learn how to create a pet medication schedule with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

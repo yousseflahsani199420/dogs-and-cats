@@ -1,6 +1,6 @@
 ---
 title: "Cat food schedule for indoor adult cats"
-date: 2026-03-17T12:16:00Z
+date: 2025-08-28T14:57:17Z
 draft: false
 slug: "cat-food-schedule-for-indoor-adult-cats"
 description: "Learn cat food schedule for indoor adult cats with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

@@ -1,6 +1,6 @@
 ---
 title: "How to teach dog place command at home"
-date: 2026-03-17T12:37:00Z
+date: 2026-02-24T11:54:07Z
 draft: false
 slug: "how-to-teach-dog-place-command-at-home"
 description: "Learn how to teach dog place command at home with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

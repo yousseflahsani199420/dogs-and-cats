@@ -1,6 +1,6 @@
 ---
 title: "How to choose kitten wet food by ingredient"
-date: 2026-03-17T12:49:00Z
+date: 2025-10-16T17:22:20Z
 draft: false
 slug: "how-to-choose-kitten-wet-food-by-ingredient"
 description: "Learn how to choose kitten wet food by ingredient with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

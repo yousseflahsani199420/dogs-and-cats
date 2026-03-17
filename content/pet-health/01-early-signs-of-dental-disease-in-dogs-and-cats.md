@@ -1,6 +1,6 @@
 ---
 title: "Early Signs of Dental Disease in Dogs and Cats"
-date: 2026-03-17T09:21:00Z
+date: 2025-10-19T15:34:51Z
 draft: false
 slug: "early-signs-of-dental-disease-in-dogs-and-cats"
 description: "Learn early signs of dental disease in dogs and cats with practical steps, pro tips, common mistakes, and FAQ to improve your pet routine fast."

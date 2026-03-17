@@ -1,6 +1,6 @@
 ---
 title: "Pet appetite loss causes and next steps"
-date: 2026-03-17T12:38:00Z
+date: 2025-12-13T14:24:56Z
 draft: false
 slug: "pet-appetite-loss-causes-and-next-steps"
 description: "Learn pet appetite loss causes and next steps with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

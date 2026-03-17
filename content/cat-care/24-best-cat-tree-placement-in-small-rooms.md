@@ -1,6 +1,6 @@
 ---
 title: "Best cat tree placement in small rooms"
-date: 2026-03-17T12:24:00Z
+date: 2025-04-13T21:39:27Z
 draft: false
 slug: "best-cat-tree-placement-in-small-rooms"
 description: "Learn best cat tree placement in small rooms with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

@@ -1,6 +1,6 @@
 ---
 title: "Best low fat diets for overweight dogs"
-date: 2026-03-17T12:24:00Z
+date: 2025-09-09T12:29:21Z
 draft: false
 slug: "best-low-fat-diets-for-overweight-dogs"
 description: "Learn best low fat diets for overweight dogs with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

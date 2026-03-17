@@ -1,6 +1,6 @@
 ---
 title: "Dog hygiene routine for multi dog households"
-date: 2026-03-17T12:39:00Z
+date: 2025-07-19T11:51:47Z
 draft: false
 slug: "dog-hygiene-routine-for-multi-dog-households"
 description: "Learn dog hygiene routine for multi dog households with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

@@ -1,6 +1,6 @@
 ---
 title: "Best high moisture meals for cats that don't drink"
-date: 2026-03-17T12:18:00Z
+date: 2025-08-31T15:30:48Z
 draft: false
 slug: "best-high-moisture-meals-for-cats-that-dont-drink"
 description: "Learn best high moisture meals for cats that dont drink with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

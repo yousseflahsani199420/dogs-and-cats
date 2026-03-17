@@ -1,6 +1,6 @@
 ---
 title: "How to measure calories in pet meals"
-date: 2026-03-17T12:40:00Z
+date: 2025-10-03T07:33:30Z
 draft: false
 slug: "how-to-measure-calories-in-pet-meals"
 description: "Learn how to measure calories in pet meals with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

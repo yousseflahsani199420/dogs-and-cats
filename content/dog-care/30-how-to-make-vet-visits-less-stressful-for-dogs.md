@@ -1,6 +1,6 @@
 ---
 title: "How to make vet visits less stressful for dogs"
-date: 2026-03-17T12:30:00Z
+date: 2025-07-06T04:23:57Z
 draft: false
 slug: "how-to-make-vet-visits-less-stressful-for-dogs"
 description: "Learn how to make vet visits less stressful for dogs with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

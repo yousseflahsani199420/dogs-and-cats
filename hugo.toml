@@ -62,42 +62,42 @@ enableRobotsTXT = true
   [[menu.main]]
     identifier = 'home'
     name = 'Home'
-    pre = '🏠 '
+    pre = '<span class="menu-ico menu-ico-home" aria-hidden="true"></span>'
     url = '/'
     weight = 10
   [[menu.main]]
     identifier = 'dog-care'
     name = 'Dog Care'
-    pre = '🐶 '
+    pre = '<span class="menu-ico menu-ico-dog" aria-hidden="true"></span>'
     url = '/dog-care/'
     weight = 20
   [[menu.main]]
     identifier = 'cat-care'
     name = 'Cat Care'
-    pre = '🐱 '
+    pre = '<span class="menu-ico menu-ico-cat" aria-hidden="true"></span>'
     url = '/cat-care/'
     weight = 30
   [[menu.main]]
     identifier = 'pet-health'
     name = 'Pet Health'
-    pre = '🩺 '
+    pre = '<span class="menu-ico menu-ico-health" aria-hidden="true"></span>'
     url = '/pet-health/'
     weight = 40
   [[menu.main]]
     identifier = 'pet-food'
     name = 'Pet Food'
-    pre = '🍖 '
+    pre = '<span class="menu-ico menu-ico-food" aria-hidden="true"></span>'
     url = '/pet-food/'
     weight = 50
   [[menu.main]]
     identifier = 'pet-training'
     name = 'Pet Training'
-    pre = '🎯 '
+    pre = '<span class="menu-ico menu-ico-training" aria-hidden="true"></span>'
     url = '/pet-training/'
     weight = 60
   [[menu.main]]
     identifier = 'about'
     name = 'About'
-    pre = 'ℹ️ '
+    pre = '<span class="menu-ico menu-ico-about" aria-hidden="true"></span>'
     url = '/about/'
     weight = 70

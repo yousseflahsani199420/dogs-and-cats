@@ -1,6 +1,6 @@
 ---
 title: "Dog parasite prevention routine at home"
-date: 2026-03-17T12:25:00Z
+date: 2025-06-28T17:21:10Z
 draft: false
 slug: "dog-parasite-prevention-routine-at-home"
 description: "Learn dog parasite prevention routine at home with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

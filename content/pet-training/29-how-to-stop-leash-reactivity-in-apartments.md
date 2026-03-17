@@ -1,6 +1,6 @@
 ---
 title: "How to stop leash reactivity in apartments"
-date: 2026-03-17T12:29:00Z
+date: 2026-02-12T14:22:03Z
 draft: false
 slug: "how-to-stop-leash-reactivity-in-apartments"
 description: "Learn how to stop leash reactivity in apartments with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

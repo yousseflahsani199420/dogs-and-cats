@@ -1,6 +1,6 @@
 ---
 title: "How to care for dogs after neuter surgery"
-date: 2026-03-17T12:34:00Z
+date: 2025-07-12T03:10:00Z
 draft: false
 slug: "how-to-care-for-dogs-after-neuter-surgery"
 description: "Learn how to care for dogs after neuter surgery with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

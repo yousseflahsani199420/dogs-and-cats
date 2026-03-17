@@ -1,6 +1,6 @@
 ---
 title: "How to prevent dog paw burns on hot pavement"
-date: 2026-03-17T12:28:00Z
+date: 2025-07-03T03:50:26Z
 draft: false
 slug: "how-to-prevent-dog-paw-burns-on-hot-pavement"
 description: "Learn how to prevent dog paw burns on hot pavement with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

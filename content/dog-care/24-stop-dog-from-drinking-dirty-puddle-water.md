@@ -1,6 +1,6 @@
 ---
 title: "Stop dog from drinking dirty puddle water"
-date: 2026-03-17T12:24:00Z
+date: 2025-06-27T05:04:24Z
 draft: false
 slug: "stop-dog-from-drinking-dirty-puddle-water"
 description: "Learn stop dog from drinking dirty puddle water with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

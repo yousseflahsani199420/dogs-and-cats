@@ -1,6 +1,6 @@
 ---
 title: "How to trim black dog nails safely"
-date: 2026-03-17T12:15:00Z
+date: 2025-06-13T21:36:34Z
 draft: false
 slug: "how-to-trim-black-dog-nails-safely"
 description: "Learn how to trim black dog nails safely with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

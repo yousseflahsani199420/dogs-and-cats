@@ -1,6 +1,6 @@
 ---
 title: "Dog impulse control games at home"
-date: 2026-03-17T12:18:00Z
+date: 2026-01-27T06:20:42Z
 draft: false
 slug: "dog-impulse-control-games-at-home"
 description: "Learn dog impulse control games at home with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

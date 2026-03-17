@@ -1,6 +1,6 @@
 ---
 title: "How to teach stay with distance and duration"
-date: 2026-03-17T12:49:00Z
+date: 2026-03-14T05:51:14Z
 draft: false
 slug: "how-to-teach-stay-with-distance-and-duration"
 description: "Learn how to teach stay with distance and duration with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

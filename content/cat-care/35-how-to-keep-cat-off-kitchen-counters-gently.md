@@ -1,6 +1,6 @@
 ---
 title: "How to keep cat off kitchen counters gently"
-date: 2026-03-17T12:35:00Z
+date: 2025-04-30T08:01:48Z
 draft: false
 slug: "how-to-keep-cat-off-kitchen-counters-gently"
 description: "Learn how to keep cat off kitchen counters gently with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

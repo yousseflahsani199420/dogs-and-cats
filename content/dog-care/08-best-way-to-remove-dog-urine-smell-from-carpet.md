@@ -1,6 +1,6 @@
 ---
 title: "Best Way to Remove Dog Urine Smell from Carpet"
-date: 2026-03-17T09:08:00Z
+date: 2025-06-03T12:21:15Z
 draft: false
 slug: "best-way-to-remove-dog-urine-smell-from-carpet"
 description: "Learn best way to remove dog urine smell from carpet with practical steps, pro tips, common mistakes, and FAQ to improve your pet routine fast."

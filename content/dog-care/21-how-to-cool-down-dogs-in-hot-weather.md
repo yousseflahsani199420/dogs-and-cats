@@ -1,6 +1,6 @@
 ---
 title: "How to cool down dogs in hot weather"
-date: 2026-03-17T12:21:00Z
+date: 2025-06-22T18:35:07Z
 draft: false
 slug: "how-to-cool-down-dogs-in-hot-weather"
 description: "Learn how to cool down dogs in hot weather with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

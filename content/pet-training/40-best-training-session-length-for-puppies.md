@@ -1,6 +1,6 @@
 ---
 title: "Best training session length for puppies"
-date: 2026-03-17T12:40:00Z
+date: 2026-02-28T22:23:24Z
 draft: false
 slug: "best-training-session-length-for-puppies"
 description: "Learn best training session length for puppies with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

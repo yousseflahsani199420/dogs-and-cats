@@ -1,6 +1,6 @@
 ---
 title: "Pet fever signs when to call the vet"
-date: 2026-03-17T12:13:00Z
+date: 2025-11-06T11:52:57Z
 draft: false
 slug: "pet-fever-signs-when-to-call-the-vet"
 description: "Learn pet fever signs when to call the vet with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

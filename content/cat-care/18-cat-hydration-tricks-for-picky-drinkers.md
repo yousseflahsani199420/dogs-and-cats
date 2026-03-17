@@ -1,6 +1,6 @@
 ---
 title: "Cat hydration tricks for picky drinkers"
-date: 2026-03-17T12:18:00Z
+date: 2025-04-05T00:40:54Z
 draft: false
 slug: "cat-hydration-tricks-for-picky-drinkers"
 description: "Learn cat hydration tricks for picky drinkers with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

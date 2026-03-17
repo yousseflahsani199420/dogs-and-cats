@@ -1,6 +1,6 @@
 ---
 title: "Best way to dry dog after swimming"
-date: 2026-03-17T12:49:00Z
+date: 2025-08-03T09:57:23Z
 draft: false
 slug: "best-way-to-dry-dog-after-swimming"
 description: "Learn best way to dry dog after swimming with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

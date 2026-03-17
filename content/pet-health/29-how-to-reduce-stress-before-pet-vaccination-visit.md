@@ -1,6 +1,6 @@
 ---
 title: "How to reduce stress before pet vaccination visit"
-date: 2026-03-17T12:29:00Z
+date: 2025-11-30T06:57:06Z
 draft: false
 slug: "how-to-reduce-stress-before-pet-vaccination-visit"
 description: "Learn how to reduce stress before pet vaccination visit with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

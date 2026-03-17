@@ -1,6 +1,6 @@
 ---
 title: "Best Daily Routine for a Senior Dog with Arthritis"
-date: 2026-03-17T09:02:00Z
+date: 2025-05-25T13:01:42Z
 draft: false
 slug: "best-daily-routine-for-senior-dog-with-arthritis"
 description: "Learn best daily routine for senior dog with arthritis with practical steps, pro tips, common mistakes, and FAQ to improve your pet routine fast."

@@ -1,6 +1,6 @@
 ---
 title: "How to choose dog food for sensitive stomach"
-date: 2026-03-17T12:12:00Z
+date: 2025-08-22T16:11:15Z
 draft: false
 slug: "how-to-choose-dog-food-for-sensitive-stomach"
 description: "Learn how to choose dog food for sensitive stomach with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

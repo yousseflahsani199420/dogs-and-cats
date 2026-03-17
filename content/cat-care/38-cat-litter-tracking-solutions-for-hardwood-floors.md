@@ -1,6 +1,6 @@
 ---
 title: "Cat litter tracking solutions for hardwood floors"
-date: 2026-03-17T12:38:00Z
+date: 2025-05-04T18:31:05Z
 draft: false
 slug: "cat-litter-tracking-solutions-for-hardwood-floors"
 description: "Learn cat litter tracking solutions for hardwood floors with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

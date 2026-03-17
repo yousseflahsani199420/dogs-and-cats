@@ -1,6 +1,6 @@
 ---
 title: "How to Transition Pet Food Without Upset Stomach"
-date: 2026-03-17T09:40:00Z
+date: 2025-08-19T17:58:44Z
 draft: false
 slug: "how-to-transition-pet-food-without-upset-stomach"
 description: "Learn how to transition pet food without upset stomach with practical steps, pro tips, common mistakes, and FAQ to improve your pet routine fast."

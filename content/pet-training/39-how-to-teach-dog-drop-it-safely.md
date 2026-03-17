@@ -1,6 +1,6 @@
 ---
 title: "How to teach dog drop it safely"
-date: 2026-03-17T12:39:00Z
+date: 2026-02-27T10:06:39Z
 draft: false
 slug: "how-to-teach-dog-drop-it-safely"
 description: "Learn how to teach dog drop it safely with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

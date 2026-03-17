@@ -1,6 +1,6 @@
 ---
 title: "How to monitor pet breathing rate at rest"
-date: 2026-03-17T12:14:00Z
+date: 2025-11-08T00:09:43Z
 draft: false
 slug: "how-to-monitor-pet-breathing-rate-at-rest"
 description: "Learn how to monitor pet breathing rate at rest with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

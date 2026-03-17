@@ -1,6 +1,6 @@
 ---
 title: "Dog cone alternatives after surgery at home"
-date: 2026-03-17T12:35:00Z
+date: 2025-07-13T13:05:45Z
 draft: false
 slug: "dog-cone-alternatives-after-surgery-at-home"
 description: "Learn dog cone alternatives after surgery at home with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

@@ -1,6 +1,6 @@
 ---
 title: "Cat confidence training for shy personalities"
-date: 2026-03-17T12:34:00Z
+date: 2026-02-19T23:03:51Z
 draft: false
 slug: "cat-confidence-training-for-shy-personalities"
 description: "Learn cat confidence training for shy personalities with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

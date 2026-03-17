@@ -1,6 +1,6 @@
 ---
 title: "How to clean dog toys and bowls safely"
-date: 2026-03-17T12:23:00Z
+date: 2025-06-25T19:08:39Z
 draft: false
 slug: "how-to-clean-dog-toys-and-bowls-safely"
 description: "Learn how to clean dog toys and bowls safely with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

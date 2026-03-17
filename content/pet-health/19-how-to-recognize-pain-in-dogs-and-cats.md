@@ -1,6 +1,6 @@
 ---
 title: "How to recognize pain in dogs and cats"
-date: 2026-03-17T12:19:00Z
+date: 2025-11-15T08:51:31Z
 draft: false
 slug: "how-to-recognize-pain-in-dogs-and-cats"
 description: "Learn how to recognize pain in dogs and cats with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

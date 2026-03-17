@@ -1,6 +1,6 @@
 ---
 title: "Clicker Training Basics for First-Time Cat Owners"
-date: 2026-03-17T09:42:00Z
+date: 2026-01-03T11:16:33Z
 draft: false
 slug: "clicker-training-basics-for-first-time-cat-owners"
 description: "Learn clicker training basics for first-time cat owners with practical steps, pro tips, common mistakes, and FAQ to improve your pet routine fast."

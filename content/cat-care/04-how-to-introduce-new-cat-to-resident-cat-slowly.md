@@ -1,6 +1,6 @@
 ---
 title: "How to Introduce a New Cat to a Resident Cat Slowly"
-date: 2026-03-17T09:14:00Z
+date: 2025-03-15T06:10:16Z
 draft: false
 slug: "how-to-introduce-new-cat-to-resident-cat-slowly"
 description: "Learn how to introduce new cat to resident cat slowly with practical steps, pro tips, common mistakes, and FAQ to improve your pet routine fast."

@@ -1,6 +1,6 @@
 ---
 title: "Best kitten feeding plan month by month"
-date: 2026-03-17T12:30:00Z
+date: 2025-09-18T11:48:54Z
 draft: false
 slug: "best-kitten-feeding-plan-month-by-month"
 description: "Learn best kitten feeding plan month by month with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

@@ -1,6 +1,6 @@
 ---
 title: "Low Calorie Treats for Overweight Dogs"
-date: 2026-03-17T09:39:00Z
+date: 2025-08-18T05:41:58Z
 draft: false
 slug: "low-calorie-treats-for-overweight-dogs"
 description: "Learn low calorie treats for overweight dogs with practical steps, pro tips, common mistakes, and FAQ to improve your pet routine fast."

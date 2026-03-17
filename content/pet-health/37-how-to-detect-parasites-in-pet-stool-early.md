@@ -1,6 +1,6 @@
 ---
 title: "How to detect parasites in pet stool early"
-date: 2026-03-17T12:37:00Z
+date: 2025-12-12T04:29:10Z
 draft: false
 slug: "how-to-detect-parasites-in-pet-stool-early"
 description: "Learn how to detect parasites in pet stool early with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

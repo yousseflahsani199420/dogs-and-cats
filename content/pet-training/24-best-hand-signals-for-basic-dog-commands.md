@@ -1,6 +1,6 @@
 ---
 title: "Best hand signals for basic dog commands"
-date: 2026-03-17T12:24:00Z
+date: 2026-02-05T03:19:15Z
 draft: false
 slug: "best-hand-signals-for-basic-dog-commands"
 description: "Learn best hand signals for basic dog commands with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

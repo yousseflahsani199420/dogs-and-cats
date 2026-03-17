@@ -1,6 +1,6 @@
 ---
 title: "Pet Skin Infection Signs Every Owner Should Know"
-date: 2026-03-17T09:29:00Z
+date: 2025-10-31T13:06:55Z
 draft: false
 slug: "pet-skin-infection-signs-every-owner-should-know"
 description: "Learn pet skin infection signs every owner should know with practical steps, pro tips, common mistakes, and FAQ to improve your pet routine fast."

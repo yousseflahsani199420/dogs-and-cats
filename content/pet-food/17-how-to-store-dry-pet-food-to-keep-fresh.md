@@ -1,6 +1,6 @@
 ---
 title: "How to store dry pet food to keep fresh"
-date: 2026-03-17T12:17:00Z
+date: 2025-08-30T03:14:02Z
 draft: false
 slug: "how-to-store-dry-pet-food-to-keep-fresh"
 description: "Learn how to store dry pet food to keep fresh with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

@@ -1,6 +1,6 @@
 ---
 title: "How to remove dog mats behind ears"
-date: 2026-03-17T12:19:00Z
+date: 2025-06-19T20:22:36Z
 draft: false
 slug: "how-to-remove-dog-mats-behind-ears"
 description: "Learn how to remove dog mats behind ears with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

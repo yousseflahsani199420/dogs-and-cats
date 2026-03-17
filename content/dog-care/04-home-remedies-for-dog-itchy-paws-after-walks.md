@@ -1,6 +1,6 @@
 ---
 title: "Home Remedies for Dog Itchy Paws After Walks"
-date: 2026-03-17T09:04:00Z
+date: 2025-05-28T13:35:13Z
 draft: false
 slug: "home-remedies-for-dog-itchy-paws-after-walks"
 description: "Learn home remedies for dog itchy paws after walks with practical steps, pro tips, common mistakes, and FAQ to improve your pet routine fast."

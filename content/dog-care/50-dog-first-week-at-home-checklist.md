@@ -1,6 +1,6 @@
 ---
 title: "Dog first week at home checklist"
-date: 2026-03-17T12:50:00Z
+date: 2025-08-04T22:14:08Z
 draft: false
 slug: "dog-first-week-at-home-checklist"
 description: "Learn dog first week at home checklist with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

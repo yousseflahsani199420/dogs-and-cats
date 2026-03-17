@@ -1,6 +1,6 @@
 ---
 title: "Best home recovery setup after pet surgery"
-date: 2026-03-17T12:15:00Z
+date: 2025-11-09T10:05:28Z
 draft: false
 slug: "best-home-recovery-setup-after-pet-surgery"
 description: "Learn best home recovery setup after pet surgery with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

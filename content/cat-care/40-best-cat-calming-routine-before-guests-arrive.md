@@ -1,6 +1,6 @@
 ---
 title: "Best cat calming routine before guests arrive"
-date: 2026-03-17T12:40:00Z
+date: 2025-05-07T16:43:36Z
 draft: false
 slug: "best-cat-calming-routine-before-guests-arrive"
 description: "Learn best cat calming routine before guests arrive with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

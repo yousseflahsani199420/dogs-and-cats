@@ -1,6 +1,6 @@
 ---
 title: "Best brushing schedule for short hair dogs"
-date: 2026-03-17T12:12:00Z
+date: 2025-06-09T08:46:18Z
 draft: false
 slug: "best-brushing-schedule-for-short-hair-dogs"
 description: "Learn best brushing schedule for short hair dogs with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

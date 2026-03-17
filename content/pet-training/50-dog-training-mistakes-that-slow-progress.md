@@ -1,6 +1,6 @@
 ---
 title: "Dog training mistakes that slow progress"
-date: 2026-03-17T12:50:00Z
+date: 2026-03-15T18:08:00Z
 draft: false
 slug: "dog-training-mistakes-that-slow-progress"
 description: "Learn dog training mistakes that slow progress with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

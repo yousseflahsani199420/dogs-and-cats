@@ -1,6 +1,6 @@
 ---
 title: "Pet probiotic food options for digestion"
-date: 2026-03-17T12:20:00Z
+date: 2025-09-03T13:43:19Z
 draft: false
 slug: "pet-probiotic-food-options-for-digestion"
 description: "Learn pet probiotic food options for digestion with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

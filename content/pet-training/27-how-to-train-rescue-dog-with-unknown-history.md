@@ -1,6 +1,6 @@
 ---
 title: "How to train rescue dog with unknown history"
-date: 2026-03-17T12:27:00Z
+date: 2026-02-09T13:48:32Z
 draft: false
 slug: "how-to-train-rescue-dog-with-unknown-history"
 description: "Learn how to train rescue dog with unknown history with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

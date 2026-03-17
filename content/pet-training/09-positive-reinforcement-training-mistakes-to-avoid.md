@@ -1,6 +1,6 @@
 ---
 title: "Positive Reinforcement Training Mistakes to Avoid"
-date: 2026-03-17T09:49:00Z
+date: 2026-01-13T20:31:52Z
 draft: false
 slug: "positive-reinforcement-training-mistakes-to-avoid"
 description: "Learn positive reinforcement training mistakes to avoid with practical steps, pro tips, common mistakes, and FAQ to improve your pet routine fast."

@@ -1,6 +1,6 @@
 ---
 title: "How to Calm a Dog During Thunderstorms Naturally"
-date: 2026-03-17T09:09:00Z
+date: 2025-06-04T22:17:01Z
 draft: false
 slug: "how-to-calm-dog-during-thunderstorms-naturally"
 description: "Learn how to calm dog during thunderstorms naturally with practical steps, pro tips, common mistakes, and FAQ to improve your pet routine fast."

@@ -1,6 +1,6 @@
 ---
 title: "How to feed two pets with different diets"
-date: 2026-03-17T12:46:00Z
+date: 2025-10-12T04:32:03Z
 draft: false
 slug: "how-to-feed-two-pets-with-different-diets"
 description: "Learn how to feed two pets with different diets with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

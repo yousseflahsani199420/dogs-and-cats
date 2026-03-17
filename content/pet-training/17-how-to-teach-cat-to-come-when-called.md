@@ -1,6 +1,6 @@
 ---
 title: "How to teach cat to come when called"
-date: 2026-03-17T12:17:00Z
+date: 2026-01-25T18:03:57Z
 draft: false
 slug: "how-to-teach-cat-to-come-when-called"
 description: "Learn how to teach cat to come when called with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

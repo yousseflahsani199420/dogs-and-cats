@@ -1,6 +1,6 @@
 ---
 title: "Best budget meal plan for multi pet homes"
-date: 2026-03-17T12:33:00Z
+date: 2025-09-22T22:18:11Z
 draft: false
 slug: "best-budget-meal-plan-for-multi-pet-homes"
 description: "Learn best budget meal plan for multi pet homes with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

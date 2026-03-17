@@ -1,6 +1,6 @@
 ---
 title: "How to teach puppy to wait at doors"
-date: 2026-03-17T12:31:00Z
+date: 2026-02-15T12:34:34Z
 draft: false
 slug: "how-to-teach-puppy-to-wait-at-doors"
 description: "Learn how to teach puppy to wait at doors with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

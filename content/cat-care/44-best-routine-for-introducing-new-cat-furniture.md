@@ -1,6 +1,6 @@
 ---
 title: "Best routine for introducing new cat furniture"
-date: 2026-03-17T12:44:00Z
+date: 2025-05-13T15:29:38Z
 draft: false
 slug: "best-routine-for-introducing-new-cat-furniture"
 description: "Learn best routine for introducing new cat furniture with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

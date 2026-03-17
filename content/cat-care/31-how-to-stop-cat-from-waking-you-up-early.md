@@ -1,6 +1,6 @@
 ---
 title: "How to stop cat from waking you up early"
-date: 2026-03-17T12:31:00Z
+date: 2025-04-24T09:15:46Z
 draft: false
 slug: "how-to-stop-cat-from-waking-you-up-early"
 description: "Learn how to stop cat from waking you up early with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

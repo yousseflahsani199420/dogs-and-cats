@@ -1,6 +1,6 @@
 ---
 title: "Cat sleeping area setup for colder weather"
-date: 2026-03-17T12:46:00Z
+date: 2025-05-16T16:03:09Z
 draft: false
 slug: "cat-sleeping-area-setup-for-colder-weather"
 description: "Learn cat sleeping area setup for colder weather with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

@@ -1,6 +1,6 @@
 ---
 title: "How to keep pets hydrated during heat waves"
-date: 2026-03-17T12:21:00Z
+date: 2025-11-18T09:25:02Z
 draft: false
 slug: "how-to-keep-pets-hydrated-during-heat-waves"
 description: "Learn how to keep pets hydrated during heat waves with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

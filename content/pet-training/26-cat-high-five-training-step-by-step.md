@@ -1,6 +1,6 @@
 ---
 title: "Cat high five training step by step"
-date: 2026-03-17T12:26:00Z
+date: 2026-02-08T01:31:46Z
 draft: false
 slug: "cat-high-five-training-step-by-step"
 description: "Learn cat high five training step by step with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

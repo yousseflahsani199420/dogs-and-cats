@@ -1,6 +1,6 @@
 ---
 title: "How to reduce cat dandruff at home"
-date: 2026-03-17T12:47:00Z
+date: 2025-05-18T01:58:54Z
 draft: false
 slug: "how-to-reduce-cat-dandruff-at-home"
 description: "Learn how to reduce cat dandruff at home with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

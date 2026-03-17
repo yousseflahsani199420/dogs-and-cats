@@ -1,6 +1,6 @@
 ---
 title: "Food Rotation Diet for Picky Cats"
-date: 2026-03-17T09:38:00Z
+date: 2025-08-16T17:25:13Z
 draft: false
 slug: "food-rotation-diet-for-picky-cats"
 description: "Learn food rotation diet for picky cats with practical steps, pro tips, common mistakes, and FAQ to improve your pet routine fast."

@@ -1,6 +1,6 @@
 ---
 title: "How to quarantine a sick pet at home"
-date: 2026-03-17T12:47:00Z
+date: 2025-12-27T00:13:46Z
 draft: false
 slug: "how-to-quarantine-a-sick-pet-at-home"
 description: "Learn how to quarantine a sick pet at home with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

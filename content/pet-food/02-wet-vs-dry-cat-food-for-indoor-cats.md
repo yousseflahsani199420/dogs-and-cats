@@ -1,6 +1,6 @@
 ---
 title: "Wet vs Dry Cat Food for Indoor Cats"
-date: 2026-03-17T09:32:00Z
+date: 2025-08-07T20:26:39Z
 draft: false
 slug: "wet-vs-dry-cat-food-for-indoor-cats"
 description: "Learn wet vs dry cat food for indoor cats with practical steps, pro tips, common mistakes, and FAQ to improve your pet routine fast."

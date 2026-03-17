@@ -1,6 +1,6 @@
 ---
 title: "Cat litter box retraining for stress incidents"
-date: 2026-03-17T12:30:00Z
+date: 2026-02-14T00:17:49Z
 draft: false
 slug: "cat-litter-box-retraining-for-stress-incidents"
 description: "Learn cat litter box retraining for stress incidents with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

@@ -1,6 +1,6 @@
 ---
 title: "How to Reduce Dog Shedding in an Apartment"
-date: 2026-03-17T09:07:00Z
+date: 2025-06-02T00:04:30Z
 draft: false
 slug: "how-to-reduce-dog-shedding-in-apartment"
 description: "Learn how to reduce dog shedding in apartment with practical steps, pro tips, common mistakes, and FAQ to improve your pet routine fast."

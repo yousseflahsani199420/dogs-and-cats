@@ -1,6 +1,6 @@
 ---
 title: "How to Check Pet Hydration at Home"
-date: 2026-03-17T09:27:00Z
+date: 2025-10-28T14:54:24Z
 draft: false
 slug: "how-to-check-pet-hydration-at-home"
 description: "Learn how to check pet hydration at home with practical steps, pro tips, common mistakes, and FAQ to improve your pet routine fast."

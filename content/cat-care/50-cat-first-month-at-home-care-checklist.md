@@ -1,6 +1,6 @@
 ---
 title: "Cat first month at home care checklist"
-date: 2026-03-17T12:50:00Z
+date: 2025-05-22T14:49:11Z
 draft: false
 slug: "cat-first-month-at-home-care-checklist"
 description: "Learn cat first month at home care checklist with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

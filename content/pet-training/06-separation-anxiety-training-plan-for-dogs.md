@@ -1,6 +1,6 @@
 ---
 title: "Separation Anxiety Training Plan for Dogs"
-date: 2026-03-17T09:46:00Z
+date: 2026-01-09T10:02:36Z
 draft: false
 slug: "separation-anxiety-training-plan-for-dogs"
 description: "Learn separation anxiety training plan for dogs with practical steps, pro tips, common mistakes, and FAQ to improve your pet routine fast."

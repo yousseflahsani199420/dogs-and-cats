@@ -1,6 +1,6 @@
 ---
 title: "How to stop puppy whining in crate at night"
-date: 2026-03-17T12:11:00Z
+date: 2025-06-07T22:50:32Z
 draft: false
 slug: "how-to-stop-puppy-whining-in-crate-at-night"
 description: "Learn how to stop puppy whining in crate at night with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

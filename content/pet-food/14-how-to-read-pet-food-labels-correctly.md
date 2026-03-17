@@ -1,6 +1,6 @@
 ---
 title: "How to read pet food labels correctly"
-date: 2026-03-17T12:14:00Z
+date: 2025-08-25T16:44:46Z
 draft: false
 slug: "how-to-read-pet-food-labels-correctly"
 description: "Learn how to read pet food labels correctly with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

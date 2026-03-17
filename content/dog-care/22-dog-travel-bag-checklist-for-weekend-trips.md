@@ -1,6 +1,6 @@
 ---
 title: "Dog travel bag checklist for weekend trips"
-date: 2026-03-17T12:22:00Z
+date: 2025-06-24T06:51:53Z
 draft: false
 slug: "dog-travel-bag-checklist-for-weekend-trips"
 description: "Learn dog travel bag checklist for weekend trips with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

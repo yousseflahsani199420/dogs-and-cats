@@ -1,6 +1,6 @@
 ---
 title: "Pet cough warning signs and vet timeline"
-date: 2026-03-17T12:28:00Z
+date: 2025-11-28T18:40:20Z
 draft: false
 slug: "pet-cough-warning-signs-and-vet-timeline"
 description: "Learn pet cough warning signs and vet timeline with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

@@ -1,6 +1,6 @@
 ---
 title: "Best flea comb routine for dogs"
-date: 2026-03-17T12:33:00Z
+date: 2025-07-10T14:53:14Z
 draft: false
 slug: "best-flea-comb-routine-for-dogs"
 description: "Learn best flea comb routine for dogs with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

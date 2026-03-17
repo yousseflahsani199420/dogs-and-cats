@@ -1,6 +1,6 @@
 ---
 title: "Litter Box Training an Older Rescue Cat"
-date: 2026-03-17T09:45:00Z
+date: 2026-01-07T21:45:50Z
 draft: false
 slug: "litter-box-training-older-rescue-cat"
 description: "Learn litter box training older rescue cat with practical steps, pro tips, common mistakes, and FAQ to improve your pet routine fast."

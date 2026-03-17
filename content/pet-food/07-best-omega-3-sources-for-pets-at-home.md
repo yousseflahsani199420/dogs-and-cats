@@ -1,6 +1,6 @@
 ---
 title: "Best Omega 3 Sources for Pets at Home"
-date: 2026-03-17T09:37:00Z
+date: 2025-08-15T07:29:27Z
 draft: false
 slug: "best-omega-3-sources-for-pets-at-home"
 description: "Learn best omega 3 sources for pets at home with practical steps, pro tips, common mistakes, and FAQ to improve your pet routine fast."

@@ -1,6 +1,6 @@
 ---
 title: "Pet first aid for minor cuts and scrapes"
-date: 2026-03-17T12:26:00Z
+date: 2025-11-25T20:27:49Z
 draft: false
 slug: "pet-first-aid-for-minor-cuts-and-scrapes"
 description: "Learn pet first aid for minor cuts and scrapes with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

@@ -1,6 +1,6 @@
 ---
 title: "Indoor Enrichment Ideas for Bored Cats"
-date: 2026-03-17T09:17:00Z
+date: 2025-03-19T16:39:33Z
 draft: false
 slug: "indoor-enrichment-ideas-for-bored-cats"
 description: "Learn indoor enrichment ideas for bored cats with practical steps, pro tips, common mistakes, and FAQ to improve your pet routine fast."

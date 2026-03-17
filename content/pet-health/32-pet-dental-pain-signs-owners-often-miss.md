@@ -1,6 +1,6 @@
 ---
 title: "Pet dental pain signs owners often miss"
-date: 2026-03-17T12:32:00Z
+date: 2025-12-04T17:26:23Z
 draft: false
 slug: "pet-dental-pain-signs-owners-often-miss"
 description: "Learn pet dental pain signs owners often miss with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

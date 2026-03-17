@@ -1,6 +1,6 @@
 ---
 title: "How to build a balanced homemade pet meal"
-date: 2026-03-17T12:22:00Z
+date: 2025-09-06T14:16:50Z
 draft: false
 slug: "how-to-build-a-balanced-homemade-pet-meal"
 description: "Learn how to build a balanced homemade pet meal with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

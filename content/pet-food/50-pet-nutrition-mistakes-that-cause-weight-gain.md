@@ -1,6 +1,6 @@
 ---
 title: "Pet nutrition mistakes that cause weight gain"
-date: 2026-03-17T12:50:00Z
+date: 2025-10-18T03:18:05Z
 draft: false
 slug: "pet-nutrition-mistakes-that-cause-weight-gain"
 description: "Learn pet nutrition mistakes that cause weight gain with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

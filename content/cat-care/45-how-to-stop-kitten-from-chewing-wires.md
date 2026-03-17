@@ -1,6 +1,6 @@
 ---
 title: "How to stop kitten from chewing wires"
-date: 2026-03-17T12:45:00Z
+date: 2025-05-15T03:46:23Z
 draft: false
 slug: "how-to-stop-kitten-from-chewing-wires"
 description: "Learn how to stop kitten from chewing wires with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

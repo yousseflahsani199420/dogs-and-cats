@@ -1,6 +1,6 @@
 ---
 title: "Cat grooming routine for long hair cats"
-date: 2026-03-17T12:14:00Z
+date: 2025-03-30T01:54:52Z
 draft: false
 slug: "cat-grooming-routine-for-long-hair-cats"
 description: "Learn cat grooming routine for long hair cats with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

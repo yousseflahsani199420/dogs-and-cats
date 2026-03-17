@@ -1,6 +1,6 @@
 ---
 title: "Pet wellness exam checklist for first-time owners"
-date: 2026-03-17T12:50:00Z
+date: 2025-12-31T10:43:02Z
 draft: false
 slug: "pet-wellness-exam-checklist-for-first-time-owners"
 description: "Learn pet wellness exam checklist for first-time owners with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

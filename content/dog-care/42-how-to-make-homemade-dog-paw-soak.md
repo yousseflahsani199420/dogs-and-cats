@@ -1,6 +1,6 @@
 ---
 title: "How to make homemade dog paw soak"
-date: 2026-03-17T12:42:00Z
+date: 2025-07-24T00:42:04Z
 draft: false
 slug: "how-to-make-homemade-dog-paw-soak"
 description: "Learn how to make homemade dog paw soak with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

@@ -1,6 +1,6 @@
 ---
 title: "How to teach leave it using positive reinforcement"
-date: 2026-03-17T12:25:00Z
+date: 2026-02-06T15:36:01Z
 draft: false
 slug: "how-to-teach-leave-it-using-positive-reinforcement"
 description: "Learn how to teach leave it using positive reinforcement with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

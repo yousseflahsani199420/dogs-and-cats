@@ -1,6 +1,6 @@
 ---
 title: "Recall Training for Stubborn Dogs at the Park"
-date: 2026-03-17T09:41:00Z
+date: 2026-01-01T22:59:48Z
 draft: false
 slug: "recall-training-for-stubborn-dogs-at-park"
 description: "Learn recall training for stubborn dogs at park with practical steps, pro tips, common mistakes, and FAQ to improve your pet routine fast."

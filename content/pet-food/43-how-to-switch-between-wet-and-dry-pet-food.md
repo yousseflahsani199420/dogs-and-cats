@@ -1,6 +1,6 @@
 ---
 title: "How to switch between wet and dry pet food"
-date: 2026-03-17T12:43:00Z
+date: 2025-10-07T18:02:46Z
 draft: false
 slug: "how-to-switch-between-wet-and-dry-pet-food"
 description: "Learn how to switch between wet and dry pet food with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

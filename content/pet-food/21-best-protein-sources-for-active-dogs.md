@@ -1,6 +1,6 @@
 ---
 title: "Best protein sources for active dogs"
-date: 2026-03-17T12:21:00Z
+date: 2025-09-05T02:00:05Z
 draft: false
 slug: "best-protein-sources-for-active-dogs"
 description: "Learn best protein sources for active dogs with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

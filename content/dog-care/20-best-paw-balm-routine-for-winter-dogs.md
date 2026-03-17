@@ -1,6 +1,6 @@
 ---
 title: "Best paw balm routine for winter dogs"
-date: 2026-03-17T12:20:00Z
+date: 2025-06-21T06:18:22Z
 draft: false
 slug: "best-paw-balm-routine-for-winter-dogs"
 description: "Learn best paw balm routine for winter dogs with clear steps, pro tips, mistakes to avoid, and FAQ for faster results at home."

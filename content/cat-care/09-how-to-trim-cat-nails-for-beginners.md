@@ -1,6 +1,6 @@
 ---
 title: "How to Trim Cat Nails for Beginners"
-date: 2026-03-17T09:19:00Z
+date: 2025-03-22T14:52:04Z
 draft: false
 slug: "how-to-trim-cat-nails-for-beginners"
 description: "Learn how to trim cat nails for beginners with practical steps, pro tips, common mistakes, and FAQ to improve your pet routine fast."
