@@ -20,6 +20,9 @@ enableRobotsTXT = true
   ShowBreadCrumbs = true
   ShowCodeCopyButtons = true
 
+[params.assets]
+  disableFingerprinting = true
+
 [params.profileMode]
   enabled = true
   title = 'PetZone'
