@@ -4,6 +4,10 @@ title = 'PetZone - Dog, Cat, Health, Food, and Training Guides'
 theme = 'PaperMod'
 enableRobotsTXT = true
 
+[services]
+  [services.googleAnalytics]
+    ID = 'G-LJS2WM1W0F'
+
 [sitemap]
   changefreq = 'weekly'
   priority = 0.7
