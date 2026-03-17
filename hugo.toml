@@ -6,7 +6,7 @@ enableRobotsTXT = true
 
 [services]
   [services.googleAnalytics]
-    ID = 'G-LJS2WM1W0F'
+    ID = 'G-G94YSLLJZC'
 
 [sitemap]
   changefreq = 'weekly'
