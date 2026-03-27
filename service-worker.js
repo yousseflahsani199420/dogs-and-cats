@@ -1,4 +1,4 @@
-const CACHE_NAME = "petzone-static-v6";
+const CACHE_NAME = "petzone-static-v7";
 const PRECACHE = [
   "./",
   "./index.html",
@@ -32,10 +32,12 @@ function shouldBypassCache(requestUrl) {
   const pathname = requestUrl.pathname || "";
   return [
     /\/admin\.html$/i,
+    /\/admin$/i,
     /\/assets\/js\/admin\.js$/i,
     /\/assets\/js\/storageService\.js$/i,
     /\/assets\/js\/contentService\.js$/i,
     /\/assets\/js\/githubPublisher\.js$/i,
+    /\/assets\/js\/utils\.js$/i,
   ].some((pattern) => pattern.test(pathname));
 }
 

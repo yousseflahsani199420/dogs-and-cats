@@ -56,7 +56,21 @@ export function estimateReadingTimeFromHtml(html = "") {
 
 function inferRuntimeBasePath() {
   const segments = window.location.pathname.split("/").filter(Boolean);
-  const reservedSegments = new Set(["posts", "categories", "tags"]);
+  const reservedSegments = new Set([
+    "posts",
+    "categories",
+    "tags",
+    "admin",
+    "article",
+    "category",
+    "search",
+    "about",
+    "contact",
+    "privacy",
+    "terms",
+    "faq",
+    "index",
+  ]);
   const first = segments[0] || "";
   if (!first || first.includes(".") || reservedSegments.has(first)) {
     return "";
@@ -180,7 +194,22 @@ export function getSiteBaseUrl() {
   }
 
   const segments = window.location.pathname.split("/").filter(Boolean);
-  const repoSegment = segments[0] && !segments[0].includes(".") && !["posts", "categories", "tags"].includes(segments[0])
+  const reservedSegments = new Set([
+    "posts",
+    "categories",
+    "tags",
+    "admin",
+    "article",
+    "category",
+    "search",
+    "about",
+    "contact",
+    "privacy",
+    "terms",
+    "faq",
+    "index",
+  ]);
+  const repoSegment = segments[0] && !segments[0].includes(".") && !reservedSegments.has(segments[0])
     ? `/${segments[0]}`
     : "";
   return `${window.location.origin}${repoSegment}`;
