@@ -1,5 +1,12 @@
 import { canonicalUrl } from "./utils.js";
 
+function absoluteSiteUrl(value = "") {
+  if (/^(https?:|data:)/i.test(value)) {
+    return value;
+  }
+  return canonicalUrl(value.startsWith("/") ? value : `/${value}`);
+}
+
 function upsertMeta(selector, attrs) {
   let node = document.head.querySelector(selector);
   if (!node) {
@@ -12,6 +19,20 @@ function upsertMeta(selector, attrs) {
   if (attrs.content) {
     node.setAttribute("content", attrs.content);
   }
+  return node;
+}
+
+function upsertLink(selector, attrs) {
+  let node = document.head.querySelector(selector);
+  if (!node) {
+    node = document.createElement("link");
+    document.head.append(node);
+  }
+
+  Object.entries(attrs).forEach(([key, value]) => {
+    node.setAttribute(key, value);
+  });
+
   return node;
 }
 
@@ -37,21 +58,24 @@ export function setPageMeta({
   upsertMeta('meta[property="og:type"]', { property: "og:type", content: ogType });
   upsertMeta('meta[name="twitter:card"]', { name: "twitter:card", content: twitterCard });
   if (ogImage) {
-    upsertMeta('meta[property="og:image"]', { property: "og:image", content: ogImage });
-    upsertMeta('meta[name="twitter:image"]', { name: "twitter:image", content: ogImage });
+    upsertMeta('meta[property="og:image"]', { property: "og:image", content: absoluteSiteUrl(ogImage) });
+    upsertMeta('meta[name="twitter:image"]', { name: "twitter:image", content: absoluteSiteUrl(ogImage) });
   }
   if (keywords.length) {
     upsertMeta('meta[name="keywords"]', { name: "keywords", content: keywords.join(", ") });
   }
   if (canonical) {
+    const href = canonicalUrl(canonical);
     let link = document.head.querySelector('link[rel="canonical"]');
     if (!link) {
       link = document.createElement("link");
       link.setAttribute("rel", "canonical");
       document.head.append(link);
     }
-    link.setAttribute("href", canonicalUrl(canonical));
-    upsertMeta('meta[property="og:url"]', { property: "og:url", content: canonicalUrl(canonical) });
+    link.setAttribute("href", href);
+    upsertLink('link[rel="alternate"][hreflang="en"]', { rel: "alternate", hreflang: "en", href });
+    upsertLink('link[rel="alternate"][hreflang="x-default"]', { rel: "alternate", hreflang: "x-default", href });
+    upsertMeta('meta[property="og:url"]', { property: "og:url", content: href });
   }
 }
 

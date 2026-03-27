@@ -8,14 +8,21 @@
       name="description"
       content="PetZone News is a fast pets news platform covering cats and dogs with practical care guides, training updates, health explainers, and trending pet stories."
     />
+    <meta name="author" content="PetZone Editorial Team" />
+    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
     <meta name="theme-color" content="#ffffff" />
+    <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="PetZone News | Cats & Dogs Daily" />
     <meta
       property="og:description"
       content="Breaking pet care news, dense article coverage, category hubs, and fast cat and dog guides built for real-world publishing."
     />
-    <meta property="og:image" content="assets/images/og-default.svg" />
+    <meta property="og:image" content="https://petzone.website/assets/images/og-default.svg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="675" />
+    <meta property="og:image:alt" content="PetZone cats and dogs editorial preview" />
     <meta property="og:url" content="https://petzone.website/" />
     <meta property="og:site_name" content="PetZone" />
     <meta name="twitter:card" content="summary_large_image" />
@@ -24,7 +31,11 @@
       name="twitter:description"
       content="Breaking pet care news, dense article coverage, category hubs, and fast cat and dog guides built for real-world publishing."
     />
+    <meta name="twitter:image" content="https://petzone.website/assets/images/og-default.svg" />
+    <meta name="twitter:image:alt" content="PetZone cats and dogs editorial preview" />
     <link rel="canonical" href="https://petzone.website/" />
+    <link rel="alternate" hreflang="en" href="https://petzone.website/" />
+    <link rel="alternate" hreflang="x-default" href="https://petzone.website/" />
     <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml" />
     <link rel="manifest" href="manifest.json" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -39,6 +50,33 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-G94YSLLJZC');
+    </script>
+    <script id="organization-jsonld" type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "PetZone",
+        "url": "https://petzone.website",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://petzone.website/assets/images/logo-mark.svg",
+          "width": 512,
+          "height": 512
+        }
+      }
+    </script>
+    <script id="website-jsonld" type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "PetZone",
+        "url": "https://petzone.website",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://petzone.website/search.html?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }
     </script>
     <link rel="stylesheet" href="assets/css/styles.css" />
   </head>

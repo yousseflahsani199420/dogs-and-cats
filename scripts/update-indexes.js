@@ -63,6 +63,10 @@ const { divider, info, warn } = require("./lib/logger");
 const IMAGE_WIDTH = 1200;
 const IMAGE_HEIGHT = 675;
 const COLLECTION_GRID_LIMIT = 36;
+const DEFAULT_ROBOTS = "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1";
+const PRIMARY_LANGUAGE = "en";
+const NEWS_SITEMAP_MAX_AGE_MS = 1000 * 60 * 60 * 24 * 2;
+const NEWS_SITEMAP_LIMIT = 1000;
 
 function escapeHtml(value = "") {
   return value
@@ -111,7 +115,97 @@ function renderAnalyticsSnippet() {
   `;
 }
 
-function renderSharedHead({ title, description, canonicalPath, prefix = "", keywords = [], ogType = "website", image = "", extraHead = "" }) {
+function countWords(value = "") {
+  return stripHtml(value).split(/\s+/).filter(Boolean).length;
+}
+
+function buildOrganizationSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: SITE_NAME,
+    url: SITE_BASE_URL,
+    logo: {
+      "@type": "ImageObject",
+      url: `${SITE_BASE_URL}/assets/images/logo-mark.svg`,
+      width: 512,
+      height: 512,
+    },
+    sameAs: [SITE_BASE_URL],
+  };
+}
+
+function buildWebsiteSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: SITE_NAME,
+    url: SITE_BASE_URL,
+    description: SITE_DESCRIPTION,
+    potentialAction: {
+      "@type": "SearchAction",
+      target: `${SITE_BASE_URL}/search.html?q={search_term_string}`,
+      "query-input": "required name=search_term_string",
+    },
+  };
+}
+
+function buildBreadcrumbSchema(items = []) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.name,
+      item: item.item,
+    })),
+  };
+}
+
+function buildCollectionSchema({ title, description, canonicalPath, articles = [] }) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: title,
+    description,
+    url: `${SITE_BASE_URL}${canonicalPath}`,
+    isPartOf: {
+      "@type": "WebSite",
+      name: SITE_NAME,
+      url: SITE_BASE_URL,
+    },
+    mainEntity: {
+      "@type": "ItemList",
+      itemListElement: articles.slice(0, 12).map((article, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        url: article.canonicalUrl || articleUrl(article.slug),
+        name: article.title,
+      })),
+    },
+  };
+}
+
+function renderAlternateLinks(canonical) {
+  return `
+    <link rel="alternate" hreflang="${PRIMARY_LANGUAGE}" href="${canonical}" />
+    <link rel="alternate" hreflang="x-default" href="${canonical}" />
+  `;
+}
+
+function renderSharedHead({
+  title,
+  description,
+  canonicalPath,
+  prefix = "",
+  keywords = [],
+  ogType = "website",
+  image = "",
+  imageAlt = `${SITE_NAME} preview image`,
+  robots = DEFAULT_ROBOTS,
+  extraHead = "",
+}) {
   const canonical = `${SITE_BASE_URL}${canonicalPath}`;
   const shareImage = image ? normalizeStaticSchemaImage(image) : `${SITE_BASE_URL}/${DEFAULT_OG_IMAGE}`;
   return `
@@ -120,19 +214,28 @@ function renderSharedHead({ title, description, canonicalPath, prefix = "", keyw
     <title>${escapeHtml(title)}</title>
     <meta name="description" content="${escapeHtml(description)}" />
     <meta name="keywords" content="${escapeHtml((keywords || []).join(", "))}" />
+    <meta name="author" content="${SITE_NAME} Editorial Team" />
+    <meta name="robots" content="${robots}" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
     <meta name="theme-color" content="#ffffff" />
     <meta name="color-scheme" content="light" />
+    <meta property="og:locale" content="en_US" />
     <meta property="og:site_name" content="${SITE_NAME}" />
     <meta property="og:type" content="${ogType}" />
     <meta property="og:title" content="${escapeHtml(title)}" />
     <meta property="og:description" content="${escapeHtml(description)}" />
     <meta property="og:image" content="${shareImage}" />
+    <meta property="og:image:width" content="${IMAGE_WIDTH}" />
+    <meta property="og:image:height" content="${IMAGE_HEIGHT}" />
+    <meta property="og:image:alt" content="${escapeHtml(imageAlt)}" />
     <meta property="og:url" content="${canonical}" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="${escapeHtml(title)}" />
     <meta name="twitter:description" content="${escapeHtml(description)}" />
     <meta name="twitter:image" content="${shareImage}" />
+    <meta name="twitter:image:alt" content="${escapeHtml(imageAlt)}" />
     <link rel="canonical" href="${canonical}" />
+    ${renderAlternateLinks(canonical)}
     <link rel="icon" href="${prefix}assets/images/favicon.svg" type="image/svg+xml" />
     <link rel="manifest" href="${prefix}manifest.json" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -318,6 +421,17 @@ function renderCollectionPage({ title, description, articles, canonicalPath }) {
   const gridItems = articles.slice(1, COLLECTION_GRID_LIMIT + 1);
   const topTags = Array.from(new Set(articles.flatMap((article) => article.tags || []))).slice(0, 8);
   const leadImage = lead ? resolveArticleFeaturedImage(lead, prefix) : "";
+  const breadcrumbItems = canonicalPath.startsWith("/categories/")
+    ? [
+        { name: "Home", item: `${SITE_BASE_URL}/` },
+        { name: title, item: `${SITE_BASE_URL}${canonicalPath}` },
+      ]
+    : [
+        { name: "Home", item: `${SITE_BASE_URL}/` },
+        { name: title, item: `${SITE_BASE_URL}${canonicalPath}` },
+      ];
+  const collectionSchema = buildCollectionSchema({ title, description, canonicalPath, articles });
+  const breadcrumbSchema = buildBreadcrumbSchema(breadcrumbItems);
   return `<!DOCTYPE html>
   <html lang="en">
     <head>${renderSharedHead({
@@ -327,10 +441,16 @@ function renderCollectionPage({ title, description, articles, canonicalPath }) {
       prefix,
       keywords: topTags,
       image: leadImage,
+      imageAlt: lead?.imageAlt || title,
       extraHead: leadImage
         ? `<link rel="preload" as="image" href="${leadImage}" imagesizes="(max-width: 767px) 100vw, (max-width: 1100px) 92vw, 720px" />`
         : "",
-    })}</head>
+    })}
+      <script type="application/ld+json">${JSON.stringify(buildOrganizationSchema())}</script>
+      <script type="application/ld+json">${JSON.stringify(buildWebsiteSchema())}</script>
+      <script type="application/ld+json">${JSON.stringify(collectionSchema)}</script>
+      <script type="application/ld+json">${JSON.stringify(breadcrumbSchema)}</script>
+    </head>
     <body>
       ${renderStaticHeader(prefix)}
       <main id="page-content" class="page-shell">
@@ -494,20 +614,37 @@ function renderArticlePage(article, relatedArticles, sidebarArticles, allArticle
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
+    url: article.canonicalUrl,
     headline: article.title,
     description: article.seoDescription,
     datePublished: article.publishDate,
     dateModified: article.updatedDate,
+    inLanguage: "en",
+    isAccessibleForFree: true,
+    wordCount: countWords(article.content),
+    articleSection: article.categoryLabel,
+    keywords: (article.seoKeywords || article.tags || []).join(", "),
     author: { "@type": "Person", name: article.author.name },
-    publisher: { "@type": "Organization", name: SITE_NAME },
+    publisher: {
+      "@type": "Organization",
+      name: SITE_NAME,
+      logo: {
+        "@type": "ImageObject",
+        url: `${SITE_BASE_URL}/assets/images/logo-mark.svg`,
+      },
+    },
     image: normalizeStaticSchemaImage(featuredImageSrc),
     mainEntityOfPage: article.canonicalUrl,
+    about: [article.categoryLabel, ...(article.tags || [])].map((name) => ({
+      "@type": "Thing",
+      name,
+    })),
   };
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: `${SITE_BASE_URL}/index.html` },
+      { "@type": "ListItem", position: 1, name: "Home", item: `${SITE_BASE_URL}/` },
       { "@type": "ListItem", position: 2, name: article.categoryLabel, item: categoryUrl(article.category) },
       { "@type": "ListItem", position: 3, name: article.title, item: article.canonicalUrl },
     ],
@@ -524,8 +661,16 @@ function renderArticlePage(article, relatedArticles, sidebarArticles, allArticle
         keywords: article.seoKeywords || article.tags || [],
         ogType: "article",
         image: featuredImageSrc,
-        extraHead: `<link rel="preload" as="image" href="${featuredImageSrc}" imagesizes="(max-width: 767px) 100vw, (max-width: 1100px) 92vw, 860px" />`,
+        imageAlt: article.imageAlt || article.title,
+        extraHead: `
+          <link rel="preload" as="image" href="${featuredImageSrc}" imagesizes="(max-width: 767px) 100vw, (max-width: 1100px) 92vw, 860px" />
+          <meta property="article:published_time" content="${article.publishDate}" />
+          <meta property="article:modified_time" content="${article.updatedDate}" />
+          <meta property="article:section" content="${escapeHtml(article.categoryLabel)}" />
+        `,
       })}
+      <script type="application/ld+json">${JSON.stringify(buildOrganizationSchema())}</script>
+      <script type="application/ld+json">${JSON.stringify(buildWebsiteSchema())}</script>
       <script type="application/ld+json">${JSON.stringify(articleSchema)}</script>
       <script type="application/ld+json">${JSON.stringify(faqSchema)}</script>
       <script type="application/ld+json">${JSON.stringify(breadcrumbSchema)}</script>
@@ -560,7 +705,7 @@ function renderArticlePage(article, relatedArticles, sidebarArticles, allArticle
                 sizes="(max-width: 767px) 100vw, (max-width: 1100px) 92vw, 860px"
               />
               <div class="article-toolbar">
-                <button class="button button-secondary" type="button" data-copy-url="${article.canonicalUrl}">Copy link</button>
+                <button class="button button-secondary" type="button" data-copy-url="${article.canonicalUrl}">Share</button>
                 <a class="button button-secondary" href="https://twitter.com/intent/tweet?text=${encodeURIComponent(article.title)}&url=${encodeURIComponent(article.canonicalUrl)}" target="_blank" rel="noreferrer">Share on X</a>
               </div>
               <section class="sidebar-box">
@@ -611,6 +756,37 @@ ${uniqueEntries
     <lastmod>${item.lastmod}</lastmod>
     <changefreq>${item.changefreq || "weekly"}</changefreq>
     <priority>${item.priority || "0.6"}</priority>
+  </url>`
+  )
+  .join("\n")}
+</urlset>
+`;
+}
+
+function generateNewsSitemap(articles = []) {
+  const cutoff = Date.now() - NEWS_SITEMAP_MAX_AGE_MS;
+  const recentArticles = [...articles]
+    .filter((article) => {
+      const published = new Date(article.publishDate);
+      return !Number.isNaN(published.getTime()) && published.getTime() >= cutoff;
+    })
+    .sort((left, right) => new Date(right.publishDate).getTime() - new Date(left.publishDate).getTime())
+    .slice(0, NEWS_SITEMAP_LIMIT);
+
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+${recentArticles
+  .map(
+    (article) => `  <url>
+    <loc>${escapeXml(article.canonicalUrl || articleUrl(article.slug))}</loc>
+    <news:news>
+      <news:publication>
+        <news:name>${escapeXml(SITE_NAME)}</news:name>
+        <news:language>${PRIMARY_LANGUAGE}</news:language>
+      </news:publication>
+      <news:publication_date>${escapeXml(article.publishDate)}</news:publication_date>
+      <news:title>${escapeXml(article.title)}</news:title>
+    </news:news>
   </url>`
   )
   .join("\n")}
@@ -771,7 +947,6 @@ function writeStaticPages(allArticles) {
   const latestArticleDate = getLatestLastmod(allArticles);
   const staticPages = [
     { path: "/", priority: "1.0", changefreq: "daily", lastmod: latestArticleDate },
-    { path: "/index.html", priority: "1.0", changefreq: "daily", lastmod: latestArticleDate },
     { path: "/about.html", priority: "0.4", changefreq: "monthly", lastmod: latestArticleDate },
     { path: "/contact.html", priority: "0.3", changefreq: "monthly", lastmod: latestArticleDate },
     { path: "/privacy.html", priority: "0.2", changefreq: "monthly", lastmod: latestArticleDate },
@@ -799,9 +974,10 @@ function writeStaticPages(allArticles) {
   }));
 
   writeText(path.join(ROOT_DIR, "sitemap.xml"), generateSitemap([...staticPages, ...articlePages, ...categoryPages, ...tagPages]));
+  writeText(path.join(ROOT_DIR, "news-sitemap.xml"), generateNewsSitemap(allArticles));
   writeText(
     path.join(ROOT_DIR, "robots.txt"),
-    `User-agent: *\nAllow: /\nDisallow: /admin.html\nSitemap: ${SITE_BASE_URL}/sitemap.xml\n`
+    `User-agent: *\nAllow: /\nDisallow: /admin.html\nSitemap: ${SITE_BASE_URL}/sitemap.xml\nSitemap: ${SITE_BASE_URL}/news-sitemap.xml\n`
   );
 }
 

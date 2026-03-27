@@ -1,5 +1,5 @@
 import { registerServiceWorker } from "./pwa.js";
-import { copyToClipboard } from "./utils.js";
+import { shareContent } from "./utils.js";
 
 function bindStaticMobileNav() {
   const toggle = document.querySelector("[data-static-nav-toggle]");
@@ -58,10 +58,19 @@ function bindStaticMobileNav() {
 function bindStaticCopyButtons() {
   document.querySelectorAll("[data-copy-url]").forEach((button) => {
     button.addEventListener("click", async () => {
-      await copyToClipboard(button.dataset.copyUrl || window.location.href);
-      button.textContent = "Copied";
+      const result = await shareContent({
+        url: button.dataset.copyUrl || window.location.href,
+        title: document.title,
+      });
+      if (result === "shared") {
+        button.textContent = "Shared";
+      } else if (result === "copied") {
+        button.textContent = "Copied";
+      } else {
+        return;
+      }
       window.setTimeout(() => {
-        button.textContent = "Copy link";
+        button.textContent = "Share";
       }, 1800);
     });
   });

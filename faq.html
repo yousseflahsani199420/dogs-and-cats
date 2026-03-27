@@ -8,7 +8,11 @@
       name="description"
       content="Read frequently asked questions about PetZone publishing, SEO setup, automation, and local editorial management."
     />
+    <meta name="author" content="PetZone Editorial Team" />
+    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
     <meta name="theme-color" content="#ffffff" />
+    <meta property="og:locale" content="en_US" />
     <meta property="og:site_name" content="PetZone" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="PetZone FAQ" />
@@ -16,7 +20,10 @@
       property="og:description"
       content="Read frequently asked questions about PetZone publishing, SEO setup, automation, and local editorial management."
     />
-    <meta property="og:image" content="assets/images/og-default.svg" />
+    <meta property="og:image" content="https://petzone.website/assets/images/og-default.svg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="675" />
+    <meta property="og:image:alt" content="PetZone FAQ preview" />
     <meta property="og:url" content="https://petzone.website/faq.html" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="PetZone FAQ" />
@@ -24,7 +31,11 @@
       name="twitter:description"
       content="Read frequently asked questions about PetZone publishing, SEO setup, automation, and local editorial management."
     />
+    <meta name="twitter:image" content="https://petzone.website/assets/images/og-default.svg" />
+    <meta name="twitter:image:alt" content="PetZone FAQ preview" />
     <link rel="canonical" href="https://petzone.website/faq.html" />
+    <link rel="alternate" hreflang="en" href="https://petzone.website/faq.html" />
+    <link rel="alternate" hreflang="x-default" href="https://petzone.website/faq.html" />
     <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml" />
     <link rel="manifest" href="manifest.json" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -39,6 +50,38 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-G94YSLLJZC');
+    </script>
+    <script id="page-jsonld" type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Can PetZone deploy directly on GitHub Pages?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. The public site is static HTML, CSS, JS, and JSON, so GitHub Pages can host it directly."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Where does daily AI publishing run?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Daily publishing runs in GitHub Actions with secrets stored in repository settings, never in the browser."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I switch from OpenAI to another provider later?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. The automation layer uses an OpenAI-compatible adapter, so you can swap the base URL, model, and key later."
+            }
+          }
+        ]
+      }
     </script>
     <link rel="stylesheet" href="assets/css/styles.css" />
   </head>

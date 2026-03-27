@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /admin.html
 Sitemap: https://petzone.website/sitemap.xml
+Sitemap: https://petzone.website/news-sitemap.xml

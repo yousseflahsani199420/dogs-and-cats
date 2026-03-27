@@ -5,10 +5,10 @@ import {
   assetPath,
   cancelIdleWork,
   categoryPath,
-  copyToClipboard,
   escapeHtml,
   formatDate,
   getCurrentDateLabel,
+  shareContent,
   sitePath,
   tagPath,
 } from "./utils.js";
@@ -404,12 +404,18 @@ export function renderRelatedArticles(articles = []) {
   `;
 }
 
-export function wireCopyLink(button, url) {
+export function wireShareButton(button, { url, title = "", text = "" } = {}) {
   if (!button) {
     return;
   }
   button.addEventListener("click", async () => {
-    await copyToClipboard(url);
-    showToast("Article link copied.");
+    const result = await shareContent({ url, title, text });
+    if (result === "shared") {
+      showToast("Article shared.");
+      return;
+    }
+    if (result === "copied") {
+      showToast("Article link copied.");
+    }
   });
 }

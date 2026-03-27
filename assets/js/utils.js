@@ -284,3 +284,23 @@ export function copyToClipboard(value) {
   input.remove();
   return Promise.resolve();
 }
+
+export async function shareContent({ title = "", text = "", url = "" } = {}) {
+  const shareUrl = url || window.location.href;
+  if (navigator.share) {
+    try {
+      const payload = Object.fromEntries(
+        Object.entries({ title, text, url: shareUrl }).filter(([, value]) => Boolean(value))
+      );
+      await navigator.share(payload);
+      return "shared";
+    } catch (error) {
+      if (error?.name === "AbortError") {
+        return "cancelled";
+      }
+    }
+  }
+
+  await copyToClipboard(shareUrl);
+  return "copied";
+}

@@ -1,5 +1,6 @@
 import { getAllArticles, getCategoryArticles, getSiteFeeds } from "./contentService.js";
 import { registerServiceWorker } from "./pwa.js";
+import { replaceJsonLd } from "./seo.js";
 import {
   injectSiteChrome,
   populateBreakingTicker,
@@ -11,7 +12,7 @@ import {
   renderSidebarItem,
   renderSpotlightTag,
 } from "./ui.js";
-import { byId, describeLoadError, escapeHtml, scheduleIdleWork, showFallbackUI } from "./utils.js";
+import { byId, canonicalUrl, describeLoadError, escapeHtml, scheduleIdleWork, showFallbackUI } from "./utils.js";
 
 const HERO_ROTATE_INTERVAL_MS = 10000;
 
@@ -165,6 +166,48 @@ async function initHomePage() {
   const catArticles = (resolvedCats.length ? resolvedCats : getCategoryArticles(articles, "cats")).slice(0, 6);
   const dogArticles = (resolvedDogs.length ? resolvedDogs : getCategoryArticles(articles, "dogs")).slice(0, 6);
   const popularArticles = (resolvedPopular.length ? resolvedPopular : uniqueArticles([...trendingArticles, ...articles])).slice(0, 8);
+
+  replaceJsonLd("organization-jsonld", {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "PetZone",
+    url: canonicalUrl("/"),
+    logo: {
+      "@type": "ImageObject",
+      url: canonicalUrl("/assets/images/logo-mark.svg"),
+      width: 512,
+      height: 512,
+    },
+  });
+
+  replaceJsonLd("website-jsonld", {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "PetZone",
+    url: canonicalUrl("/"),
+    potentialAction: {
+      "@type": "SearchAction",
+      target: `${canonicalUrl("/search.html")}?q={search_term_string}`,
+      "query-input": "required name=search_term_string",
+    },
+  });
+
+  replaceJsonLd("homepage-jsonld", {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: "PetZone News | Cats & Dogs Daily",
+    description: "Breaking pet care news, category hubs, and practical cat and dog guides from PetZone.",
+    url: canonicalUrl("/"),
+    mainEntity: {
+      "@type": "ItemList",
+      itemListElement: latestArticles.slice(0, 10).map((article, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        url: canonicalUrl(`/posts/${article.slug}/`),
+        name: article.title,
+      })),
+    },
+  });
 
   const heroGrid = byId("home-hero-grid");
   setupHeroRotation(heroGrid, heroArticles);

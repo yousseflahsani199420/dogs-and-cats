@@ -10,7 +10,7 @@ import {
   renderSidebarItem,
   renderTagPills,
   showToast,
-  wireCopyLink,
+  wireShareButton,
 } from "./ui.js";
 import { articlePath, byId, canonicalUrl, describeLoadError, escapeHtml, formatDate, getQueryParam, scheduleIdleWork, showFallbackUI, sitePath, slugify, stripHtml } from "./utils.js";
 
@@ -166,7 +166,7 @@ async function initArticlePage() {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: canonicalUrl("/index.html") },
+      { "@type": "ListItem", position: 1, name: "Home", item: canonicalUrl("/") },
       { "@type": "ListItem", position: 2, name: article.categoryLabel, item: canonicalUrl(`/categories/${article.category}/`) },
       { "@type": "ListItem", position: 3, name: article.title, item: canonicalUrl(`/posts/${article.slug}/`) },
     ],
@@ -212,7 +212,7 @@ async function initArticlePage() {
       sizes="(max-width: 767px) 100vw, (max-width: 1100px) 92vw, 860px"
     />
     <div class="article-toolbar">
-      <button id="copy-link-button" class="button button-secondary" type="button">Copy link</button>
+      <button id="share-link-button" class="button button-secondary" type="button">Share</button>
       <a class="button button-secondary" href="https://twitter.com/intent/tweet?text=${encodeURIComponent(article.title)}&url=${encodeURIComponent(canonicalUrl(`/posts/${article.slug}/`))}" target="_blank" rel="noreferrer">Share on X</a>
     </div>
     <section class="sidebar-box">
@@ -229,7 +229,11 @@ async function initArticlePage() {
     <div id="article-related-slot" class="content-deferred"></div>
   `;
 
-  wireCopyLink(byId("copy-link-button"), canonicalUrl(`/posts/${article.slug}/`));
+  wireShareButton(byId("share-link-button"), {
+    url: canonicalUrl(`/posts/${article.slug}/`),
+    title: article.title,
+    text: article.excerpt,
+  });
 
   scheduleIdleWork(() => {
     byId("article-sidebar").innerHTML = `
