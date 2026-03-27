@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 Disallow: /admin.html
-Sitemap: https://your-username.github.io/dogs-and-cats-blog/sitemap.xml
+Sitemap: https://yousseflahsani199420.github.io/dogs-and-cats/sitemap.xml

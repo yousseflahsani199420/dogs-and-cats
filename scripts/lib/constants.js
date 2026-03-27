@@ -20,7 +20,7 @@ module.exports = {
     role: "Pet care newsroom",
     bio: "Editors and researchers producing practical reporting for cat and dog owners with a file-based publishing workflow.",
   },
-  SITE_BASE_URL: (process.env.SITE_BASE_URL || "https://your-username.github.io/dogs-and-cats-blog").replace(/\/$/, ""),
+  SITE_BASE_URL: (process.env.SITE_BASE_URL || "https://yousseflahsani199420.github.io/dogs-and-cats").replace(/\/$/, ""),
   DEFAULT_IMAGE: "assets/images/placeholder-pet.svg",
   DEFAULT_OG_IMAGE: "assets/images/og-default.svg",
   PUBLISHING_HISTORY_FILE: path.join(ROOT_DIR, "data", "publishing-history.json"),

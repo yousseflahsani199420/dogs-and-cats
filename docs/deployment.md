@@ -14,7 +14,7 @@
 - `AI_MODEL`
 - `SITE_BASE_URL`
 
-Set `SITE_BASE_URL` to your final Pages URL, for example `https://your-username.github.io/dogs-and-cats-blog`.
+Set `SITE_BASE_URL` to your final Pages URL, for example `https://yousseflahsani199420.github.io/dogs-and-cats`.
 
 ## Cron schedule
 

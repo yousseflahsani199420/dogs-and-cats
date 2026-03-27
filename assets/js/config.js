@@ -1,7 +1,7 @@
 export const PETZONE_CONFIG = {
   siteName: "PetZone",
   tagline: "Cats & Dogs Daily",
-  siteUrl: "https://your-username.github.io/dogs-and-cats-blog",
+  siteUrl: "https://yousseflahsani199420.github.io/dogs-and-cats",
   ogImage: "assets/images/og-default.svg",
   defaultAuthor: {
     name: "PetZone Editorial Team",
