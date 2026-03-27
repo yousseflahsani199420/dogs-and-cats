@@ -1,4 +1,4 @@
-const CACHE_NAME = "petzone-static-v5";
+const CACHE_NAME = "petzone-static-v6";
 const PRECACHE = [
   "./",
   "./index.html",
@@ -26,6 +26,17 @@ const PRECACHE = [
 
 function isCacheable(response) {
   return response && response.ok && response.status === 200;
+}
+
+function shouldBypassCache(requestUrl) {
+  const pathname = requestUrl.pathname || "";
+  return [
+    /\/admin\.html$/i,
+    /\/assets\/js\/admin\.js$/i,
+    /\/assets\/js\/storageService\.js$/i,
+    /\/assets\/js\/contentService\.js$/i,
+    /\/assets\/js\/githubPublisher\.js$/i,
+  ].some((pattern) => pattern.test(pathname));
 }
 
 async function networkFirst(request) {
@@ -69,6 +80,10 @@ self.addEventListener("fetch", (event) => {
 
   const requestUrl = new URL(event.request.url);
   if (requestUrl.origin !== self.location.origin) {
+    return;
+  }
+
+  if (shouldBypassCache(requestUrl)) {
     return;
   }
 

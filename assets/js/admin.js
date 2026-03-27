@@ -3,7 +3,9 @@ import { clearArticleCache, getAllArticles, getArticleBySlug, getPublishingHisto
 import { getActionsUrl, publishArticleToGitHub, testGitHubConnection } from "./githubPublisher.js";
 import { setPageMeta } from "./seo.js";
 import {
+  clearAdminArticles,
   clearAdminSession,
+  clearGitHubPublishConfig,
   clearGitHubPublishToken,
   deleteAdminArticle,
   getAdminArticles,
@@ -14,6 +16,7 @@ import {
   saveGitHubPublishConfig,
   saveGitHubPublishToken,
   setAdminSession,
+  normalizeArticleRecord,
   upsertAdminArticle,
 } from "./storageService.js";
 import { showToast } from "./ui.js";
@@ -37,6 +40,94 @@ const state = {
   },
   editing: null,
 };
+
+function isPlainObject(value) {
+  return Boolean(value && typeof value === "object" && !Array.isArray(value));
+}
+
+function normalizeHistoryState(value) {
+  const items = Array.isArray(value?.items)
+    ? value.items
+      .filter((item) => isPlainObject(item))
+      .map((item) => ({
+        slug: item.slug?.toString?.() || "",
+        keyword: item.keyword?.toString?.() || item.slug?.toString?.() || "",
+        category: item.category?.toString?.() || "",
+        intent: item.intent?.toString?.() || "",
+        cluster: item.cluster?.toString?.() || "",
+        source: item.source?.toString?.() || "",
+        publishDate: item.publishDate || item.updatedDate || null,
+      }))
+    : [];
+  return {
+    updatedAt: value?.updatedAt || null,
+    items,
+  };
+}
+
+function normalizeQueueState(value) {
+  const queue = Array.isArray(value?.queue)
+    ? value.queue
+      .filter((item) => isPlainObject(item))
+      .map((item) => ({
+        keyword: item.keyword?.toString?.().trim?.() || "",
+        category: item.category?.toString?.().trim?.().toLowerCase?.() === "dogs" ? "dogs" : "cats",
+        intent: item.intent?.toString?.().trim?.() || "",
+        type: item.type?.toString?.().trim?.() || "",
+        cluster: item.cluster?.toString?.().trim?.() || "",
+        priority: Number.isFinite(Number(item.priority)) ? Number(item.priority) : 0,
+      }))
+      .filter((item) => item.keyword)
+    : [];
+  return {
+    updatedAt: value?.updatedAt || null,
+    queue,
+  };
+}
+
+function normalizeEditableArticle(article) {
+  return normalizeArticleRecord(article, {
+    fallbackId: `local-${Date.now()}`,
+    fallbackSource: article?.source || "local-admin",
+  }) || emptyArticle();
+}
+
+function renderFatalAdminState(error) {
+  const shell = document.querySelector(".admin-shell");
+  if (!shell) {
+    return;
+  }
+
+  shell.innerHTML = `
+    <section class="admin-auth-shell">
+      <article class="admin-auth-card">
+        <img src="assets/images/logo-full.svg" alt="PetZone" class="admin-auth-logo" width="188" height="60" />
+        <p class="eyebrow">Admin Recovery</p>
+        <h1>Admin failed to load local data</h1>
+        <p class="muted-copy">
+          PetZone ran into a browser storage or cached data problem while loading the editorial dashboard. You can retry now, or clear the admin-only local data and reopen a clean session.
+        </p>
+        <p class="meta-copy">${escapeHtml(error?.message || "Unknown admin boot error.")}</p>
+        <div class="button-row">
+          <button type="button" id="admin-retry-load" class="button button-primary">Retry admin</button>
+          <button type="button" id="admin-reset-local" class="button button-secondary">Reset local admin data</button>
+        </div>
+      </article>
+    </section>
+  `;
+
+  byId("admin-retry-load")?.addEventListener("click", () => {
+    window.location.reload();
+  });
+
+  byId("admin-reset-local")?.addEventListener("click", () => {
+    clearGitHubPublishToken();
+    clearGitHubPublishConfig();
+    clearAdminSession();
+    clearAdminArticles();
+    window.location.reload();
+  });
+}
 
 function hasValidAdminSession() {
   const session = getAdminSession();
@@ -255,8 +346,9 @@ function buildEditorChecklist(article) {
 
 function filteredArticles() {
   return state.articles.filter((article) => {
+    const tags = Array.isArray(article.tags) ? article.tags : [];
     const matchesQuery = !state.filters.query
-      || [article.title, article.keyword, article.excerpt, ...(article.tags || [])]
+      || [article.title, article.keyword, article.excerpt, ...tags]
         .join(" ")
         .toLowerCase()
         .includes(state.filters.query.toLowerCase());
@@ -470,10 +562,10 @@ function renderArticlesView() {
 
       if (button.dataset.adminAction === "edit") {
         const fullArticle = article.content ? article : await getArticleBySlug(article.slug);
-        state.editing = structuredClone({
+        state.editing = structuredClone(normalizeEditableArticle({
           ...(fullArticle || article),
           originalSlug: article.slug,
-        });
+        }));
         setView("editor");
         renderEditor();
       }
@@ -501,7 +593,7 @@ function renderArticlesView() {
 }
 
 function editorFaqRows(article) {
-  return article.faqItems
+  return (Array.isArray(article.faqItems) ? article.faqItems : [])
     .map(
       (item, index) => `
         <div class="field-grid two-col faq-row" data-faq-index="${index}">
@@ -555,7 +647,7 @@ function captureEditorState() {
 }
 
 function renderEditor() {
-  const article = state.editing || emptyArticle();
+  const article = normalizeEditableArticle(state.editing || emptyArticle());
   const readingTime = estimateReadingTimeFromHtml(article.content || "");
   const checklist = buildEditorChecklist(article);
   const wordCount = wordCountFromHtml(article.content || "");
@@ -606,11 +698,11 @@ function renderEditor() {
           <div class="field-grid two-col">
             <div>
               <label class="input-label">Tags</label>
-              <input name="tags" class="text-input" value="${escapeHtml((article.tags || []).join(", "))}" />
+              <input name="tags" class="text-input" value="${escapeHtml((Array.isArray(article.tags) ? article.tags : []).join(", "))}" />
             </div>
             <div>
               <label class="input-label">SEO keywords</label>
-              <input name="seoKeywords" class="text-input" value="${escapeHtml((article.seoKeywords || []).join(", "))}" />
+              <input name="seoKeywords" class="text-input" value="${escapeHtml((Array.isArray(article.seoKeywords) ? article.seoKeywords : []).join(", "))}" />
             </div>
           </div>
           <div class="field-grid two-col">
@@ -674,7 +766,7 @@ function renderEditor() {
             <div class="topic-chip-row">
               <span class="topic-chip">${wordCount} words</span>
               <span class="topic-chip">${readingTime} min read</span>
-              <span class="topic-chip">${(article.tags || []).length} tags</span>
+              <span class="topic-chip">${(Array.isArray(article.tags) ? article.tags : []).length} tags</span>
             </div>
           </div>
         </section>
@@ -719,7 +811,7 @@ function renderEditor() {
   byId("add-faq-row").addEventListener("click", () => {
     const next = captureEditorState();
     next.faqItems.push({ question: "", answer: "" });
-    state.editing = next;
+    state.editing = normalizeEditableArticle(next);
     renderEditor();
   });
 
@@ -730,10 +822,10 @@ function renderEditor() {
     }
     const reader = new FileReader();
     reader.onload = () => {
-      state.editing = {
+      state.editing = normalizeEditableArticle({
         ...captureEditorState(),
         featuredImage: reader.result,
-      };
+      });
       renderEditor();
     };
     reader.readAsDataURL(file);
@@ -747,9 +839,10 @@ function renderEditor() {
     articleData.publishDate = articleData.publishDate || new Date().toISOString();
     articleData.canonicalUrl = articlePath(articleData.slug);
     articleData.originalSlug = articleData.originalSlug || state.editing?.originalSlug || articleData.slug;
-    upsertAdminArticle(articleData);
+    const normalizedArticle = normalizeEditableArticle(articleData);
+    upsertAdminArticle(normalizedArticle);
     state.editing = structuredClone({
-      ...articleData,
+      ...normalizedArticle,
       originalSlug: articleData.slug,
     });
     clearArticleCache();
@@ -764,9 +857,10 @@ function renderEditor() {
     articleData.slug = slugify(articleData.slug || articleData.title);
     articleData.id = articleData.id || articleData.slug;
     articleData.originalSlug = articleData.originalSlug || state.editing?.originalSlug || articleData.slug;
-    upsertAdminArticle(articleData);
+    const normalizedArticle = normalizeEditableArticle(articleData);
+    upsertAdminArticle(normalizedArticle);
     state.editing = structuredClone({
-      ...articleData,
+      ...normalizedArticle,
       originalSlug: articleData.slug,
     });
     clearArticleCache();
@@ -807,14 +901,14 @@ function renderEditor() {
         previousSlug: articleData.originalSlug,
       });
 
-      const savedArticle = {
+      const savedArticle = normalizeEditableArticle({
         ...articleData,
         source: "github-admin",
         canonicalUrl: result.article.canonicalUrl,
         originalSlug: result.article.slug,
         remoteCommitSha: result.commitSha,
         remotePublishedAt: new Date().toISOString(),
-      };
+      });
 
       upsertAdminArticle(savedArticle);
       state.editing = structuredClone(savedArticle);
@@ -976,7 +1070,9 @@ function renderAutomation() {
 }
 
 function renderSeo() {
-  const topTags = Array.from(new Set(state.articles.flatMap((article) => article.tags))).slice(0, 18);
+  const topTags = Array.from(new Set(
+    state.articles.flatMap((article) => (Array.isArray(article.tags) ? article.tags : []))
+  )).slice(0, 18);
   byId("admin-seo-view").innerHTML = `
     <section class="admin-card table-panel">
       <div class="section-header">
@@ -1009,13 +1105,13 @@ async function refreshData() {
   ]);
 
   state.articles = articlesResult.status === "fulfilled" && Array.isArray(articlesResult.value)
-    ? articlesResult.value
+    ? articlesResult.value.map((article, index) => normalizeArticleRecord(article, { fallbackId: `article-${index}` })).filter(Boolean)
     : [];
-  state.history = historyResult.status === "fulfilled" && historyResult.value?.items
-    ? historyResult.value
+  state.history = historyResult.status === "fulfilled"
+    ? normalizeHistoryState(historyResult.value)
     : { updatedAt: null, items: [] };
-  state.queue = queueResult.status === "fulfilled" && Array.isArray(queueResult.value?.queue)
-    ? queueResult.value
+  state.queue = queueResult.status === "fulfilled"
+    ? normalizeQueueState(queueResult.value)
     : { updatedAt: null, queue: [] };
 
   if (articlesResult.status === "rejected") {
@@ -1083,5 +1179,6 @@ async function initAdmin() {
 
 initAdmin().catch((error) => {
   console.error(error);
+  renderFatalAdminState(error);
   showToast("Admin failed to load.");
 });
