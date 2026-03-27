@@ -154,14 +154,24 @@ export async function getCategoryDigest(category) {
 
 export async function getPublishingHistory() {
   if (!publishingHistoryCache) {
-    publishingHistoryCache = await fetchJson("data/publishing-history.json");
+    try {
+      publishingHistoryCache = await fetchJson("data/publishing-history.json");
+    } catch (error) {
+      console.warn("Falling back to empty publishing history.", error);
+      publishingHistoryCache = { updatedAt: null, items: [] };
+    }
   }
   return publishingHistoryCache;
 }
 
 export async function getTopicQueue() {
   if (!topicQueueCache) {
-    topicQueueCache = await fetchJson("data/topic-queue.json");
+    try {
+      topicQueueCache = await fetchJson("data/topic-queue.json");
+    } catch (error) {
+      console.warn("Falling back to empty topic queue.", error);
+      topicQueueCache = { updatedAt: null, queue: [] };
+    }
   }
   return topicQueueCache;
 }

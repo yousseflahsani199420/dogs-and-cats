@@ -1002,9 +1002,30 @@ function renderSeo() {
 
 async function refreshData() {
   clearArticleCache();
-  state.articles = await getAllArticles();
-  state.history = await getPublishingHistory();
-  state.queue = await getTopicQueue();
+  const [articlesResult, historyResult, queueResult] = await Promise.allSettled([
+    getAllArticles(),
+    getPublishingHistory(),
+    getTopicQueue(),
+  ]);
+
+  state.articles = articlesResult.status === "fulfilled" && Array.isArray(articlesResult.value)
+    ? articlesResult.value
+    : [];
+  state.history = historyResult.status === "fulfilled" && historyResult.value?.items
+    ? historyResult.value
+    : { updatedAt: null, items: [] };
+  state.queue = queueResult.status === "fulfilled" && Array.isArray(queueResult.value?.queue)
+    ? queueResult.value
+    : { updatedAt: null, queue: [] };
+
+  if (articlesResult.status === "rejected") {
+    throw articlesResult.reason;
+  }
+
+  if (historyResult.status === "rejected" || queueResult.status === "rejected") {
+    showToast("Admin loaded with partial data. Some automation files could not be read.");
+  }
+
   renderOverview();
   renderArticlesView();
   renderEditor();

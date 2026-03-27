@@ -14,6 +14,31 @@ function writeStorage(key, value) {
   localStorage.setItem(key, JSON.stringify(value));
 }
 
+function isPlainObject(value) {
+  return Boolean(value && typeof value === "object" && !Array.isArray(value));
+}
+
+function readArrayStorage(key, fallback = []) {
+  const value = readStorage(key, fallback);
+  if (Array.isArray(value)) {
+    return value;
+  }
+  console.warn(`Storage value for ${key} was not an array. Ignoring stale data.`);
+  return fallback;
+}
+
+function readObjectStorage(key, fallback = null) {
+  const value = readStorage(key, fallback);
+  if (value === null || value === undefined) {
+    return fallback;
+  }
+  if (isPlainObject(value)) {
+    return value;
+  }
+  console.warn(`Storage value for ${key} was not an object. Ignoring stale data.`);
+  return fallback;
+}
+
 function readSessionValue(key, fallback = "") {
   try {
     return sessionStorage.getItem(key) ?? fallback;
@@ -36,11 +61,13 @@ function writeSessionValue(key, value) {
 }
 
 export function getAdminArticles() {
-  return readStorage(PETZONE_CONFIG.adminStorageKey, []);
+  return readArrayStorage(PETZONE_CONFIG.adminStorageKey, [])
+    .filter((article) => isPlainObject(article))
+    .filter((article) => Boolean(article.slug || article.id || article.title));
 }
 
 export function saveAdminArticles(articles) {
-  writeStorage(PETZONE_CONFIG.adminStorageKey, articles);
+  writeStorage(PETZONE_CONFIG.adminStorageKey, Array.isArray(articles) ? articles : []);
 }
 
 export function upsertAdminArticle(article) {
@@ -74,7 +101,7 @@ export function mergeArticles(defaultArticles = []) {
 }
 
 export function saveNewsletterSubscriber(email) {
-  const subscribers = readStorage(PETZONE_CONFIG.newsletterStorageKey, []);
+  const subscribers = readArrayStorage(PETZONE_CONFIG.newsletterStorageKey, []);
   if (!subscribers.includes(email)) {
     subscribers.push(email);
     writeStorage(PETZONE_CONFIG.newsletterStorageKey, subscribers);
@@ -83,7 +110,7 @@ export function saveNewsletterSubscriber(email) {
 }
 
 export function getNewsletterSubscribers() {
-  return readStorage(PETZONE_CONFIG.newsletterStorageKey, []);
+  return readArrayStorage(PETZONE_CONFIG.newsletterStorageKey, []);
 }
 
 export function getAdminSession() {
@@ -91,7 +118,8 @@ export function getAdminSession() {
   if (legacy === "true") {
     return { username: "admin", loginAt: null };
   }
-  return readStorage(PETZONE_CONFIG.adminSessionKey, null);
+  const session = readObjectStorage(PETZONE_CONFIG.adminSessionKey, null);
+  return session?.username ? session : null;
 }
 
 export function isAdminLoggedIn() {
@@ -122,7 +150,7 @@ export function setAdminLoggedIn(isLoggedIn) {
 export function getGitHubPublishConfig() {
   return {
     ...PETZONE_CONFIG.githubPublishDefaults,
-    ...readStorage(PETZONE_CONFIG.githubPublishConfigKey, {}),
+    ...readObjectStorage(PETZONE_CONFIG.githubPublishConfigKey, {}),
   };
 }
 
