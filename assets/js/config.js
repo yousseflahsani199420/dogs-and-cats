@@ -2,6 +2,10 @@ export const PETZONE_CONFIG = {
   siteName: "PetZone",
   tagline: "Cats & Dogs Daily",
   siteUrl: "https://petzone.website",
+  assetVersion: "20260327-1",
+  fetchTimeoutMs: 9000,
+  fetchRetryAttempts: 3,
+  fetchRetryDelayMs: 600,
   ogImage: "assets/images/og-default.svg",
   defaultAuthor: {
     name: "PetZone Editorial Team",

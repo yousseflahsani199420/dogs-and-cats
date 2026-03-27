@@ -1,9 +1,14 @@
+import { assetPath } from "./utils.js";
+
 function prefixAssetPath(path, prefix = "") {
   if (!path || /^https?:\/\//i.test(path) || path.startsWith("data:")) {
     return path;
   }
   const cleanPath = path.replace(/^\.?\//, "");
-  return `${prefix}${cleanPath}`;
+  if (prefix) {
+    return `${prefix}${cleanPath}`;
+  }
+  return assetPath(cleanPath);
 }
 
 const ARTICLE_IMAGE_WIDTH = 1200;

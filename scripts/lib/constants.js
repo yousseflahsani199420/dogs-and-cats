@@ -16,6 +16,7 @@ module.exports = {
   SITE_DESCRIPTION:
     "PetZone is a fast static pet news site covering cats and dogs with SEO-ready care, food, behavior, and health reporting.",
   GA_MEASUREMENT_ID: "G-G94YSLLJZC",
+  ASSET_VERSION: "20260327-1",
   DEFAULT_AUTHOR: {
     name: "PetZone Editorial Team",
     role: "Pet care newsroom",

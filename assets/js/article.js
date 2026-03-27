@@ -12,7 +12,7 @@ import {
   showToast,
   wireCopyLink,
 } from "./ui.js";
-import { articlePath, byId, canonicalUrl, escapeHtml, formatDate, getQueryParam, scheduleIdleWork, slugify, stripHtml } from "./utils.js";
+import { articlePath, byId, canonicalUrl, describeLoadError, escapeHtml, formatDate, getQueryParam, scheduleIdleWork, showFallbackUI, sitePath, slugify, stripHtml } from "./utils.js";
 
 function buildHeadingAnchors(headings = []) {
   const used = new Map();
@@ -80,25 +80,39 @@ function renderInternalLinksSection(links = []) {
   `;
 }
 
+function detectSlugFromPath() {
+  const match = window.location.pathname.match(/\/posts\/([^/]+)\/?$/i);
+  return match?.[1] || "";
+}
+
 async function initArticlePage() {
   injectSiteChrome();
   registerServiceWorker();
 
-  const slug = getQueryParam("slug");
+  const slug = getQueryParam("slug") || detectSlugFromPath();
   if (!slug) {
     byId("article-main").innerHTML = `<div class="empty-state"><h1 class="section-title">Article not found</h1><p class="muted-copy">Choose a story from the homepage or search to continue.</p></div>`;
     return;
   }
 
+  console.log("Fetching article:", slug);
   const article = await getArticleBySlug(slug);
   if (!article?.content) {
     byId("article-main").innerHTML = `<div class="empty-state"><h1 class="section-title">Article not found</h1><p class="muted-copy">This article is not available in the current static data set.</p></div>`;
     return;
   }
 
-  const allArticles = await getAllArticles();
+  let allArticles = [];
+  try {
+    allArticles = await getAllArticles();
+  } catch (relatedError) {
+    console.warn("Related articles could not be loaded.", relatedError);
+  }
+  console.log("Loaded data:", { article, allArticles });
   const relatedArticles = getRelatedArticles(allArticles, article);
-  populateBreakingTicker(allArticles);
+  if (allArticles.length) {
+    populateBreakingTicker(allArticles);
+  }
 
   const headingAnchors = buildHeadingAnchors(article.headings || []);
   let headingIndex = 0;
@@ -174,8 +188,8 @@ async function initArticlePage() {
   byId("article-main").classList.remove("article-loading");
   byId("article-main").innerHTML = `
     ${renderBreadcrumbs([
-      { label: "Home", href: "index.html" },
-      { label: article.categoryLabel, href: `categories/${article.category}/` },
+      { label: "Home", href: sitePath("index.html") },
+      { label: article.categoryLabel, href: sitePath(`categories/${article.category}/`) },
       { label: article.title },
     ])}
     <div class="card-meta-row">
@@ -235,6 +249,10 @@ async function initArticlePage() {
 }
 
 initArticlePage().catch((error) => {
-  console.error(error);
+  console.error("Article failed to load:", error);
+  showFallbackUI("article-main", {
+    title: "Article failed to load",
+    description: describeLoadError(error, "article content"),
+  });
   showToast("Article failed to load.");
 });

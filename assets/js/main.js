@@ -11,7 +11,7 @@ import {
   renderSidebarItem,
   renderSpotlightTag,
 } from "./ui.js";
-import { byId, escapeHtml, scheduleIdleWork } from "./utils.js";
+import { byId, describeLoadError, escapeHtml, scheduleIdleWork, showFallbackUI } from "./utils.js";
 
 const HERO_ROTATE_INTERVAL_MS = 10000;
 
@@ -139,7 +139,13 @@ async function initHomePage() {
   injectSiteChrome();
   registerServiceWorker();
 
-  const [articles, siteFeeds] = await Promise.all([getAllArticles(), getSiteFeeds()]);
+  console.log("Fetching articles for homepage...");
+  const articles = await getAllArticles();
+  const siteFeeds = await getSiteFeeds();
+  console.log("Loaded data:", { articles, siteFeeds });
+  if (!articles.length) {
+    throw new Error("The homepage feed is empty.");
+  }
   const bySlug = new Map(articles.map((article) => [article.slug, article]));
   const resolveMany = (slugs = []) => slugs.map((slug) => bySlug.get(slug)).filter(Boolean);
   populateBreakingTicker(articles);
@@ -147,13 +153,18 @@ async function initHomePage() {
   const lead = bySlug.get(siteFeeds.hero?.lead) || articles[0];
   const featuredArticles = resolveMany(siteFeeds.hero?.side);
   const latestFeedArticles = resolveMany(siteFeeds.latest);
+  const resolvedTrending = resolveMany(siteFeeds.trending);
+  const resolvedHeadlines = resolveMany(siteFeeds.headlines);
+  const resolvedCats = resolveMany(siteFeeds.cats);
+  const resolvedDogs = resolveMany(siteFeeds.dogs);
+  const resolvedPopular = resolveMany(siteFeeds.popular);
   const heroArticles = uniqueArticles([lead, ...featuredArticles, ...latestFeedArticles, ...articles]).slice(0, 5);
-  const trendingArticles = resolveMany(siteFeeds.trending);
-  const latestArticles = latestFeedArticles.slice(0, 8);
-  const headlineArticles = resolveMany(siteFeeds.headlines).slice(0, 10);
-  const catArticles = resolveMany(siteFeeds.cats).slice(0, 6);
-  const dogArticles = resolveMany(siteFeeds.dogs).slice(0, 6);
-  const popularArticles = resolveMany(siteFeeds.popular).slice(0, 8);
+  const trendingArticles = (resolvedTrending.length ? resolvedTrending : articles.filter((article) => article.trending || article.featured)).slice(0, 8);
+  const latestArticles = (latestFeedArticles.length ? latestFeedArticles : articles).slice(0, 8);
+  const headlineArticles = (resolvedHeadlines.length ? resolvedHeadlines : articles).slice(0, 10);
+  const catArticles = (resolvedCats.length ? resolvedCats : getCategoryArticles(articles, "cats")).slice(0, 6);
+  const dogArticles = (resolvedDogs.length ? resolvedDogs : getCategoryArticles(articles, "dogs")).slice(0, 6);
+  const popularArticles = (resolvedPopular.length ? resolvedPopular : uniqueArticles([...trendingArticles, ...articles])).slice(0, 8);
 
   const heroGrid = byId("home-hero-grid");
   setupHeroRotation(heroGrid, heroArticles);
@@ -182,5 +193,22 @@ async function initHomePage() {
 }
 
 initHomePage().catch((error) => {
-  console.error(error);
+  console.error("Homepage failed to load:", error);
+  const ticker = byId("breaking-ticker");
+  if (ticker) {
+    ticker.textContent = "Homepage feed unavailable. Retrying is safe.";
+  }
+  showFallbackUI([
+    "home-hero-grid",
+    "latest-article-grid",
+    "home-headline-stream",
+    "cats-category-block",
+    "dogs-category-block",
+    "trending-list",
+    "popular-list",
+    "home-spotlight-tags",
+  ], {
+    title: "Homepage failed to load",
+    description: describeLoadError(error, "homepage stories"),
+  });
 });

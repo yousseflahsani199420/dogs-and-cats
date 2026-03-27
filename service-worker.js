@@ -1,4 +1,4 @@
-const CACHE_NAME = "petzone-static-v4";
+const CACHE_NAME = "petzone-static-v5";
 const PRECACHE = [
   "./",
   "./index.html",
@@ -37,12 +37,12 @@ async function networkFirst(request) {
     }
     return response;
   } catch (error) {
-    const cached = await cache.match(request);
+    const cached = await cache.match(request, { ignoreSearch: true });
     if (cached) {
       return cached;
     }
     if (request.mode === "navigate") {
-      return cache.match("./index.html");
+      return cache.match("./index.html", { ignoreSearch: true });
     }
     throw error;
   }

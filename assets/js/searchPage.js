@@ -2,13 +2,15 @@ import { getAllArticles, getSearchIndex } from "./contentService.js";
 import { registerServiceWorker } from "./pwa.js";
 import { searchArticles, collectTags } from "./search.js";
 import { injectSiteChrome, populateBreakingTicker, renderGridCard, renderSpotlightTag, showToast } from "./ui.js";
-import { byId, getQueryParam } from "./utils.js";
+import { byId, describeLoadError, getQueryParam, showFallbackUI } from "./utils.js";
 
 async function initSearchPage() {
   injectSiteChrome();
   registerServiceWorker();
 
+  console.log("Fetching articles for search...");
   const [articles, searchIndex] = await Promise.all([getAllArticles(), getSearchIndex()]);
+  console.log("Loaded data:", { articles, searchIndex });
   populateBreakingTicker(articles);
 
   const queryInput = byId("search-input");
@@ -71,6 +73,14 @@ async function initSearchPage() {
 }
 
 initSearchPage().catch((error) => {
-  console.error(error);
-  showToast("Search failed to load.");
+  console.error("Search failed to load:", error);
+  const meta = byId("search-meta");
+  if (meta) {
+    meta.textContent = "Search index unavailable right now.";
+  }
+  showFallbackUI("search-results", {
+    title: "Search is temporarily unavailable",
+    description: describeLoadError(error, "search results"),
+  });
+  showToast("Search is temporarily unavailable.");
 });

@@ -71,7 +71,16 @@ function buildInlineArticleFigure(article, heading = "", index = 0, prefix = "")
   const visual = resolveArticleVisual(article, heading, index, prefix);
   return `
     <figure class="article-inline-visual">
-      <img src="${visual.src}" alt="${visual.alt}" loading="lazy" />
+      <img
+        src="${visual.src}"
+        alt="${visual.alt}"
+        loading="lazy"
+        decoding="async"
+        width="1200"
+        height="675"
+        sizes="(max-width: 767px) 100vw, (max-width: 1100px) 92vw, 760px"
+        onerror="this.onerror=null;this.src='${prefix}assets/images/placeholder-pet.svg';"
+      />
       <figcaption>${visual.caption}</figcaption>
     </figure>
   `;

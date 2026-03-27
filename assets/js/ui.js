@@ -2,12 +2,14 @@ import { PETZONE_CONFIG } from "./config.js";
 import { saveNewsletterSubscriber } from "./storageService.js";
 import {
   articlePath,
+  assetPath,
   cancelIdleWork,
   categoryPath,
   copyToClipboard,
   escapeHtml,
   formatDate,
   getCurrentDateLabel,
+  sitePath,
   tagPath,
 } from "./utils.js";
 
@@ -15,7 +17,9 @@ const IMAGE_WIDTH = 1200;
 const IMAGE_HEIGHT = 675;
 
 function activeLinkClass(href) {
-  return window.location.pathname.endsWith(href.replace(/^\.\//, "")) ? "is-active" : "";
+  const normalizedCurrent = window.location.pathname.replace(/\/index\.html$/, "/");
+  const normalizedTarget = new URL(sitePath(href), window.location.origin).pathname.replace(/\/index\.html$/, "/");
+  return normalizedCurrent === normalizedTarget ? "is-active" : "";
 }
 
 function renderArticleBadges(article) {
@@ -49,12 +53,12 @@ export function injectSiteChrome() {
       </section>
       <header class="main-header">
         <div class="site-shell main-header-inner">
-          <a href="index.html" class="brand-logo" aria-label="PetZone home">
-            <img src="assets/images/logo-full.svg" alt="PetZone" class="brand-logo-image" width="190" height="60" />
+          <a href="${sitePath("index.html")}" class="brand-logo" aria-label="PetZone home">
+            <img src="${assetPath("assets/images/logo-full.svg")}" alt="PetZone" class="brand-logo-image" width="190" height="60" />
           </a>
           <nav class="nav-links" aria-label="Primary navigation">
             ${PETZONE_CONFIG.navLinks
-              .map((link) => `<a href="${link.href}" class="nav-link ${activeLinkClass(link.href)}">${link.label}</a>`)
+              .map((link) => `<a href="${sitePath(link.href)}" class="nav-link ${activeLinkClass(link.href)}">${link.label}</a>`)
               .join("")}
           </nav>
           <div class="header-actions">
@@ -78,7 +82,7 @@ export function injectSiteChrome() {
         <div id="mobile-menu-overlay" class="mobile-menu-overlay" hidden></div>
         <div id="mobile-menu" class="mobile-menu" hidden>
           <div class="site-shell mobile-menu-inner">
-            ${PETZONE_CONFIG.navLinks.map((link) => `<a href="${link.href}" class="mobile-link">${link.label}</a>`).join("")}
+            ${PETZONE_CONFIG.navLinks.map((link) => `<a href="${sitePath(link.href)}" class="mobile-link">${link.label}</a>`).join("")}
           </div>
         </div>
       </header>
@@ -96,17 +100,17 @@ export function injectSiteChrome() {
               PetZone combines dense editorial coverage, fast static pages, and a file-based publishing workflow ready for AI automation.
             </p>
           </div>
-          <div class="footer-link-grid">
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-            <a href="privacy.html">Privacy</a>
-            <a href="terms.html">Terms</a>
-            <a href="faq.html">FAQ</a>
-            <a href="admin.html">Admin</a>
-          </div>
+        <div class="footer-link-grid">
+            <a href="${sitePath("about.html")}">About</a>
+            <a href="${sitePath("contact.html")}">Contact</a>
+            <a href="${sitePath("privacy.html")}">Privacy</a>
+            <a href="${sitePath("terms.html")}">Terms</a>
+            <a href="${sitePath("faq.html")}">FAQ</a>
+            <a href="${sitePath("admin.html")}">Admin</a>
         </div>
-      </footer>
-    `;
+      </div>
+    </footer>
+  `;
   }
 
   bindChromeInteractions();
@@ -177,15 +181,17 @@ function buildResponsiveImage({
   fetchpriority = "auto",
   sizes = "(max-width: 767px) 100vw, 360px",
 }) {
+  const resolvedSrc = assetPath(src);
   return `
     <img
-      src="${src}"
+      src="${resolvedSrc}"
       alt="${escapeHtml(alt)}"
       loading="${loading}"
       decoding="async"
       width="${IMAGE_WIDTH}"
       height="${IMAGE_HEIGHT}"
       sizes="${sizes}"
+      onerror="this.onerror=null;this.src='${assetPath("assets/images/placeholder-pet.svg")}';"
       ${fetchpriority !== "auto" ? `fetchpriority="${fetchpriority}"` : ""}
     />
   `;

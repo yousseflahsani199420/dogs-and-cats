@@ -2,6 +2,7 @@ const fs = require("fs");
 const path = require("path");
 const {
   ARTICLES_FILE,
+  ASSET_VERSION,
   CATEGORY_INDEX_FILE,
   CATEGORIES_DIR,
   CATEGORY_LABELS,
@@ -138,7 +139,7 @@ function renderSharedHead({ title, description, canonicalPath, prefix = "", keyw
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=Source+Sans+3:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     ${renderAnalyticsSnippet()}
-    <link rel="stylesheet" href="${prefix}assets/css/styles.css" />
+    <link rel="stylesheet" href="${prefix}assets/css/styles.css?v=${ASSET_VERSION}" />
     ${extraHead}
   `;
 }
@@ -257,6 +258,12 @@ function normalizeStaticSchemaImage(imageSrc = "") {
   return `${SITE_BASE_URL}/${imageSrc.replace(/^(\.\.\/)+/g, "")}`;
 }
 
+function getStaticFallbackImage(src = "") {
+  const prefixMatch = src.match(/^(\.\.\/)+/);
+  const prefix = prefixMatch ? prefixMatch[0] : "";
+  return `${prefix}assets/images/placeholder-pet.svg`;
+}
+
 function renderStaticResponsiveImage({
   src,
   alt,
@@ -273,6 +280,7 @@ function renderStaticResponsiveImage({
       width="${IMAGE_WIDTH}"
       height="${IMAGE_HEIGHT}"
       sizes="${sizes}"
+      onerror="this.onerror=null;this.src='${getStaticFallbackImage(src)}';"
       ${fetchpriority !== "auto" ? `fetchpriority="${fetchpriority}"` : ""}
     />
   `;
@@ -373,7 +381,7 @@ function renderCollectionPage({ title, description, articles, canonicalPath }) {
         </div>
       </main>
       ${renderStaticFooter(prefix)}
-      <script type="module" src="${prefix}assets/js/staticPage.js"></script>
+      <script type="module" src="${prefix}assets/js/staticPage.js?v=${ASSET_VERSION}"></script>
     </body>
   </html>`;
 }
@@ -585,7 +593,7 @@ function renderArticlePage(article, relatedArticles, sidebarArticles, allArticle
         </div>
       </main>
       ${renderStaticFooter(prefix)}
-      <script type="module" src="${prefix}assets/js/staticPage.js"></script>
+      <script type="module" src="${prefix}assets/js/staticPage.js?v=${ASSET_VERSION}"></script>
     </body>
   </html>`;
 }

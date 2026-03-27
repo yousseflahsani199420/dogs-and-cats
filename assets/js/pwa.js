@@ -1,10 +1,10 @@
-import { getSiteBaseUrl, scheduleIdleWork } from "./utils.js";
+import { getRuntimeBaseUrl, scheduleIdleWork } from "./utils.js";
 
 export function registerServiceWorker() {
   if ("serviceWorker" in navigator) {
     window.addEventListener("load", () => {
       scheduleIdleWork(() => {
-        const basePath = new URL(getSiteBaseUrl()).pathname.replace(/\/$/, "");
+        const basePath = new URL(getRuntimeBaseUrl()).pathname.replace(/\/$/, "");
         const serviceWorkerPath = `${basePath || ""}/service-worker.js`;
         const scope = `${basePath || ""}/`;
         navigator.serviceWorker.register(serviceWorkerPath, { scope }).catch((error) => {

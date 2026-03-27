@@ -2,16 +2,21 @@ import { getAllArticles, getCategoryArticles, getCategoryDigest, getRequestedCat
 import { registerServiceWorker } from "./pwa.js";
 import { setPageMeta } from "./seo.js";
 import { injectSiteChrome, populateBreakingTicker, renderDenseHeadlineItem, renderGridCard, renderLeadCard, renderSidebarItem, renderTagPills, showToast } from "./ui.js";
-import { byId, scheduleIdleWork } from "./utils.js";
+import { byId, describeLoadError, scheduleIdleWork, showFallbackUI } from "./utils.js";
 
 async function initCategoryPage() {
   injectSiteChrome();
   registerServiceWorker();
 
+  console.log("Fetching category data...");
   const allArticles = await getAllArticles();
   const category = getRequestedCategory();
   const articles = getCategoryArticles(allArticles, category);
   const digest = await getCategoryDigest(category);
+  console.log("Loaded data:", { category, articles, digest });
+  if (!articles.length) {
+    throw new Error(`No published ${category} articles are available yet.`);
+  }
   const lead = articles[0];
 
   populateBreakingTicker(allArticles);
@@ -67,6 +72,16 @@ async function initCategoryPage() {
 }
 
 initCategoryPage().catch((error) => {
-  console.error(error);
-  showToast("Category failed to load.");
+  console.error("Category failed to load:", error);
+  showFallbackUI([
+    "category-hero",
+    "category-lead-grid",
+    "category-grid",
+    "category-sidebar-list",
+    "category-headline-stream",
+  ], {
+    title: "Category feed failed to load",
+    description: describeLoadError(error, "category coverage"),
+  });
+  showToast("Category feed failed to load.");
 });
