@@ -302,18 +302,17 @@ function renderStaticFooter(prefix = "../") {
   return `
     <footer class="site-footer">
       <div class="site-shell footer-main">
-        <div>
+        <div class="footer-brand-copy">
           <p class="eyebrow">PetZone</p>
-          <h2 class="section-title small-title">Built for SEO, speed, and daily publishing.</h2>
-          <p class="muted-copy">${escapeHtml(SITE_DESCRIPTION)}</p>
+          <h2 class="section-title small-title">Cats and dogs, covered with clarity.</h2>
+          <p class="muted-copy">Trusted stories, practical guides, and fast daily coverage for cat and dog owners.</p>
         </div>
-        <div class="footer-link-grid">
+        <div class="footer-link-grid" aria-label="Footer navigation">
           <a href="${prefix}about.html">About</a>
           <a href="${prefix}contact.html">Contact</a>
           <a href="${prefix}privacy.html">Privacy</a>
           <a href="${prefix}terms.html">Terms</a>
           <a href="${prefix}faq.html">FAQ</a>
-          <a href="${prefix}admin.html">Admin</a>
         </div>
       </div>
     </footer>

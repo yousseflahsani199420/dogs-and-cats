@@ -93,24 +93,23 @@ export function injectSiteChrome() {
     footerTarget.innerHTML = `
       <footer class="site-footer">
         <div class="site-shell footer-main">
-          <div>
+          <div class="footer-brand-copy">
             <p class="eyebrow">PetZone</p>
-            <h2 class="section-title small-title">Cats and dogs, covered like a real newsroom.</h2>
+            <h2 class="section-title small-title">Cats and dogs, covered with clarity.</h2>
             <p class="muted-copy">
-              PetZone combines dense editorial coverage, fast static pages, and a file-based publishing workflow ready for AI automation.
+              Trusted stories, practical guides, and fast daily coverage for cat and dog owners.
             </p>
           </div>
-        <div class="footer-link-grid">
+          <div class="footer-link-grid" aria-label="Footer navigation">
             <a href="${sitePath("about.html")}">About</a>
             <a href="${sitePath("contact.html")}">Contact</a>
             <a href="${sitePath("privacy.html")}">Privacy</a>
             <a href="${sitePath("terms.html")}">Terms</a>
             <a href="${sitePath("faq.html")}">FAQ</a>
-            <a href="${sitePath("admin.html")}">Admin</a>
+          </div>
         </div>
-      </div>
-    </footer>
-  `;
+      </footer>
+    `;
   }
 
   bindChromeInteractions();
