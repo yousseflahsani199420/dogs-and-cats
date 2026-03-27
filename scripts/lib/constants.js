@@ -15,12 +15,13 @@ module.exports = {
   SITE_TAGLINE: "Cats & Dogs Daily",
   SITE_DESCRIPTION:
     "PetZone is a fast static pet news site covering cats and dogs with SEO-ready care, food, behavior, and health reporting.",
+  GA_MEASUREMENT_ID: "G-G94YSLLJZC",
   DEFAULT_AUTHOR: {
     name: "PetZone Editorial Team",
     role: "Pet care newsroom",
     bio: "Editors and researchers producing practical reporting for cat and dog owners with a file-based publishing workflow.",
   },
-  SITE_BASE_URL: (process.env.SITE_BASE_URL || "https://yousseflahsani199420.github.io/dogs-and-cats").replace(/\/$/, ""),
+  SITE_BASE_URL: (process.env.SITE_BASE_URL || "https://petzone.website").replace(/\/$/, ""),
   DEFAULT_IMAGE: "assets/images/placeholder-pet.svg",
   DEFAULT_OG_IMAGE: "assets/images/og-default.svg",
   PUBLISHING_HISTORY_FILE: path.join(ROOT_DIR, "data", "publishing-history.json"),

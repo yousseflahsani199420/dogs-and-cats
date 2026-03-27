@@ -1,106 +1,110 @@
 {
-  "updatedAt": "2026-03-26T10:31:23.325Z",
+  "updatedAt": "2026-03-26T16:38:56.342Z",
   "hero": {
-    "lead": "best-food-for-indoor-cats-for-beginners-a-clear-practical-guide",
+    "lead": "best-food-for-indoor-cats-for-beginners",
     "side": [
-      "best-food-for-active-dogs-for-beginners-a-clear-practical-guide",
-      "how-to-stop-cat-scratching-furniture-for-beginners-what-actually-delivers-better-results",
-      "how-to-stop-puppy-biting-for-beginners-what-actually-delivers-better-results",
-      "kitten-litter-training-for-beginners-a-first-time-owner-guide"
+      "best-food-for-active-dogs-for-beginners",
+      "cat-food-tips",
+      "dog-food-tips",
+      "how-to-stop-cat-scratching-furniture-for-beginners"
     ]
   },
   "latest": [
-    "best-food-for-indoor-cats-for-beginners-a-clear-practical-guide",
-    "best-food-for-active-dogs-for-beginners-a-clear-practical-guide",
-    "how-to-stop-cat-scratching-furniture-for-beginners-what-actually-delivers-better-results",
-    "how-to-stop-puppy-biting-for-beginners-what-actually-delivers-better-results",
-    "kitten-litter-training-for-beginners-a-first-time-owner-guide",
-    "puppy-potty-training-schedule-for-beginners-a-first-time-owner-guide",
-    "how-to-calm-a-cat-in-a-carrier-for-beginners-what-to-watch-and-what-to-do-next",
-    "how-to-calm-a-dog-during-thunderstorms-for-beginners-what-to-watch-and-what-to-do-next",
-    "best-toys-for-bored-indoor-cats-for-beginners-a-practical-routine-that-sticks",
-    "best-toys-for-high-energy-dogs-for-beginners-a-practical-routine-that-sticks",
-    "how-to-reduce-cat-shedding-for-beginners-what-smart-owners-prioritize",
-    "how-to-reduce-dog-shedding-for-beginners-what-smart-owners-prioritize",
-    "wet-vs-dry-food-for-cats-for-beginners-what-it-usually-means-and-what-helps",
-    "wet-vs-dry-food-for-dogs-for-beginners-what-it-usually-means-and-what-helps",
-    "how-to-introduce-a-new-cat-for-beginners-a-clear-practical-guide",
-    "how-to-introduce-a-rescue-dog-for-beginners-a-clear-practical-guide"
+    "best-food-for-indoor-cats-for-beginners",
+    "best-food-for-active-dogs-for-beginners",
+    "cat-food-tips",
+    "dog-food-tips",
+    "how-to-stop-cat-scratching-furniture-for-beginners",
+    "how-to-stop-puppy-biting-for-beginners",
+    "kitten-care-tips",
+    "puppy-care-tips",
+    "kitten-litter-training-for-beginners",
+    "puppy-potty-training-schedule-for-beginners",
+    "cat-training-tips",
+    "dog-training-tips",
+    "how-to-calm-a-cat-in-a-carrier-for-beginners",
+    "how-to-calm-a-dog-during-thunderstorms-for-beginners",
+    "cat-behavior-tips",
+    "dog-behavior-tips"
   ],
   "headlines": [
-    "best-food-for-indoor-cats-for-beginners-a-clear-practical-guide",
-    "best-food-for-active-dogs-for-beginners-a-clear-practical-guide",
-    "how-to-stop-cat-scratching-furniture-for-beginners-what-actually-delivers-better-results",
-    "how-to-stop-puppy-biting-for-beginners-what-actually-delivers-better-results",
-    "kitten-litter-training-for-beginners-a-first-time-owner-guide",
-    "puppy-potty-training-schedule-for-beginners-a-first-time-owner-guide",
-    "how-to-calm-a-cat-in-a-carrier-for-beginners-what-to-watch-and-what-to-do-next",
-    "how-to-calm-a-dog-during-thunderstorms-for-beginners-what-to-watch-and-what-to-do-next",
-    "best-toys-for-bored-indoor-cats-for-beginners-a-practical-routine-that-sticks",
-    "best-toys-for-high-energy-dogs-for-beginners-a-practical-routine-that-sticks",
-    "how-to-reduce-cat-shedding-for-beginners-what-smart-owners-prioritize",
-    "how-to-reduce-dog-shedding-for-beginners-what-smart-owners-prioritize",
-    "wet-vs-dry-food-for-cats-for-beginners-what-it-usually-means-and-what-helps",
-    "wet-vs-dry-food-for-dogs-for-beginners-what-it-usually-means-and-what-helps",
-    "how-to-introduce-a-new-cat-for-beginners-a-clear-practical-guide",
-    "how-to-introduce-a-rescue-dog-for-beginners-a-clear-practical-guide",
-    "how-to-help-a-senior-cat-drink-more-water-for-beginners-what-actually-delivers-better-resu",
-    "how-to-help-a-senior-dog-with-mobility-for-beginners-what-actually-delivers-better-results",
-    "cat-enrichment-ideas-for-beginners-a-first-time-owner-guide",
-    "dog-exercise-ideas-for-beginners-a-first-time-owner-guide",
-    "best-food-for-indoor-cats-in-apartments-what-actually-delivers-better-results",
-    "best-food-for-active-dogs-in-apartments-what-actually-delivers-better-results",
-    "how-to-stop-cat-scratching-furniture-in-apartments-a-first-time-owner-guide",
-    "how-to-stop-puppy-biting-in-apartments-a-first-time-owner-guide"
+    "best-food-for-indoor-cats-for-beginners",
+    "best-food-for-active-dogs-for-beginners",
+    "cat-food-tips",
+    "dog-food-tips",
+    "how-to-stop-cat-scratching-furniture-for-beginners",
+    "how-to-stop-puppy-biting-for-beginners",
+    "kitten-care-tips",
+    "puppy-care-tips",
+    "kitten-litter-training-for-beginners",
+    "puppy-potty-training-schedule-for-beginners",
+    "cat-training-tips",
+    "dog-training-tips",
+    "how-to-calm-a-cat-in-a-carrier-for-beginners",
+    "how-to-calm-a-dog-during-thunderstorms-for-beginners",
+    "cat-behavior-tips",
+    "dog-behavior-tips",
+    "best-toys-for-bored-indoor-cats-for-beginners",
+    "best-toys-for-high-energy-dogs-for-beginners",
+    "cat-grooming-tips",
+    "dog-grooming-tips",
+    "how-to-reduce-cat-shedding-for-beginners",
+    "how-to-reduce-dog-shedding-for-beginners",
+    "indoor-cat-tips",
+    "dog-exercise-tips"
   ],
   "trending": [
-    "best-food-for-indoor-cats-for-beginners-a-clear-practical-guide",
-    "best-food-for-active-dogs-for-beginners-a-clear-practical-guide",
-    "how-to-stop-cat-scratching-furniture-for-beginners-what-actually-delivers-better-results",
-    "how-to-stop-puppy-biting-for-beginners-what-actually-delivers-better-results",
-    "kitten-litter-training-for-beginners-a-first-time-owner-guide",
-    "puppy-potty-training-schedule-for-beginners-a-first-time-owner-guide",
-    "how-to-calm-a-cat-in-a-carrier-for-beginners-what-to-watch-and-what-to-do-next",
-    "how-to-calm-a-dog-during-thunderstorms-for-beginners-what-to-watch-and-what-to-do-next"
+    "best-food-for-indoor-cats-for-beginners",
+    "best-food-for-active-dogs-for-beginners",
+    "cat-food-tips",
+    "dog-food-tips",
+    "how-to-stop-cat-scratching-furniture-for-beginners",
+    "how-to-stop-puppy-biting-for-beginners",
+    "kitten-care-tips",
+    "puppy-care-tips"
   ],
   "popular": [
-    "best-food-for-indoor-cats-for-beginners-a-clear-practical-guide",
-    "best-food-for-active-dogs-for-beginners-a-clear-practical-guide",
-    "how-to-stop-cat-scratching-furniture-for-beginners-what-actually-delivers-better-results",
-    "how-to-stop-puppy-biting-for-beginners-what-actually-delivers-better-results",
-    "kitten-litter-training-for-beginners-a-first-time-owner-guide",
-    "puppy-potty-training-schedule-for-beginners-a-first-time-owner-guide",
-    "how-to-calm-a-cat-in-a-carrier-for-beginners-what-to-watch-and-what-to-do-next",
-    "how-to-calm-a-dog-during-thunderstorms-for-beginners-what-to-watch-and-what-to-do-next"
+    "best-food-for-indoor-cats-for-beginners",
+    "best-food-for-active-dogs-for-beginners",
+    "cat-food-tips",
+    "dog-food-tips",
+    "how-to-stop-cat-scratching-furniture-for-beginners",
+    "how-to-stop-puppy-biting-for-beginners",
+    "kitten-care-tips",
+    "puppy-care-tips"
   ],
   "cats": [
-    "best-food-for-indoor-cats-for-beginners-a-clear-practical-guide",
-    "how-to-stop-cat-scratching-furniture-for-beginners-what-actually-delivers-better-results",
-    "kitten-litter-training-for-beginners-a-first-time-owner-guide",
-    "how-to-calm-a-cat-in-a-carrier-for-beginners-what-to-watch-and-what-to-do-next",
-    "best-toys-for-bored-indoor-cats-for-beginners-a-practical-routine-that-sticks",
-    "how-to-reduce-cat-shedding-for-beginners-what-smart-owners-prioritize",
-    "wet-vs-dry-food-for-cats-for-beginners-what-it-usually-means-and-what-helps",
-    "how-to-introduce-a-new-cat-for-beginners-a-clear-practical-guide",
-    "how-to-help-a-senior-cat-drink-more-water-for-beginners-what-actually-delivers-better-resu",
-    "cat-enrichment-ideas-for-beginners-a-first-time-owner-guide"
+    "best-food-for-indoor-cats-for-beginners",
+    "cat-food-tips",
+    "how-to-stop-cat-scratching-furniture-for-beginners",
+    "kitten-care-tips",
+    "kitten-litter-training-for-beginners",
+    "cat-training-tips",
+    "how-to-calm-a-cat-in-a-carrier-for-beginners",
+    "cat-behavior-tips",
+    "best-toys-for-bored-indoor-cats-for-beginners",
+    "cat-grooming-tips"
   ],
   "dogs": [
-    "best-food-for-active-dogs-for-beginners-a-clear-practical-guide",
-    "how-to-stop-puppy-biting-for-beginners-what-actually-delivers-better-results",
-    "puppy-potty-training-schedule-for-beginners-a-first-time-owner-guide",
-    "how-to-calm-a-dog-during-thunderstorms-for-beginners-what-to-watch-and-what-to-do-next",
-    "best-toys-for-high-energy-dogs-for-beginners-a-practical-routine-that-sticks",
-    "how-to-reduce-dog-shedding-for-beginners-what-smart-owners-prioritize",
-    "wet-vs-dry-food-for-dogs-for-beginners-what-it-usually-means-and-what-helps",
-    "how-to-introduce-a-rescue-dog-for-beginners-a-clear-practical-guide",
-    "how-to-help-a-senior-dog-with-mobility-for-beginners-what-actually-delivers-better-results",
-    "dog-exercise-ideas-for-beginners-a-first-time-owner-guide"
+    "best-food-for-active-dogs-for-beginners",
+    "dog-food-tips",
+    "how-to-stop-puppy-biting-for-beginners",
+    "puppy-care-tips",
+    "puppy-potty-training-schedule-for-beginners",
+    "dog-training-tips",
+    "how-to-calm-a-dog-during-thunderstorms-for-beginners",
+    "dog-behavior-tips",
+    "best-toys-for-high-energy-dogs-for-beginners",
+    "dog-grooming-tips"
   ],
   "spotlightTags": [
     {
       "label": "apartments",
       "slug": "apartments"
+    },
+    {
+      "label": "at home",
+      "slug": "at-home"
     },
     {
       "label": "behavior",
@@ -119,6 +123,10 @@
       "slug": "buying-guide"
     },
     {
+      "label": "cat behavior",
+      "slug": "cat-behavior"
+    },
+    {
       "label": "cat care",
       "slug": "cat-care"
     },
@@ -127,40 +135,32 @@
       "slug": "cat-enrichment-ideas"
     },
     {
+      "label": "cat food",
+      "slug": "cat-food"
+    },
+    {
+      "label": "cat grooming",
+      "slug": "cat-grooming"
+    },
+    {
+      "label": "cat health",
+      "slug": "cat-health"
+    },
+    {
+      "label": "cat litter",
+      "slug": "cat-litter"
+    },
+    {
+      "label": "cat toys",
+      "slug": "cat-toys"
+    },
+    {
+      "label": "cat training",
+      "slug": "cat-training"
+    },
+    {
       "label": "cats",
       "slug": "cats"
-    },
-    {
-      "label": "dog care",
-      "slug": "dog-care"
-    },
-    {
-      "label": "dog exercise ideas",
-      "slug": "dog-exercise-ideas"
-    },
-    {
-      "label": "dogs",
-      "slug": "dogs"
-    },
-    {
-      "label": "feeding",
-      "slug": "feeding"
-    },
-    {
-      "label": "first-time owners",
-      "slug": "first-time-owners"
-    },
-    {
-      "label": "health basics",
-      "slug": "health-basics"
-    },
-    {
-      "label": "how to calm",
-      "slug": "how-to-calm"
-    },
-    {
-      "label": "how to help",
-      "slug": "how-to-help"
     }
   ]
 }

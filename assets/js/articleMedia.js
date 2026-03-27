@@ -6,6 +6,9 @@ function prefixAssetPath(path, prefix = "") {
   return `${prefix}${cleanPath}`;
 }
 
+const ARTICLE_IMAGE_WIDTH = 1200;
+const ARTICLE_IMAGE_HEIGHT = 675;
+
 const visualCatalog = {
   cats: {
     routine: "assets/images/article-cats-routine.svg",
@@ -71,7 +74,15 @@ export function buildInlineArticleFigure(article, heading = "", index = 0, prefi
   const visual = resolveArticleVisual(article, heading, index, prefix);
   return `
     <figure class="article-inline-visual">
-      <img src="${visual.src}" alt="${visual.alt}" loading="lazy" />
+      <img
+        src="${visual.src}"
+        alt="${visual.alt}"
+        loading="lazy"
+        decoding="async"
+        width="${ARTICLE_IMAGE_WIDTH}"
+        height="${ARTICLE_IMAGE_HEIGHT}"
+        sizes="(max-width: 767px) 100vw, (max-width: 1100px) 92vw, 760px"
+      />
       <figcaption>${visual.caption}</figcaption>
     </figure>
   `;

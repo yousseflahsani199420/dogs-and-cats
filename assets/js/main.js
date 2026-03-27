@@ -11,7 +11,7 @@ import {
   renderSidebarItem,
   renderSpotlightTag,
 } from "./ui.js";
-import { byId, escapeHtml } from "./utils.js";
+import { byId, escapeHtml, scheduleIdleWork } from "./utils.js";
 
 const HERO_ROTATE_INTERVAL_MS = 10000;
 
@@ -160,24 +160,25 @@ async function initHomePage() {
 
   byId("latest-article-grid").innerHTML = latestArticles.map(renderGridCard).join("");
   byId("latest-article-grid").classList.remove("news-loading");
+  scheduleIdleWork(() => {
+    byId("home-headline-stream").innerHTML = headlineArticles.map(renderDenseHeadlineItem).join("");
+    byId("home-headline-stream").classList.remove("news-loading");
 
-  byId("home-headline-stream").innerHTML = headlineArticles.map(renderDenseHeadlineItem).join("");
-  byId("home-headline-stream").classList.remove("news-loading");
+    byId("cats-category-block").innerHTML = (catArticles.length ? catArticles : getCategoryArticles(articles, "cats").slice(0, 6)).map(renderListCard).join("");
+    byId("cats-category-block").classList.remove("news-loading");
 
-  byId("cats-category-block").innerHTML = (catArticles.length ? catArticles : getCategoryArticles(articles, "cats").slice(0, 6)).map(renderListCard).join("");
-  byId("cats-category-block").classList.remove("news-loading");
+    byId("dogs-category-block").innerHTML = (dogArticles.length ? dogArticles : getCategoryArticles(articles, "dogs").slice(0, 6)).map(renderListCard).join("");
+    byId("dogs-category-block").classList.remove("news-loading");
 
-  byId("dogs-category-block").innerHTML = (dogArticles.length ? dogArticles : getCategoryArticles(articles, "dogs").slice(0, 6)).map(renderListCard).join("");
-  byId("dogs-category-block").classList.remove("news-loading");
+    byId("trending-list").innerHTML = trendingArticles.slice(0, 8).map(renderSidebarItem).join("");
+    byId("trending-list").classList.remove("news-loading");
 
-  byId("trending-list").innerHTML = trendingArticles.slice(0, 8).map(renderSidebarItem).join("");
-  byId("trending-list").classList.remove("news-loading");
+    byId("popular-list").innerHTML = popularArticles.map(renderSidebarItem).join("");
+    byId("popular-list").classList.remove("news-loading");
 
-  byId("popular-list").innerHTML = popularArticles.map(renderSidebarItem).join("");
-  byId("popular-list").classList.remove("news-loading");
-
-  byId("home-spotlight-tags").innerHTML = (siteFeeds.spotlightTags || []).map(renderSpotlightTag).join("");
-  byId("home-spotlight-tags").classList.remove("news-loading");
+    byId("home-spotlight-tags").innerHTML = (siteFeeds.spotlightTags || []).map(renderSpotlightTag).join("");
+    byId("home-spotlight-tags").classList.remove("news-loading");
+  });
 }
 
 initHomePage().catch((error) => {

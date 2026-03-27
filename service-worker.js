@@ -1,4 +1,4 @@
-const CACHE_NAME = "petzone-static-v3";
+const CACHE_NAME = "petzone-static-v4";
 const PRECACHE = [
   "./",
   "./index.html",
@@ -9,10 +9,19 @@ const PRECACHE = [
   "./terms.html",
   "./faq.html",
   "./assets/css/styles.css",
+  "./assets/js/main.js",
+  "./assets/js/article.js",
+  "./assets/js/category.js",
+  "./assets/js/searchPage.js",
+  "./assets/js/staticPage.js",
+  "./assets/js/ui.js",
+  "./assets/js/utils.js",
   "./assets/images/logo-full.svg",
   "./assets/images/logo-mark.svg",
   "./assets/images/favicon.svg",
   "./assets/images/placeholder-pet.svg",
+  "./assets/icons/icon-192.svg",
+  "./assets/icons/icon-512.svg",
 ];
 
 function isCacheable(response) {

@@ -7,6 +7,7 @@ const {
   CATEGORY_LABELS,
   DATA_DIR,
   DEFAULT_OG_IMAGE,
+  GA_MEASUREMENT_ID,
   KEYWORD_CLUSTERS_FILE,
   KEYWORDS_FILE,
   POSTS_DIR,
@@ -58,6 +59,10 @@ const { buildInlineArticleFigure, resolveArticleFeaturedImage } = require("./lib
 const { buildSeedArticle } = require("./generate-article");
 const { divider, info, warn } = require("./lib/logger");
 
+const IMAGE_WIDTH = 1200;
+const IMAGE_HEIGHT = 675;
+const COLLECTION_GRID_LIMIT = 36;
+
 function escapeHtml(value = "") {
   return value
     .toString()
@@ -89,8 +94,25 @@ function renderStaticBadges(article) {
   return badges.join("");
 }
 
-function renderSharedHead({ title, description, canonicalPath, prefix = "", keywords = [], ogType = "website" }) {
+function renderAnalyticsSnippet() {
+  if (!GA_MEASUREMENT_ID) {
+    return "";
+  }
+
+  return `
+    <script async src="https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', '${GA_MEASUREMENT_ID}');
+    </script>
+  `;
+}
+
+function renderSharedHead({ title, description, canonicalPath, prefix = "", keywords = [], ogType = "website", image = "", extraHead = "" }) {
   const canonical = `${SITE_BASE_URL}${canonicalPath}`;
+  const shareImage = image ? normalizeStaticSchemaImage(image) : `${SITE_BASE_URL}/${DEFAULT_OG_IMAGE}`;
   return `
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -98,28 +120,32 @@ function renderSharedHead({ title, description, canonicalPath, prefix = "", keyw
     <meta name="description" content="${escapeHtml(description)}" />
     <meta name="keywords" content="${escapeHtml((keywords || []).join(", "))}" />
     <meta name="theme-color" content="#ffffff" />
+    <meta name="color-scheme" content="light" />
     <meta property="og:site_name" content="${SITE_NAME}" />
     <meta property="og:type" content="${ogType}" />
     <meta property="og:title" content="${escapeHtml(title)}" />
     <meta property="og:description" content="${escapeHtml(description)}" />
-    <meta property="og:image" content="${SITE_BASE_URL}/${DEFAULT_OG_IMAGE}" />
+    <meta property="og:image" content="${shareImage}" />
     <meta property="og:url" content="${canonical}" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="${escapeHtml(title)}" />
     <meta name="twitter:description" content="${escapeHtml(description)}" />
-    <meta name="twitter:image" content="${SITE_BASE_URL}/${DEFAULT_OG_IMAGE}" />
+    <meta name="twitter:image" content="${shareImage}" />
     <link rel="canonical" href="${canonical}" />
     <link rel="icon" href="${prefix}assets/images/favicon.svg" type="image/svg+xml" />
     <link rel="manifest" href="${prefix}manifest.json" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=Source+Sans+3:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    ${renderAnalyticsSnippet()}
     <link rel="stylesheet" href="${prefix}assets/css/styles.css" />
+    ${extraHead}
   `;
 }
 
 function renderStaticHeader(prefix = "../") {
   return `
+    <a class="skip-link" href="#page-content">Skip to content</a>
     <section class="news-topline">
       <div class="site-shell news-topline-inner">
         <span>PetZone newsroom</span>
@@ -128,9 +154,8 @@ function renderStaticHeader(prefix = "../") {
     </section>
     <header class="main-header">
       <div class="site-shell main-header-inner">
-        <a href="${prefix}index.html" class="brand-logo">
-          <img src="${prefix}assets/images/logo-mark.svg" alt="PetZone logo" width="34" height="34" />
-          <span>PetZone</span>
+        <a href="${prefix}index.html" class="brand-logo" aria-label="PetZone home">
+          <img src="${prefix}assets/images/logo-full.svg" alt="PetZone" class="brand-logo-image" width="190" height="60" />
         </a>
         <nav class="nav-links" aria-label="Primary navigation">
           <a href="${prefix}index.html" class="nav-link">Home</a>
@@ -140,6 +165,30 @@ function renderStaticHeader(prefix = "../") {
           <a href="${prefix}about.html" class="nav-link">About</a>
           <a href="${prefix}contact.html" class="nav-link">Contact</a>
         </nav>
+        <div class="header-actions">
+          <button
+            type="button"
+            class="mobile-nav-toggle"
+            data-static-nav-toggle
+            aria-expanded="false"
+            aria-controls="static-mobile-menu"
+            aria-label="Toggle navigation"
+          >
+            <span class="hamburger-lines" aria-hidden="true"><span></span><span></span><span></span></span>
+            <span class="mobile-nav-label">Menu</span>
+          </button>
+        </div>
+      </div>
+      <div class="mobile-menu-overlay" data-static-mobile-overlay hidden></div>
+      <div id="static-mobile-menu" class="mobile-menu" data-static-mobile-menu hidden>
+        <div class="site-shell mobile-menu-inner">
+          <a href="${prefix}index.html" class="mobile-link">Home</a>
+          <a href="${prefix}categories/cats/" class="mobile-link">Cats</a>
+          <a href="${prefix}categories/dogs/" class="mobile-link">Dogs</a>
+          <a href="${prefix}search.html" class="mobile-link">Search</a>
+          <a href="${prefix}about.html" class="mobile-link">About</a>
+          <a href="${prefix}contact.html" class="mobile-link">Contact</a>
+        </div>
       </div>
     </header>
   `;
@@ -208,11 +257,37 @@ function normalizeStaticSchemaImage(imageSrc = "") {
   return `${SITE_BASE_URL}/${imageSrc.replace(/^(\.\.\/)+/g, "")}`;
 }
 
+function renderStaticResponsiveImage({
+  src,
+  alt,
+  loading = "lazy",
+  fetchpriority = "auto",
+  sizes = "(max-width: 767px) 100vw, 360px",
+}) {
+  return `
+    <img
+      src="${src}"
+      alt="${escapeHtml(alt)}"
+      loading="${loading}"
+      decoding="async"
+      width="${IMAGE_WIDTH}"
+      height="${IMAGE_HEIGHT}"
+      sizes="${sizes}"
+      ${fetchpriority !== "auto" ? `fetchpriority="${fetchpriority}"` : ""}
+    />
+  `;
+}
+
 function renderArticleCard(article, prefix = "../") {
+  const imageSrc = resolveArticleFeaturedImage(article, prefix);
   return `
     <article class="grid-card news-card">
-      <a href="${prefix}posts/${article.slug}/" class="media-link">
-        <img src="${prefix}${article.featuredImage}" alt="${escapeHtml(article.imageAlt || article.title)}" loading="lazy" />
+      <a href="${prefix}posts/${article.slug}/" class="media-link news-media">
+        ${renderStaticResponsiveImage({
+          src: imageSrc,
+          alt: article.imageAlt || article.title,
+          sizes: "(max-width: 767px) 100vw, (max-width: 1100px) 46vw, 360px",
+        })}
       </a>
       <div class="news-card-body">
         <div class="card-meta-row">
@@ -232,14 +307,25 @@ function renderCollectionPage({ title, description, articles, canonicalPath }) {
   const prefix = "../../";
   const lead = articles[0];
   const headlineItems = articles.slice(1, 6);
-  const gridItems = articles.slice(1, 25);
+  const gridItems = articles.slice(1, COLLECTION_GRID_LIMIT + 1);
   const topTags = Array.from(new Set(articles.flatMap((article) => article.tags || []))).slice(0, 8);
+  const leadImage = lead ? resolveArticleFeaturedImage(lead, prefix) : "";
   return `<!DOCTYPE html>
   <html lang="en">
-    <head>${renderSharedHead({ title, description, canonicalPath, prefix, keywords: topTags })}</head>
+    <head>${renderSharedHead({
+      title,
+      description,
+      canonicalPath,
+      prefix,
+      keywords: topTags,
+      image: leadImage,
+      extraHead: leadImage
+        ? `<link rel="preload" as="image" href="${leadImage}" imagesizes="(max-width: 767px) 100vw, (max-width: 1100px) 92vw, 720px" />`
+        : "",
+    })}</head>
     <body>
       ${renderStaticHeader(prefix)}
-      <main class="page-shell">
+      <main id="page-content" class="page-shell">
         <div class="site-shell section-tight">
           <section class="search-page-header">
             <div>
@@ -249,7 +335,7 @@ function renderCollectionPage({ title, description, articles, canonicalPath }) {
               <div class="category-summary-row">
                 <span class="category-summary-pill">${articles.length} articles</span>
                 <span class="category-summary-pill">${topTags.length} active topics</span>
-                <span class="category-summary-pill">Showing latest ${Math.min(gridItems.length + (lead ? 1 : 0), articles.length)}</span>
+                <span class="category-summary-pill">Showing latest ${Math.min(gridItems.length + (lead ? 1 : 0), articles.length)} of ${articles.length}</span>
               </div>
               <div class="topic-chip-row">${buildTagPills(topTags, prefix)}</div>
             </div>
@@ -287,6 +373,7 @@ function renderCollectionPage({ title, description, articles, canonicalPath }) {
         </div>
       </main>
       ${renderStaticFooter(prefix)}
+      <script type="module" src="${prefix}assets/js/staticPage.js"></script>
     </body>
   </html>`;
 }
@@ -428,6 +515,8 @@ function renderArticlePage(article, relatedArticles, sidebarArticles, allArticle
         prefix,
         keywords: article.seoKeywords || article.tags || [],
         ogType: "article",
+        image: featuredImageSrc,
+        extraHead: `<link rel="preload" as="image" href="${featuredImageSrc}" imagesizes="(max-width: 767px) 100vw, (max-width: 1100px) 92vw, 860px" />`,
       })}
       <script type="application/ld+json">${JSON.stringify(articleSchema)}</script>
       <script type="application/ld+json">${JSON.stringify(faqSchema)}</script>
@@ -435,7 +524,7 @@ function renderArticlePage(article, relatedArticles, sidebarArticles, allArticle
     </head>
     <body>
       ${renderStaticHeader(prefix)}
-      <main class="page-shell">
+      <main id="page-content" class="page-shell">
         <div class="site-shell section-tight">
           <div class="article-layout">
             <article class="article-main">
@@ -451,7 +540,21 @@ function renderArticlePage(article, relatedArticles, sidebarArticles, allArticle
               </div>
               <h1 class="article-title">${escapeHtml(article.title)}</h1>
               <p class="article-standfirst">${escapeHtml(article.excerpt)}</p>
-              <img class="article-featured-image" src="${featuredImageSrc}" alt="${escapeHtml(article.imageAlt || article.title)}" loading="eager" />
+              <img
+                class="article-featured-image"
+                src="${featuredImageSrc}"
+                alt="${escapeHtml(article.imageAlt || article.title)}"
+                loading="eager"
+                decoding="async"
+                fetchpriority="high"
+                width="${IMAGE_WIDTH}"
+                height="${IMAGE_HEIGHT}"
+                sizes="(max-width: 767px) 100vw, (max-width: 1100px) 92vw, 860px"
+              />
+              <div class="article-toolbar">
+                <button class="button button-secondary" type="button" data-copy-url="${article.canonicalUrl}">Copy link</button>
+                <a class="button button-secondary" href="https://twitter.com/intent/tweet?text=${encodeURIComponent(article.title)}&url=${encodeURIComponent(article.canonicalUrl)}" target="_blank" rel="noreferrer">Share on X</a>
+              </div>
               <section class="sidebar-box">
                 <h2 class="section-title small-title">Table of contents</h2>
                 <ol class="toc-list">${toc}</ol>
@@ -482,6 +585,7 @@ function renderArticlePage(article, relatedArticles, sidebarArticles, allArticle
         </div>
       </main>
       ${renderStaticFooter(prefix)}
+      <script type="module" src="${prefix}assets/js/staticPage.js"></script>
     </body>
   </html>`;
 }

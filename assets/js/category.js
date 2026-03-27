@@ -2,7 +2,7 @@ import { getAllArticles, getCategoryArticles, getCategoryDigest, getRequestedCat
 import { registerServiceWorker } from "./pwa.js";
 import { setPageMeta } from "./seo.js";
 import { injectSiteChrome, populateBreakingTicker, renderDenseHeadlineItem, renderGridCard, renderLeadCard, renderSidebarItem, renderTagPills, showToast } from "./ui.js";
-import { byId, escapeHtml } from "./utils.js";
+import { byId, scheduleIdleWork } from "./utils.js";
 
 async function initCategoryPage() {
   injectSiteChrome();
@@ -57,12 +57,13 @@ async function initCategoryPage() {
 
   byId("category-grid").classList.remove("news-loading");
   byId("category-grid").innerHTML = articles.slice(1, 9).map(renderGridCard).join("");
+  scheduleIdleWork(() => {
+    byId("category-sidebar-list").classList.remove("news-loading");
+    byId("category-sidebar-list").innerHTML = articles.slice(0, 5).map(renderSidebarItem).join("");
 
-  byId("category-sidebar-list").classList.remove("news-loading");
-  byId("category-sidebar-list").innerHTML = articles.slice(0, 5).map(renderSidebarItem).join("");
-
-  byId("category-headline-stream").classList.remove("news-loading");
-  byId("category-headline-stream").innerHTML = articles.slice(5, 11).map(renderDenseHeadlineItem).join("");
+    byId("category-headline-stream").classList.remove("news-loading");
+    byId("category-headline-stream").innerHTML = articles.slice(5, 11).map(renderDenseHeadlineItem).join("");
+  });
 }
 
 initCategoryPage().catch((error) => {

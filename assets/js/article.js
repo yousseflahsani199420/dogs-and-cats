@@ -12,7 +12,7 @@ import {
   showToast,
   wireCopyLink,
 } from "./ui.js";
-import { articlePath, byId, canonicalUrl, escapeHtml, formatDate, getQueryParam, slugify, stripHtml } from "./utils.js";
+import { articlePath, byId, canonicalUrl, escapeHtml, formatDate, getQueryParam, scheduleIdleWork, slugify, stripHtml } from "./utils.js";
 
 function buildHeadingAnchors(headings = []) {
   const used = new Map();
@@ -186,7 +186,17 @@ async function initArticlePage() {
     </div>
     <h1 class="article-title">${escapeHtml(article.title)}</h1>
     <p class="article-standfirst">${escapeHtml(article.excerpt)}</p>
-    <img class="article-featured-image" src="${featuredImageSrc}" alt="${escapeHtml(article.imageAlt || article.title)}" loading="eager" />
+    <img
+      class="article-featured-image"
+      src="${featuredImageSrc}"
+      alt="${escapeHtml(article.imageAlt || article.title)}"
+      loading="eager"
+      decoding="async"
+      fetchpriority="high"
+      width="1200"
+      height="675"
+      sizes="(max-width: 767px) 100vw, (max-width: 1100px) 92vw, 860px"
+    />
     <div class="article-toolbar">
       <button id="copy-link-button" class="button button-secondary" type="button">Copy link</button>
       <a class="button button-secondary" href="https://twitter.com/intent/tweet?text=${encodeURIComponent(article.title)}&url=${encodeURIComponent(canonicalUrl(`/posts/${article.slug}/`))}" target="_blank" rel="noreferrer">Share on X</a>
@@ -202,22 +212,26 @@ async function initArticlePage() {
       <p class="muted-copy">${escapeHtml(article.author.bio || "")}</p>
     </section>
     ${renderInternalLinksSection(article.internalLinkSuggestions)}
-    ${renderRelatedArticles(relatedArticles)}
-  `;
-
-  byId("article-sidebar").innerHTML = `
-    <section class="sidebar-box">
-      <div class="section-header compact-header"><h2 class="section-title">Trending</h2></div>
-      ${allArticles.slice(0, 6).map(renderSidebarItem).join("")}
-    </section>
-    <section class="sidebar-box">
-      <div class="section-header compact-header"><h2 class="section-title">Tags</h2></div>
-      <div class="tag-row">${renderTagPills(article.tags)}</div>
-    </section>
-    ${renderFaqSection(article.faqItems)}
+    <div id="article-related-slot" class="content-deferred"></div>
   `;
 
   wireCopyLink(byId("copy-link-button"), canonicalUrl(`/posts/${article.slug}/`));
+
+  scheduleIdleWork(() => {
+    byId("article-sidebar").innerHTML = `
+      <section class="sidebar-box">
+        <div class="section-header compact-header"><h2 class="section-title">Trending</h2></div>
+        ${allArticles.slice(0, 6).map(renderSidebarItem).join("")}
+      </section>
+      <section class="sidebar-box">
+        <div class="section-header compact-header"><h2 class="section-title">Tags</h2></div>
+        <div class="tag-row">${renderTagPills(article.tags)}</div>
+      </section>
+      ${renderFaqSection(article.faqItems)}
+    `;
+
+    byId("article-related-slot").innerHTML = renderRelatedArticles(relatedArticles);
+  });
 }
 
 initArticlePage().catch((error) => {

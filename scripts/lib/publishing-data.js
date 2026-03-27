@@ -1,5 +1,6 @@
 const { CATEGORY_LABELS, SITE_NAME } = require("./constants");
 const { excerptFromHtml, slugify, stripHtml, tokenizeText } = require("./content-utils");
+const { resolveArticleFeaturedImage } = require("./article-media");
 
 function clampText(value = "", maxLength = 160) {
   const clean = value.replace(/\s+/g, " ").trim();
@@ -97,7 +98,7 @@ function summarizeArticle(article) {
     cluster: article.cluster || "",
     topicType: article.topicType || "",
     tags: article.tags || [],
-    featuredImage: article.featuredImage,
+    featuredImage: resolveArticleFeaturedImage(article),
     imageAlt: article.imageAlt || article.title,
     author: {
       name: article.author?.name || "",

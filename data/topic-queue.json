@@ -1,1365 +1,805 @@
 {
-  "updatedAt": "2026-03-27T10:52:34.968Z",
+  "updatedAt": "2026-03-27T16:46:25.560Z",
   "queue": [
     {
-      "keyword": "best food for indoor cats without stress",
-      "category": "cats",
-      "intent": "food",
-      "type": "longTail",
-      "cluster": "best-food-for",
-      "priority": 98
-    },
-    {
-      "keyword": "best food for active dogs without stress",
-      "category": "dogs",
-      "intent": "food",
-      "type": "longTail",
-      "cluster": "best-food-for",
-      "priority": 98
-    },
-    {
-      "keyword": "best food for indoor cats for first-time owners",
-      "category": "cats",
-      "intent": "beginner",
-      "type": "longTail",
-      "cluster": "best-food-for",
-      "priority": 97
-    },
-    {
-      "keyword": "best food for active dogs for first-time owners",
-      "category": "dogs",
-      "intent": "beginner",
-      "type": "longTail",
-      "cluster": "best-food-for",
-      "priority": 97
-    },
-    {
-      "keyword": "best food for indoor cats at home",
-      "category": "cats",
-      "intent": "food",
-      "type": "longTail",
-      "cluster": "best-food-for",
-      "priority": 96
-    },
-    {
-      "keyword": "best food for active dogs at home",
-      "category": "dogs",
-      "intent": "food",
-      "type": "longTail",
-      "cluster": "best-food-for",
-      "priority": 96
-    },
-    {
-      "keyword": "how to stop cat scratching furniture without stress",
-      "category": "cats",
-      "intent": "training",
-      "type": "longTail",
-      "cluster": "how-to-stop",
-      "priority": 94
-    },
-    {
-      "keyword": "how to stop puppy biting without stress",
-      "category": "dogs",
-      "intent": "training",
-      "type": "longTail",
-      "cluster": "how-to-stop",
-      "priority": 94
-    },
-    {
-      "keyword": "how to stop cat scratching furniture for first-time owners",
-      "category": "cats",
-      "intent": "beginner",
-      "type": "longTail",
-      "cluster": "how-to-stop",
-      "priority": 93
-    },
-    {
-      "keyword": "how to stop puppy biting for first-time owners",
-      "category": "dogs",
-      "intent": "beginner",
-      "type": "longTail",
-      "cluster": "how-to-stop",
-      "priority": 93
-    },
-    {
-      "keyword": "how to stop cat scratching furniture at home",
-      "category": "cats",
-      "intent": "training",
-      "type": "longTail",
-      "cluster": "how-to-stop",
-      "priority": 92
-    },
-    {
-      "keyword": "how to stop puppy biting at home",
-      "category": "dogs",
-      "intent": "training",
-      "type": "longTail",
-      "cluster": "how-to-stop",
-      "priority": 92
-    },
-    {
-      "keyword": "kitten litter training without stress",
-      "category": "cats",
-      "intent": "training",
-      "type": "longTail",
-      "cluster": "kitten-litter-training",
-      "priority": 90
-    },
-    {
-      "keyword": "puppy potty training schedule without stress",
-      "category": "dogs",
-      "intent": "training",
-      "type": "longTail",
-      "cluster": "puppy-potty-training",
-      "priority": 90
-    },
-    {
-      "keyword": "kitten litter training for first-time owners",
-      "category": "cats",
-      "intent": "beginner",
-      "type": "longTail",
-      "cluster": "kitten-litter-training",
-      "priority": 89
-    },
-    {
-      "keyword": "puppy potty training schedule for first-time owners",
-      "category": "dogs",
-      "intent": "beginner",
-      "type": "longTail",
-      "cluster": "puppy-potty-training",
-      "priority": 89
-    },
-    {
-      "keyword": "kitten litter training at home",
-      "category": "cats",
-      "intent": "training",
-      "type": "longTail",
-      "cluster": "kitten-litter-training",
-      "priority": 88
-    },
-    {
-      "keyword": "puppy potty training schedule at home",
-      "category": "dogs",
-      "intent": "training",
-      "type": "longTail",
-      "cluster": "puppy-potty-training",
-      "priority": 88
-    },
-    {
-      "keyword": "how to calm a cat in a carrier without stress",
-      "category": "cats",
-      "intent": "behavior",
-      "type": "longTail",
-      "cluster": "how-to-calm",
-      "priority": 86
-    },
-    {
-      "keyword": "how to calm a dog during thunderstorms without stress",
-      "category": "dogs",
-      "intent": "behavior",
-      "type": "longTail",
-      "cluster": "how-to-calm",
-      "priority": 86
-    },
-    {
-      "keyword": "how to calm a cat in a carrier for first-time owners",
-      "category": "cats",
-      "intent": "beginner",
-      "type": "longTail",
-      "cluster": "how-to-calm",
-      "priority": 85
-    },
-    {
-      "keyword": "how to calm a dog during thunderstorms for first-time owners",
-      "category": "dogs",
-      "intent": "beginner",
-      "type": "longTail",
-      "cluster": "how-to-calm",
-      "priority": 85
-    },
-    {
-      "keyword": "how to calm a cat in a carrier at home",
-      "category": "cats",
-      "intent": "behavior",
-      "type": "longTail",
-      "cluster": "how-to-calm",
-      "priority": 84
-    },
-    {
-      "keyword": "how to calm a dog during thunderstorms at home",
-      "category": "dogs",
-      "intent": "behavior",
-      "type": "longTail",
-      "cluster": "how-to-calm",
-      "priority": 84
-    },
-    {
-      "keyword": "best toys for bored indoor cats without stress",
-      "category": "cats",
-      "intent": "transactional",
-      "type": "longTail",
-      "cluster": "best-toys-for",
-      "priority": 82
-    },
-    {
-      "keyword": "best toys for high energy dogs without stress",
-      "category": "dogs",
-      "intent": "transactional",
-      "type": "longTail",
-      "cluster": "best-toys-for",
-      "priority": 82
-    },
-    {
-      "keyword": "best toys for bored indoor cats for first-time owners",
-      "category": "cats",
-      "intent": "beginner",
-      "type": "longTail",
-      "cluster": "best-toys-for",
-      "priority": 81
-    },
-    {
-      "keyword": "best toys for high energy dogs for first-time owners",
-      "category": "dogs",
-      "intent": "beginner",
-      "type": "longTail",
-      "cluster": "best-toys-for",
-      "priority": 81
-    },
-    {
-      "keyword": "best toys for bored indoor cats at home",
-      "category": "cats",
-      "intent": "transactional",
-      "type": "longTail",
-      "cluster": "best-toys-for",
-      "priority": 80
-    },
-    {
-      "keyword": "best toys for high energy dogs at home",
-      "category": "dogs",
-      "intent": "transactional",
-      "type": "longTail",
-      "cluster": "best-toys-for",
-      "priority": 80
-    },
-    {
-      "keyword": "how to reduce cat shedding in apartments",
-      "category": "cats",
-      "intent": "informational",
-      "type": "longTail",
-      "cluster": "how-to-reduce",
-      "priority": 79
-    },
-    {
-      "keyword": "how to reduce dog shedding in apartments",
-      "category": "dogs",
-      "intent": "informational",
-      "type": "longTail",
-      "cluster": "how-to-reduce",
-      "priority": 79
-    },
-    {
-      "keyword": "how to reduce cat shedding without stress",
-      "category": "cats",
-      "intent": "health",
-      "type": "longTail",
-      "cluster": "how-to-reduce",
-      "priority": 78
-    },
-    {
-      "keyword": "how to reduce dog shedding without stress",
-      "category": "dogs",
-      "intent": "health",
-      "type": "longTail",
-      "cluster": "how-to-reduce",
-      "priority": 78
-    },
-    {
-      "keyword": "how to reduce cat shedding for first-time owners",
-      "category": "cats",
-      "intent": "beginner",
-      "type": "longTail",
-      "cluster": "how-to-reduce",
-      "priority": 77
-    },
-    {
-      "keyword": "how to reduce dog shedding for first-time owners",
-      "category": "dogs",
-      "intent": "beginner",
-      "type": "longTail",
-      "cluster": "how-to-reduce",
-      "priority": 77
-    },
-    {
-      "keyword": "how to reduce cat shedding at home",
-      "category": "cats",
-      "intent": "health",
-      "type": "longTail",
-      "cluster": "how-to-reduce",
-      "priority": 76
-    },
-    {
-      "keyword": "how to reduce dog shedding at home",
-      "category": "dogs",
-      "intent": "health",
-      "type": "longTail",
-      "cluster": "how-to-reduce",
-      "priority": 76
-    },
-    {
-      "keyword": "wet vs dry food for cats in apartments",
-      "category": "cats",
-      "intent": "informational",
-      "type": "longTail",
-      "cluster": "wet-vs-dry",
-      "priority": 75
-    },
-    {
-      "keyword": "wet vs dry food for dogs in apartments",
-      "category": "dogs",
-      "intent": "informational",
-      "type": "longTail",
-      "cluster": "wet-vs-dry",
-      "priority": 75
-    },
-    {
-      "keyword": "wet vs dry food for cats without stress",
-      "category": "cats",
-      "intent": "food",
-      "type": "longTail",
-      "cluster": "wet-vs-dry",
-      "priority": 74
-    },
-    {
-      "keyword": "wet vs dry food for dogs without stress",
-      "category": "dogs",
-      "intent": "food",
-      "type": "longTail",
-      "cluster": "wet-vs-dry",
-      "priority": 74
-    },
-    {
-      "keyword": "wet vs dry food for cats for first-time owners",
-      "category": "cats",
-      "intent": "beginner",
-      "type": "longTail",
-      "cluster": "wet-vs-dry",
-      "priority": 73
-    },
-    {
-      "keyword": "wet vs dry food for dogs for first-time owners",
-      "category": "dogs",
-      "intent": "beginner",
-      "type": "longTail",
-      "cluster": "wet-vs-dry",
-      "priority": 73
-    },
-    {
-      "keyword": "wet vs dry food for cats at home",
-      "category": "cats",
-      "intent": "food",
-      "type": "longTail",
-      "cluster": "wet-vs-dry",
-      "priority": 72
-    },
-    {
-      "keyword": "wet vs dry food for dogs at home",
-      "category": "dogs",
-      "intent": "food",
-      "type": "longTail",
-      "cluster": "wet-vs-dry",
-      "priority": 72
-    },
-    {
-      "keyword": "how to introduce a new cat in apartments",
-      "category": "cats",
-      "intent": "informational",
-      "type": "longTail",
-      "cluster": "how-to-introduce",
-      "priority": 71
-    },
-    {
-      "keyword": "how to introduce a rescue dog in apartments",
-      "category": "dogs",
-      "intent": "informational",
-      "type": "longTail",
-      "cluster": "how-to-introduce",
-      "priority": 71
-    },
-    {
-      "keyword": "how to introduce a new cat without stress",
-      "category": "cats",
-      "intent": "behavior",
-      "type": "longTail",
-      "cluster": "how-to-introduce",
-      "priority": 70
-    },
-    {
-      "keyword": "how to introduce a rescue dog without stress",
-      "category": "dogs",
-      "intent": "behavior",
-      "type": "longTail",
-      "cluster": "how-to-introduce",
-      "priority": 70
-    },
-    {
-      "keyword": "how to introduce a new cat for first-time owners",
-      "category": "cats",
-      "intent": "beginner",
-      "type": "longTail",
-      "cluster": "how-to-introduce",
-      "priority": 69
-    },
-    {
-      "keyword": "how to introduce a rescue dog for first-time owners",
-      "category": "dogs",
-      "intent": "beginner",
-      "type": "longTail",
-      "cluster": "how-to-introduce",
-      "priority": 69
-    },
-    {
-      "keyword": "how to introduce a new cat at home",
-      "category": "cats",
-      "intent": "behavior",
-      "type": "longTail",
-      "cluster": "how-to-introduce",
-      "priority": 68
-    },
-    {
-      "keyword": "how to introduce a rescue dog at home",
-      "category": "dogs",
-      "intent": "behavior",
-      "type": "longTail",
-      "cluster": "how-to-introduce",
-      "priority": 68
-    },
-    {
-      "keyword": "how to help a senior cat drink more water in apartments",
-      "category": "cats",
-      "intent": "informational",
-      "type": "longTail",
-      "cluster": "how-to-help",
-      "priority": 67
-    },
-    {
-      "keyword": "how to help a senior dog with mobility in apartments",
-      "category": "dogs",
-      "intent": "informational",
-      "type": "longTail",
-      "cluster": "how-to-help",
-      "priority": 67
-    },
-    {
-      "keyword": "how to help a senior cat drink more water without stress",
-      "category": "cats",
-      "intent": "health",
-      "type": "longTail",
-      "cluster": "how-to-help",
-      "priority": 66
-    },
-    {
-      "keyword": "how to help a senior dog with mobility without stress",
-      "category": "dogs",
-      "intent": "health",
-      "type": "longTail",
-      "cluster": "how-to-help",
-      "priority": 66
-    },
-    {
-      "keyword": "how to help a senior cat drink more water for first-time owners",
-      "category": "cats",
-      "intent": "beginner",
-      "type": "longTail",
-      "cluster": "how-to-help",
-      "priority": 65
-    },
-    {
-      "keyword": "how to help a senior dog with mobility for first-time owners",
-      "category": "dogs",
-      "intent": "beginner",
-      "type": "longTail",
-      "cluster": "how-to-help",
-      "priority": 65
-    },
-    {
-      "keyword": "how to help a senior cat drink more water at home",
-      "category": "cats",
-      "intent": "health",
-      "type": "longTail",
-      "cluster": "how-to-help",
-      "priority": 64
-    },
-    {
-      "keyword": "how to help a senior dog with mobility at home",
-      "category": "dogs",
-      "intent": "health",
-      "type": "longTail",
-      "cluster": "how-to-help",
-      "priority": 64
-    },
-    {
-      "keyword": "cat enrichment ideas in apartments",
-      "category": "cats",
-      "intent": "informational",
-      "type": "longTail",
-      "cluster": "cat-enrichment-ideas",
-      "priority": 63
-    },
-    {
-      "keyword": "dog exercise ideas in apartments",
-      "category": "dogs",
-      "intent": "informational",
-      "type": "longTail",
-      "cluster": "dog-exercise-ideas",
-      "priority": 63
-    },
-    {
-      "keyword": "cat enrichment ideas without stress",
-      "category": "cats",
-      "intent": "behavior",
-      "type": "longTail",
-      "cluster": "cat-enrichment-ideas",
-      "priority": 62
-    },
-    {
-      "keyword": "dog exercise ideas without stress",
-      "category": "dogs",
-      "intent": "behavior",
-      "type": "longTail",
-      "cluster": "dog-exercise-ideas",
-      "priority": 62
-    },
-    {
-      "keyword": "cat enrichment ideas for first-time owners",
-      "category": "cats",
-      "intent": "beginner",
-      "type": "longTail",
-      "cluster": "cat-enrichment-ideas",
-      "priority": 61
-    },
-    {
-      "keyword": "dog exercise ideas for first-time owners",
-      "category": "dogs",
-      "intent": "beginner",
-      "type": "longTail",
-      "cluster": "dog-exercise-ideas",
-      "priority": 61
-    },
-    {
-      "keyword": "cat enrichment ideas at home",
-      "category": "cats",
-      "intent": "behavior",
-      "type": "longTail",
-      "cluster": "cat-enrichment-ideas",
-      "priority": 60
-    },
-    {
-      "keyword": "dog exercise ideas at home",
-      "category": "dogs",
-      "intent": "behavior",
-      "type": "longTail",
-      "cluster": "dog-exercise-ideas",
-      "priority": 60
-    },
-    {
-      "keyword": "cat food tips",
+      "keyword": "cat anxiety tips",
       "category": "cats",
       "intent": "informational",
       "type": "highVolume",
-      "cluster": "cat-food",
-      "priority": 60
-    },
-    {
-      "keyword": "dog food tips",
-      "category": "dogs",
-      "intent": "informational",
-      "type": "highVolume",
-      "cluster": "dog-food",
-      "priority": 60
-    },
-    {
-      "keyword": "cat food guide",
-      "category": "cats",
-      "intent": "beginner",
-      "type": "highVolume",
-      "cluster": "cat-food",
-      "priority": 59
-    },
-    {
-      "keyword": "dog food guide",
-      "category": "dogs",
-      "intent": "beginner",
-      "type": "highVolume",
-      "cluster": "dog-food",
-      "priority": 59
-    },
-    {
-      "keyword": "cat food advice",
-      "category": "cats",
-      "intent": "informational",
-      "type": "highVolume",
-      "cluster": "cat-food",
-      "priority": 58
-    },
-    {
-      "keyword": "dog food advice",
-      "category": "dogs",
-      "intent": "informational",
-      "type": "highVolume",
-      "cluster": "dog-food",
-      "priority": 58
-    },
-    {
-      "keyword": "cat food routine",
-      "category": "cats",
-      "intent": "behavior",
-      "type": "highVolume",
-      "cluster": "cat-food",
-      "priority": 57
-    },
-    {
-      "keyword": "dog food routine",
-      "category": "dogs",
-      "intent": "behavior",
-      "type": "highVolume",
-      "cluster": "dog-food",
-      "priority": 57
-    },
-    {
-      "keyword": "cat food checklist",
-      "category": "cats",
-      "intent": "transactional",
-      "type": "highVolume",
-      "cluster": "cat-food",
-      "priority": 56
-    },
-    {
-      "keyword": "dog food checklist",
-      "category": "dogs",
-      "intent": "transactional",
-      "type": "highVolume",
-      "cluster": "dog-food",
-      "priority": 56
-    },
-    {
-      "keyword": "kitten care tips",
-      "category": "cats",
-      "intent": "informational",
-      "type": "highVolume",
-      "cluster": "kitten-care",
-      "priority": 59
-    },
-    {
-      "keyword": "puppy care tips",
-      "category": "dogs",
-      "intent": "informational",
-      "type": "highVolume",
-      "cluster": "puppy-care",
-      "priority": 59
-    },
-    {
-      "keyword": "kitten care guide",
-      "category": "cats",
-      "intent": "beginner",
-      "type": "highVolume",
-      "cluster": "kitten-care",
-      "priority": 58
-    },
-    {
-      "keyword": "puppy care guide",
-      "category": "dogs",
-      "intent": "beginner",
-      "type": "highVolume",
-      "cluster": "puppy-care",
-      "priority": 58
-    },
-    {
-      "keyword": "kitten care advice",
-      "category": "cats",
-      "intent": "informational",
-      "type": "highVolume",
-      "cluster": "kitten-care",
-      "priority": 57
-    },
-    {
-      "keyword": "puppy care advice",
-      "category": "dogs",
-      "intent": "informational",
-      "type": "highVolume",
-      "cluster": "puppy-care",
-      "priority": 57
-    },
-    {
-      "keyword": "kitten care routine",
-      "category": "cats",
-      "intent": "behavior",
-      "type": "highVolume",
-      "cluster": "kitten-care",
-      "priority": 56
-    },
-    {
-      "keyword": "puppy care routine",
-      "category": "dogs",
-      "intent": "behavior",
-      "type": "highVolume",
-      "cluster": "puppy-care",
-      "priority": 56
-    },
-    {
-      "keyword": "kitten care checklist",
-      "category": "cats",
-      "intent": "transactional",
-      "type": "highVolume",
-      "cluster": "kitten-care",
-      "priority": 55
-    },
-    {
-      "keyword": "puppy care checklist",
-      "category": "dogs",
-      "intent": "transactional",
-      "type": "highVolume",
-      "cluster": "puppy-care",
-      "priority": 55
-    },
-    {
-      "keyword": "cat training tips",
-      "category": "cats",
-      "intent": "informational",
-      "type": "highVolume",
-      "cluster": "cat-training",
-      "priority": 58
-    },
-    {
-      "keyword": "dog training tips",
-      "category": "dogs",
-      "intent": "informational",
-      "type": "highVolume",
-      "cluster": "dog-training",
-      "priority": 58
-    },
-    {
-      "keyword": "cat training guide",
-      "category": "cats",
-      "intent": "beginner",
-      "type": "highVolume",
-      "cluster": "cat-training",
-      "priority": 57
-    },
-    {
-      "keyword": "dog training guide",
-      "category": "dogs",
-      "intent": "beginner",
-      "type": "highVolume",
-      "cluster": "dog-training",
-      "priority": 57
-    },
-    {
-      "keyword": "cat training advice",
-      "category": "cats",
-      "intent": "informational",
-      "type": "highVolume",
-      "cluster": "cat-training",
-      "priority": 56
-    },
-    {
-      "keyword": "dog training advice",
-      "category": "dogs",
-      "intent": "informational",
-      "type": "highVolume",
-      "cluster": "dog-training",
-      "priority": 56
-    },
-    {
-      "keyword": "cat training routine",
-      "category": "cats",
-      "intent": "behavior",
-      "type": "highVolume",
-      "cluster": "cat-training",
-      "priority": 55
-    },
-    {
-      "keyword": "dog training routine",
-      "category": "dogs",
-      "intent": "behavior",
-      "type": "highVolume",
-      "cluster": "dog-training",
-      "priority": 55
-    },
-    {
-      "keyword": "cat training checklist",
-      "category": "cats",
-      "intent": "transactional",
-      "type": "highVolume",
-      "cluster": "cat-training",
-      "priority": 54
-    },
-    {
-      "keyword": "dog training checklist",
-      "category": "dogs",
-      "intent": "transactional",
-      "type": "highVolume",
-      "cluster": "dog-training",
-      "priority": 54
-    },
-    {
-      "keyword": "cat behavior tips",
-      "category": "cats",
-      "intent": "informational",
-      "type": "highVolume",
-      "cluster": "cat-behavior",
-      "priority": 57
-    },
-    {
-      "keyword": "dog behavior tips",
-      "category": "dogs",
-      "intent": "informational",
-      "type": "highVolume",
-      "cluster": "dog-behavior",
-      "priority": 57
-    },
-    {
-      "keyword": "cat behavior guide",
-      "category": "cats",
-      "intent": "beginner",
-      "type": "highVolume",
-      "cluster": "cat-behavior",
-      "priority": 56
-    },
-    {
-      "keyword": "dog behavior guide",
-      "category": "dogs",
-      "intent": "beginner",
-      "type": "highVolume",
-      "cluster": "dog-behavior",
-      "priority": 56
-    },
-    {
-      "keyword": "cat behavior advice",
-      "category": "cats",
-      "intent": "informational",
-      "type": "highVolume",
-      "cluster": "cat-behavior",
-      "priority": 55
-    },
-    {
-      "keyword": "dog behavior advice",
-      "category": "dogs",
-      "intent": "informational",
-      "type": "highVolume",
-      "cluster": "dog-behavior",
-      "priority": 55
-    },
-    {
-      "keyword": "cat behavior routine",
-      "category": "cats",
-      "intent": "behavior",
-      "type": "highVolume",
-      "cluster": "cat-behavior",
-      "priority": 54
-    },
-    {
-      "keyword": "dog behavior routine",
-      "category": "dogs",
-      "intent": "behavior",
-      "type": "highVolume",
-      "cluster": "dog-behavior",
-      "priority": 54
-    },
-    {
-      "keyword": "cat behavior checklist",
-      "category": "cats",
-      "intent": "transactional",
-      "type": "highVolume",
-      "cluster": "cat-behavior",
-      "priority": 53
-    },
-    {
-      "keyword": "dog behavior checklist",
-      "category": "dogs",
-      "intent": "transactional",
-      "type": "highVolume",
-      "cluster": "dog-behavior",
-      "priority": 53
-    },
-    {
-      "keyword": "cat grooming tips",
-      "category": "cats",
-      "intent": "informational",
-      "type": "highVolume",
-      "cluster": "cat-grooming",
-      "priority": 56
-    },
-    {
-      "keyword": "dog grooming tips",
-      "category": "dogs",
-      "intent": "informational",
-      "type": "highVolume",
-      "cluster": "dog-grooming",
-      "priority": 56
-    },
-    {
-      "keyword": "cat grooming guide",
-      "category": "cats",
-      "intent": "beginner",
-      "type": "highVolume",
-      "cluster": "cat-grooming",
-      "priority": 55
-    },
-    {
-      "keyword": "dog grooming guide",
-      "category": "dogs",
-      "intent": "beginner",
-      "type": "highVolume",
-      "cluster": "dog-grooming",
-      "priority": 55
-    },
-    {
-      "keyword": "cat grooming advice",
-      "category": "cats",
-      "intent": "informational",
-      "type": "highVolume",
-      "cluster": "cat-grooming",
-      "priority": 54
-    },
-    {
-      "keyword": "dog grooming advice",
-      "category": "dogs",
-      "intent": "informational",
-      "type": "highVolume",
-      "cluster": "dog-grooming",
-      "priority": 54
-    },
-    {
-      "keyword": "cat grooming routine",
-      "category": "cats",
-      "intent": "behavior",
-      "type": "highVolume",
-      "cluster": "cat-grooming",
-      "priority": 53
-    },
-    {
-      "keyword": "dog grooming routine",
-      "category": "dogs",
-      "intent": "behavior",
-      "type": "highVolume",
-      "cluster": "dog-grooming",
-      "priority": 53
-    },
-    {
-      "keyword": "cat grooming checklist",
-      "category": "cats",
-      "intent": "transactional",
-      "type": "highVolume",
-      "cluster": "cat-grooming",
-      "priority": 52
-    },
-    {
-      "keyword": "dog grooming checklist",
-      "category": "dogs",
-      "intent": "transactional",
-      "type": "highVolume",
-      "cluster": "dog-grooming",
-      "priority": 52
-    },
-    {
-      "keyword": "indoor cat tips",
-      "category": "cats",
-      "intent": "informational",
-      "type": "highVolume",
-      "cluster": "indoor-cat",
-      "priority": 55
-    },
-    {
-      "keyword": "dog exercise tips",
-      "category": "dogs",
-      "intent": "informational",
-      "type": "highVolume",
-      "cluster": "dog-exercise",
-      "priority": 55
-    },
-    {
-      "keyword": "indoor cat guide",
-      "category": "cats",
-      "intent": "beginner",
-      "type": "highVolume",
-      "cluster": "indoor-cat",
-      "priority": 54
-    },
-    {
-      "keyword": "dog exercise guide",
-      "category": "dogs",
-      "intent": "beginner",
-      "type": "highVolume",
-      "cluster": "dog-exercise",
-      "priority": 54
-    },
-    {
-      "keyword": "indoor cat advice",
-      "category": "cats",
-      "intent": "informational",
-      "type": "highVolume",
-      "cluster": "indoor-cat",
-      "priority": 53
-    },
-    {
-      "keyword": "dog exercise advice",
-      "category": "dogs",
-      "intent": "informational",
-      "type": "highVolume",
-      "cluster": "dog-exercise",
-      "priority": 53
-    },
-    {
-      "keyword": "indoor cat routine",
-      "category": "cats",
-      "intent": "behavior",
-      "type": "highVolume",
-      "cluster": "indoor-cat",
-      "priority": 52
-    },
-    {
-      "keyword": "dog exercise routine",
-      "category": "dogs",
-      "intent": "behavior",
-      "type": "highVolume",
-      "cluster": "dog-exercise",
-      "priority": 52
-    },
-    {
-      "keyword": "indoor cat checklist",
-      "category": "cats",
-      "intent": "transactional",
-      "type": "highVolume",
-      "cluster": "indoor-cat",
-      "priority": 51
-    },
-    {
-      "keyword": "dog exercise checklist",
-      "category": "dogs",
-      "intent": "transactional",
-      "type": "highVolume",
-      "cluster": "dog-exercise",
-      "priority": 51
-    },
-    {
-      "keyword": "senior cat care tips",
-      "category": "cats",
-      "intent": "informational",
-      "type": "highVolume",
-      "cluster": "senior-cat-care",
-      "priority": 54
-    },
-    {
-      "keyword": "senior dog care tips",
-      "category": "dogs",
-      "intent": "informational",
-      "type": "highVolume",
-      "cluster": "senior-dog-care",
-      "priority": 54
-    },
-    {
-      "keyword": "senior cat care guide",
-      "category": "cats",
-      "intent": "beginner",
-      "type": "highVolume",
-      "cluster": "senior-cat-care",
-      "priority": 53
-    },
-    {
-      "keyword": "senior dog care guide",
-      "category": "dogs",
-      "intent": "beginner",
-      "type": "highVolume",
-      "cluster": "senior-dog-care",
-      "priority": 53
-    },
-    {
-      "keyword": "senior cat care advice",
-      "category": "cats",
-      "intent": "informational",
-      "type": "highVolume",
-      "cluster": "senior-cat-care",
-      "priority": 52
-    },
-    {
-      "keyword": "senior dog care advice",
-      "category": "dogs",
-      "intent": "informational",
-      "type": "highVolume",
-      "cluster": "senior-dog-care",
-      "priority": 52
-    },
-    {
-      "keyword": "senior cat care routine",
-      "category": "cats",
-      "intent": "behavior",
-      "type": "highVolume",
-      "cluster": "senior-cat-care",
-      "priority": 51
-    },
-    {
-      "keyword": "senior dog care routine",
-      "category": "dogs",
-      "intent": "behavior",
-      "type": "highVolume",
-      "cluster": "senior-dog-care",
-      "priority": 51
-    },
-    {
-      "keyword": "senior cat care checklist",
-      "category": "cats",
-      "intent": "transactional",
-      "type": "highVolume",
-      "cluster": "senior-cat-care",
+      "cluster": "cat-anxiety",
       "priority": 50
     },
     {
-      "keyword": "senior dog care checklist",
-      "category": "dogs",
-      "intent": "transactional",
-      "type": "highVolume",
-      "cluster": "senior-dog-care",
-      "priority": 50
-    },
-    {
-      "keyword": "cat health tips",
-      "category": "cats",
-      "intent": "informational",
-      "type": "highVolume",
-      "cluster": "cat-health",
-      "priority": 53
-    },
-    {
-      "keyword": "dog health tips",
-      "category": "dogs",
-      "intent": "informational",
-      "type": "highVolume",
-      "cluster": "dog-health",
-      "priority": 53
-    },
-    {
-      "keyword": "cat health guide",
+      "keyword": "cat anxiety guide",
       "category": "cats",
       "intent": "beginner",
       "type": "highVolume",
-      "cluster": "cat-health",
-      "priority": 52
-    },
-    {
-      "keyword": "dog health guide",
-      "category": "dogs",
-      "intent": "beginner",
-      "type": "highVolume",
-      "cluster": "dog-health",
-      "priority": 52
-    },
-    {
-      "keyword": "cat health advice",
-      "category": "cats",
-      "intent": "informational",
-      "type": "highVolume",
-      "cluster": "cat-health",
-      "priority": 51
-    },
-    {
-      "keyword": "dog health advice",
-      "category": "dogs",
-      "intent": "informational",
-      "type": "highVolume",
-      "cluster": "dog-health",
-      "priority": 51
-    },
-    {
-      "keyword": "cat health routine",
-      "category": "cats",
-      "intent": "behavior",
-      "type": "highVolume",
-      "cluster": "cat-health",
-      "priority": 50
-    },
-    {
-      "keyword": "dog health routine",
-      "category": "dogs",
-      "intent": "behavior",
-      "type": "highVolume",
-      "cluster": "dog-health",
-      "priority": 50
-    },
-    {
-      "keyword": "cat health checklist",
-      "category": "cats",
-      "intent": "transactional",
-      "type": "highVolume",
-      "cluster": "cat-health",
+      "cluster": "cat-anxiety",
       "priority": 49
     },
     {
-      "keyword": "dog health checklist",
-      "category": "dogs",
-      "intent": "transactional",
-      "type": "highVolume",
-      "cluster": "dog-health",
-      "priority": 49
-    },
-    {
-      "keyword": "cat litter tips",
+      "keyword": "cat anxiety advice",
       "category": "cats",
       "intent": "informational",
       "type": "highVolume",
-      "cluster": "cat-litter",
-      "priority": 52
-    },
-    {
-      "keyword": "dog treats tips",
-      "category": "dogs",
-      "intent": "informational",
-      "type": "highVolume",
-      "cluster": "dog-treats",
-      "priority": 52
-    },
-    {
-      "keyword": "cat litter guide",
-      "category": "cats",
-      "intent": "beginner",
-      "type": "highVolume",
-      "cluster": "cat-litter",
-      "priority": 51
-    },
-    {
-      "keyword": "dog treats guide",
-      "category": "dogs",
-      "intent": "beginner",
-      "type": "highVolume",
-      "cluster": "dog-treats",
-      "priority": 51
-    },
-    {
-      "keyword": "cat litter advice",
-      "category": "cats",
-      "intent": "informational",
-      "type": "highVolume",
-      "cluster": "cat-litter",
-      "priority": 50
-    },
-    {
-      "keyword": "dog treats advice",
-      "category": "dogs",
-      "intent": "informational",
-      "type": "highVolume",
-      "cluster": "dog-treats",
-      "priority": 50
-    },
-    {
-      "keyword": "cat litter routine",
-      "category": "cats",
-      "intent": "behavior",
-      "type": "highVolume",
-      "cluster": "cat-litter",
-      "priority": 49
-    },
-    {
-      "keyword": "dog treats routine",
-      "category": "dogs",
-      "intent": "behavior",
-      "type": "highVolume",
-      "cluster": "dog-treats",
-      "priority": 49
-    },
-    {
-      "keyword": "cat litter checklist",
-      "category": "cats",
-      "intent": "transactional",
-      "type": "highVolume",
-      "cluster": "cat-litter",
+      "cluster": "cat-anxiety",
       "priority": 48
     },
     {
-      "keyword": "dog treats checklist",
-      "category": "dogs",
-      "intent": "transactional",
-      "type": "highVolume",
-      "cluster": "dog-treats",
-      "priority": 48
-    },
-    {
-      "keyword": "cat toys tips",
-      "category": "cats",
-      "intent": "informational",
-      "type": "highVolume",
-      "cluster": "cat-toys",
-      "priority": 51
-    },
-    {
-      "keyword": "dog breeds tips",
-      "category": "dogs",
-      "intent": "informational",
-      "type": "highVolume",
-      "cluster": "dog-breeds",
-      "priority": 51
-    },
-    {
-      "keyword": "cat toys guide",
-      "category": "cats",
-      "intent": "beginner",
-      "type": "highVolume",
-      "cluster": "cat-toys",
-      "priority": 50
-    },
-    {
-      "keyword": "dog breeds guide",
-      "category": "dogs",
-      "intent": "beginner",
-      "type": "highVolume",
-      "cluster": "dog-breeds",
-      "priority": 50
-    },
-    {
-      "keyword": "cat toys advice",
-      "category": "cats",
-      "intent": "informational",
-      "type": "highVolume",
-      "cluster": "cat-toys",
-      "priority": 49
-    },
-    {
-      "keyword": "dog breeds advice",
-      "category": "dogs",
-      "intent": "informational",
-      "type": "highVolume",
-      "cluster": "dog-breeds",
-      "priority": 49
-    },
-    {
-      "keyword": "cat toys routine",
+      "keyword": "cat anxiety routine",
       "category": "cats",
       "intent": "behavior",
       "type": "highVolume",
-      "cluster": "cat-toys",
-      "priority": 48
-    },
-    {
-      "keyword": "dog breeds routine",
-      "category": "dogs",
-      "intent": "behavior",
-      "type": "highVolume",
-      "cluster": "dog-breeds",
-      "priority": 48
-    },
-    {
-      "keyword": "cat toys checklist",
-      "category": "cats",
-      "intent": "transactional",
-      "type": "highVolume",
-      "cluster": "cat-toys",
+      "cluster": "cat-anxiety",
       "priority": 47
     },
     {
-      "keyword": "dog breeds checklist",
+      "keyword": "cat anxiety checklist",
+      "category": "cats",
+      "intent": "transactional",
+      "type": "highVolume",
+      "cluster": "cat-anxiety",
+      "priority": 46
+    },
+    {
+      "keyword": "cat dental care tips",
+      "category": "cats",
+      "intent": "informational",
+      "type": "highVolume",
+      "cluster": "cat-dental-care",
+      "priority": 49
+    },
+    {
+      "keyword": "cat dental care guide",
+      "category": "cats",
+      "intent": "beginner",
+      "type": "highVolume",
+      "cluster": "cat-dental-care",
+      "priority": 48
+    },
+    {
+      "keyword": "cat dental care advice",
+      "category": "cats",
+      "intent": "informational",
+      "type": "highVolume",
+      "cluster": "cat-dental-care",
+      "priority": 47
+    },
+    {
+      "keyword": "cat dental care routine",
+      "category": "cats",
+      "intent": "behavior",
+      "type": "highVolume",
+      "cluster": "cat-dental-care",
+      "priority": 46
+    },
+    {
+      "keyword": "cat dental care checklist",
+      "category": "cats",
+      "intent": "transactional",
+      "type": "highVolume",
+      "cluster": "cat-dental-care",
+      "priority": 45
+    },
+    {
+      "keyword": "cat weight loss tips",
+      "category": "cats",
+      "intent": "informational",
+      "type": "highVolume",
+      "cluster": "cat-weight-loss",
+      "priority": 48
+    },
+    {
+      "keyword": "cat weight loss guide",
+      "category": "cats",
+      "intent": "beginner",
+      "type": "highVolume",
+      "cluster": "cat-weight-loss",
+      "priority": 47
+    },
+    {
+      "keyword": "cat weight loss advice",
+      "category": "cats",
+      "intent": "informational",
+      "type": "highVolume",
+      "cluster": "cat-weight-loss",
+      "priority": 46
+    },
+    {
+      "keyword": "cat weight loss routine",
+      "category": "cats",
+      "intent": "behavior",
+      "type": "highVolume",
+      "cluster": "cat-weight-loss",
+      "priority": 45
+    },
+    {
+      "keyword": "cat weight loss checklist",
+      "category": "cats",
+      "intent": "transactional",
+      "type": "highVolume",
+      "cluster": "cat-weight-loss",
+      "priority": 44
+    },
+    {
+      "keyword": "cat allergies tips",
+      "category": "cats",
+      "intent": "informational",
+      "type": "highVolume",
+      "cluster": "cat-allergies",
+      "priority": 47
+    },
+    {
+      "keyword": "cat allergies guide",
+      "category": "cats",
+      "intent": "beginner",
+      "type": "highVolume",
+      "cluster": "cat-allergies",
+      "priority": 46
+    },
+    {
+      "keyword": "cat allergies advice",
+      "category": "cats",
+      "intent": "informational",
+      "type": "highVolume",
+      "cluster": "cat-allergies",
+      "priority": 45
+    },
+    {
+      "keyword": "cat allergies routine",
+      "category": "cats",
+      "intent": "behavior",
+      "type": "highVolume",
+      "cluster": "cat-allergies",
+      "priority": 44
+    },
+    {
+      "keyword": "cat allergies checklist",
+      "category": "cats",
+      "intent": "transactional",
+      "type": "highVolume",
+      "cluster": "cat-allergies",
+      "priority": 43
+    },
+    {
+      "keyword": "cat play tips",
+      "category": "cats",
+      "intent": "informational",
+      "type": "highVolume",
+      "cluster": "cat-play",
+      "priority": 46
+    },
+    {
+      "keyword": "cat play guide",
+      "category": "cats",
+      "intent": "beginner",
+      "type": "highVolume",
+      "cluster": "cat-play",
+      "priority": 45
+    },
+    {
+      "keyword": "cat play advice",
+      "category": "cats",
+      "intent": "informational",
+      "type": "highVolume",
+      "cluster": "cat-play",
+      "priority": 44
+    },
+    {
+      "keyword": "cat play routine",
+      "category": "cats",
+      "intent": "behavior",
+      "type": "highVolume",
+      "cluster": "cat-play",
+      "priority": 43
+    },
+    {
+      "keyword": "cat play checklist",
+      "category": "cats",
+      "intent": "transactional",
+      "type": "highVolume",
+      "cluster": "cat-play",
+      "priority": 42
+    },
+    {
+      "keyword": "how to stop cat meowing at night for beginners",
+      "category": "cats",
+      "intent": "beginner",
+      "type": "longTail",
+      "cluster": "how-to-stop",
+      "priority": 60
+    },
+    {
+      "keyword": "how to stop cat meowing at night in apartments",
+      "category": "cats",
+      "intent": "informational",
+      "type": "longTail",
+      "cluster": "how-to-stop",
+      "priority": 59
+    },
+    {
+      "keyword": "how to stop cat meowing at night without stress",
+      "category": "cats",
+      "intent": "training",
+      "type": "longTail",
+      "cluster": "how-to-stop",
+      "priority": 58
+    },
+    {
+      "keyword": "how to stop cat meowing at night for first-time owners",
+      "category": "cats",
+      "intent": "beginner",
+      "type": "longTail",
+      "cluster": "how-to-stop",
+      "priority": 57
+    },
+    {
+      "keyword": "how to stop cat meowing at night at home",
+      "category": "cats",
+      "intent": "training",
+      "type": "longTail",
+      "cluster": "how-to-stop",
+      "priority": 56
+    },
+    {
+      "keyword": "how to keep indoor cats active for beginners",
+      "category": "cats",
+      "intent": "beginner",
+      "type": "longTail",
+      "cluster": "how-to-keep",
+      "priority": 52
+    },
+    {
+      "keyword": "how to keep indoor cats active in apartments",
+      "category": "cats",
+      "intent": "informational",
+      "type": "longTail",
+      "cluster": "how-to-keep",
+      "priority": 51
+    },
+    {
+      "keyword": "how to keep indoor cats active without stress",
+      "category": "cats",
+      "intent": "behavior",
+      "type": "longTail",
+      "cluster": "how-to-keep",
+      "priority": 50
+    },
+    {
+      "keyword": "how to keep indoor cats active for first-time owners",
+      "category": "cats",
+      "intent": "beginner",
+      "type": "longTail",
+      "cluster": "how-to-keep",
+      "priority": 49
+    },
+    {
+      "keyword": "how to keep indoor cats active at home",
+      "category": "cats",
+      "intent": "behavior",
+      "type": "longTail",
+      "cluster": "how-to-keep",
+      "priority": 48
+    },
+    {
+      "keyword": "cat grooming routine for long hair cats for beginners",
+      "category": "cats",
+      "intent": "beginner",
+      "type": "longTail",
+      "cluster": "cat-grooming-routine",
+      "priority": 48
+    },
+    {
+      "keyword": "cat grooming routine for long hair cats in apartments",
+      "category": "cats",
+      "intent": "informational",
+      "type": "longTail",
+      "cluster": "cat-grooming-routine",
+      "priority": 47
+    },
+    {
+      "keyword": "cat grooming routine for long hair cats without stress",
+      "category": "cats",
+      "intent": "health",
+      "type": "longTail",
+      "cluster": "cat-grooming-routine",
+      "priority": 46
+    },
+    {
+      "keyword": "cat grooming routine for long hair cats for first-time owners",
+      "category": "cats",
+      "intent": "beginner",
+      "type": "longTail",
+      "cluster": "cat-grooming-routine",
+      "priority": 45
+    },
+    {
+      "keyword": "cat grooming routine for long hair cats at home",
+      "category": "cats",
+      "intent": "health",
+      "type": "longTail",
+      "cluster": "cat-grooming-routine",
+      "priority": 44
+    },
+    {
+      "keyword": "how to help a senior cat gain weight for beginners",
+      "category": "cats",
+      "intent": "beginner",
+      "type": "longTail",
+      "cluster": "how-to-help",
+      "priority": 44
+    },
+    {
+      "keyword": "how to help a senior cat gain weight in apartments",
+      "category": "cats",
+      "intent": "informational",
+      "type": "longTail",
+      "cluster": "how-to-help",
+      "priority": 43
+    },
+    {
+      "keyword": "how to help a senior cat gain weight without stress",
+      "category": "cats",
+      "intent": "health",
+      "type": "longTail",
+      "cluster": "how-to-help",
+      "priority": 42
+    },
+    {
+      "keyword": "how to help a senior cat gain weight for first-time owners",
+      "category": "cats",
+      "intent": "beginner",
+      "type": "longTail",
+      "cluster": "how-to-help",
+      "priority": 41
+    },
+    {
+      "keyword": "how to help a senior cat gain weight at home",
+      "category": "cats",
+      "intent": "health",
+      "type": "longTail",
+      "cluster": "how-to-help",
+      "priority": 40
+    },
+    {
+      "keyword": "dog anxiety tips",
+      "category": "dogs",
+      "intent": "informational",
+      "type": "highVolume",
+      "cluster": "dog-anxiety",
+      "priority": 50
+    },
+    {
+      "keyword": "dog anxiety guide",
+      "category": "dogs",
+      "intent": "beginner",
+      "type": "highVolume",
+      "cluster": "dog-anxiety",
+      "priority": 49
+    },
+    {
+      "keyword": "dog anxiety advice",
+      "category": "dogs",
+      "intent": "informational",
+      "type": "highVolume",
+      "cluster": "dog-anxiety",
+      "priority": 48
+    },
+    {
+      "keyword": "dog anxiety routine",
+      "category": "dogs",
+      "intent": "behavior",
+      "type": "highVolume",
+      "cluster": "dog-anxiety",
+      "priority": 47
+    },
+    {
+      "keyword": "dog anxiety checklist",
       "category": "dogs",
       "intent": "transactional",
       "type": "highVolume",
-      "cluster": "dog-breeds",
+      "cluster": "dog-anxiety",
+      "priority": 46
+    },
+    {
+      "keyword": "dog dental care tips",
+      "category": "dogs",
+      "intent": "informational",
+      "type": "highVolume",
+      "cluster": "dog-dental-care",
+      "priority": 49
+    },
+    {
+      "keyword": "dog dental care guide",
+      "category": "dogs",
+      "intent": "beginner",
+      "type": "highVolume",
+      "cluster": "dog-dental-care",
+      "priority": 48
+    },
+    {
+      "keyword": "dog dental care advice",
+      "category": "dogs",
+      "intent": "informational",
+      "type": "highVolume",
+      "cluster": "dog-dental-care",
       "priority": 47
+    },
+    {
+      "keyword": "dog dental care routine",
+      "category": "dogs",
+      "intent": "behavior",
+      "type": "highVolume",
+      "cluster": "dog-dental-care",
+      "priority": 46
+    },
+    {
+      "keyword": "dog dental care checklist",
+      "category": "dogs",
+      "intent": "transactional",
+      "type": "highVolume",
+      "cluster": "dog-dental-care",
+      "priority": 45
+    },
+    {
+      "keyword": "dog weight loss tips",
+      "category": "dogs",
+      "intent": "informational",
+      "type": "highVolume",
+      "cluster": "dog-weight-loss",
+      "priority": 48
+    },
+    {
+      "keyword": "dog weight loss guide",
+      "category": "dogs",
+      "intent": "beginner",
+      "type": "highVolume",
+      "cluster": "dog-weight-loss",
+      "priority": 47
+    },
+    {
+      "keyword": "dog weight loss advice",
+      "category": "dogs",
+      "intent": "informational",
+      "type": "highVolume",
+      "cluster": "dog-weight-loss",
+      "priority": 46
+    },
+    {
+      "keyword": "dog weight loss routine",
+      "category": "dogs",
+      "intent": "behavior",
+      "type": "highVolume",
+      "cluster": "dog-weight-loss",
+      "priority": 45
+    },
+    {
+      "keyword": "dog weight loss checklist",
+      "category": "dogs",
+      "intent": "transactional",
+      "type": "highVolume",
+      "cluster": "dog-weight-loss",
+      "priority": 44
+    },
+    {
+      "keyword": "dog allergies tips",
+      "category": "dogs",
+      "intent": "informational",
+      "type": "highVolume",
+      "cluster": "dog-allergies",
+      "priority": 47
+    },
+    {
+      "keyword": "dog allergies guide",
+      "category": "dogs",
+      "intent": "beginner",
+      "type": "highVolume",
+      "cluster": "dog-allergies",
+      "priority": 46
+    },
+    {
+      "keyword": "dog allergies advice",
+      "category": "dogs",
+      "intent": "informational",
+      "type": "highVolume",
+      "cluster": "dog-allergies",
+      "priority": 45
+    },
+    {
+      "keyword": "dog allergies routine",
+      "category": "dogs",
+      "intent": "behavior",
+      "type": "highVolume",
+      "cluster": "dog-allergies",
+      "priority": 44
+    },
+    {
+      "keyword": "dog allergies checklist",
+      "category": "dogs",
+      "intent": "transactional",
+      "type": "highVolume",
+      "cluster": "dog-allergies",
+      "priority": 43
+    },
+    {
+      "keyword": "dog socialization tips",
+      "category": "dogs",
+      "intent": "informational",
+      "type": "highVolume",
+      "cluster": "dog-socialization",
+      "priority": 46
+    },
+    {
+      "keyword": "dog socialization guide",
+      "category": "dogs",
+      "intent": "beginner",
+      "type": "highVolume",
+      "cluster": "dog-socialization",
+      "priority": 45
+    },
+    {
+      "keyword": "dog socialization advice",
+      "category": "dogs",
+      "intent": "informational",
+      "type": "highVolume",
+      "cluster": "dog-socialization",
+      "priority": 44
+    },
+    {
+      "keyword": "dog socialization routine",
+      "category": "dogs",
+      "intent": "behavior",
+      "type": "highVolume",
+      "cluster": "dog-socialization",
+      "priority": 43
+    },
+    {
+      "keyword": "dog socialization checklist",
+      "category": "dogs",
+      "intent": "transactional",
+      "type": "highVolume",
+      "cluster": "dog-socialization",
+      "priority": 42
+    },
+    {
+      "keyword": "how to stop dog jumping on guests for beginners",
+      "category": "dogs",
+      "intent": "beginner",
+      "type": "longTail",
+      "cluster": "how-to-stop",
+      "priority": 60
+    },
+    {
+      "keyword": "how to stop dog jumping on guests in apartments",
+      "category": "dogs",
+      "intent": "informational",
+      "type": "longTail",
+      "cluster": "how-to-stop",
+      "priority": 59
+    },
+    {
+      "keyword": "how to stop dog jumping on guests without stress",
+      "category": "dogs",
+      "intent": "training",
+      "type": "longTail",
+      "cluster": "how-to-stop",
+      "priority": 58
+    },
+    {
+      "keyword": "how to stop dog jumping on guests for first-time owners",
+      "category": "dogs",
+      "intent": "beginner",
+      "type": "longTail",
+      "cluster": "how-to-stop",
+      "priority": 57
+    },
+    {
+      "keyword": "how to stop dog jumping on guests at home",
+      "category": "dogs",
+      "intent": "training",
+      "type": "longTail",
+      "cluster": "how-to-stop",
+      "priority": 56
+    },
+    {
+      "keyword": "best crate setup for anxious dogs for beginners",
+      "category": "dogs",
+      "intent": "beginner",
+      "type": "longTail",
+      "cluster": "best-crate-setup",
+      "priority": 56
+    },
+    {
+      "keyword": "best crate setup for anxious dogs in apartments",
+      "category": "dogs",
+      "intent": "informational",
+      "type": "longTail",
+      "cluster": "best-crate-setup",
+      "priority": 55
+    },
+    {
+      "keyword": "best crate setup for anxious dogs without stress",
+      "category": "dogs",
+      "intent": "training",
+      "type": "longTail",
+      "cluster": "best-crate-setup",
+      "priority": 54
+    },
+    {
+      "keyword": "best crate setup for anxious dogs for first-time owners",
+      "category": "dogs",
+      "intent": "beginner",
+      "type": "longTail",
+      "cluster": "best-crate-setup",
+      "priority": 53
+    },
+    {
+      "keyword": "best crate setup for anxious dogs at home",
+      "category": "dogs",
+      "intent": "training",
+      "type": "longTail",
+      "cluster": "best-crate-setup",
+      "priority": 52
+    },
+    {
+      "keyword": "dog grooming routine for heavy shedders for beginners",
+      "category": "dogs",
+      "intent": "beginner",
+      "type": "longTail",
+      "cluster": "dog-grooming-routine",
+      "priority": 48
+    },
+    {
+      "keyword": "dog grooming routine for heavy shedders in apartments",
+      "category": "dogs",
+      "intent": "informational",
+      "type": "longTail",
+      "cluster": "dog-grooming-routine",
+      "priority": 47
+    },
+    {
+      "keyword": "dog grooming routine for heavy shedders without stress",
+      "category": "dogs",
+      "intent": "health",
+      "type": "longTail",
+      "cluster": "dog-grooming-routine",
+      "priority": 46
+    },
+    {
+      "keyword": "dog grooming routine for heavy shedders for first-time owners",
+      "category": "dogs",
+      "intent": "beginner",
+      "type": "longTail",
+      "cluster": "dog-grooming-routine",
+      "priority": 45
+    },
+    {
+      "keyword": "dog grooming routine for heavy shedders at home",
+      "category": "dogs",
+      "intent": "health",
+      "type": "longTail",
+      "cluster": "dog-grooming-routine",
+      "priority": 44
+    },
+    {
+      "keyword": "how to help a senior dog gain weight for beginners",
+      "category": "dogs",
+      "intent": "beginner",
+      "type": "longTail",
+      "cluster": "how-to-help",
+      "priority": 44
+    },
+    {
+      "keyword": "how to help a senior dog gain weight in apartments",
+      "category": "dogs",
+      "intent": "informational",
+      "type": "longTail",
+      "cluster": "how-to-help",
+      "priority": 43
+    },
+    {
+      "keyword": "how to help a senior dog gain weight without stress",
+      "category": "dogs",
+      "intent": "health",
+      "type": "longTail",
+      "cluster": "how-to-help",
+      "priority": 42
+    },
+    {
+      "keyword": "how to help a senior dog gain weight for first-time owners",
+      "category": "dogs",
+      "intent": "beginner",
+      "type": "longTail",
+      "cluster": "how-to-help",
+      "priority": 41
+    },
+    {
+      "keyword": "how to help a senior dog gain weight at home",
+      "category": "dogs",
+      "intent": "health",
+      "type": "longTail",
+      "cluster": "how-to-help",
+      "priority": 40
+    },
+    {
+      "keyword": "best litter box setup for indoor cats for beginners",
+      "category": "cats",
+      "intent": "beginner",
+      "type": "longTail",
+      "cluster": "best-litter-box",
+      "priority": 56
+    },
+    {
+      "keyword": "best litter box setup for indoor cats in apartments",
+      "category": "cats",
+      "intent": "informational",
+      "type": "longTail",
+      "cluster": "best-litter-box",
+      "priority": 55
+    },
+    {
+      "keyword": "best litter box setup for indoor cats without stress",
+      "category": "cats",
+      "intent": "informational",
+      "type": "longTail",
+      "cluster": "best-litter-box",
+      "priority": 54
+    },
+    {
+      "keyword": "best litter box setup for indoor cats for first-time owners",
+      "category": "cats",
+      "intent": "beginner",
+      "type": "longTail",
+      "cluster": "best-litter-box",
+      "priority": 53
+    },
+    {
+      "keyword": "best litter box setup for indoor cats at home",
+      "category": "cats",
+      "intent": "informational",
+      "type": "longTail",
+      "cluster": "best-litter-box",
+      "priority": 52
+    },
+    {
+      "keyword": "how to keep dogs active for beginners",
+      "category": "dogs",
+      "intent": "beginner",
+      "type": "longTail",
+      "cluster": "how-to-keep",
+      "priority": 52
+    },
+    {
+      "keyword": "how to keep dogs active in apartments",
+      "category": "dogs",
+      "intent": "informational",
+      "type": "longTail",
+      "cluster": "how-to-keep",
+      "priority": 51
+    },
+    {
+      "keyword": "how to keep dogs active without stress",
+      "category": "dogs",
+      "intent": "behavior",
+      "type": "longTail",
+      "cluster": "how-to-keep",
+      "priority": 50
+    },
+    {
+      "keyword": "how to keep dogs active for first-time owners",
+      "category": "dogs",
+      "intent": "beginner",
+      "type": "longTail",
+      "cluster": "how-to-keep",
+      "priority": 49
+    },
+    {
+      "keyword": "how to keep dogs active at home",
+      "category": "dogs",
+      "intent": "behavior",
+      "type": "longTail",
+      "cluster": "how-to-keep",
+      "priority": 48
     }
   ]
 }

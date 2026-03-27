@@ -55,7 +55,10 @@ export function estimateReadingTimeFromHtml(html = "") {
 }
 
 export async function fetchJson(path) {
-  const response = await fetch(path, { headers: { Accept: "application/json" } });
+  const response = await fetch(path, {
+    headers: { Accept: "application/json" },
+    cache: "force-cache",
+  });
   if (!response.ok) {
     throw new Error(`Failed to load ${path}: ${response.status}`);
   }
@@ -127,6 +130,21 @@ export function chunk(items, size) {
 
 export function wait(ms) {
   return new Promise((resolve) => window.setTimeout(resolve, ms));
+}
+
+export function scheduleIdleWork(callback, { timeout = 1500 } = {}) {
+  if ("requestIdleCallback" in window) {
+    return window.requestIdleCallback(callback, { timeout });
+  }
+  return window.setTimeout(() => callback({ didTimeout: false, timeRemaining: () => 0 }), 1);
+}
+
+export function cancelIdleWork(handle) {
+  if ("cancelIdleCallback" in window) {
+    window.cancelIdleCallback(handle);
+    return;
+  }
+  window.clearTimeout(handle);
 }
 
 export function copyToClipboard(value) {

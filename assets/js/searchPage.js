@@ -29,6 +29,8 @@ async function initSearchPage() {
     tagSelect.append(option);
   });
 
+  let renderHandle = 0;
+
   function renderResults() {
     const filters = {
       query: queryInput.value,
@@ -55,8 +57,13 @@ async function initSearchPage() {
     }
   }
 
+  function scheduleRender() {
+    window.clearTimeout(renderHandle);
+    renderHandle = window.setTimeout(renderResults, 80);
+  }
+
   [queryInput, categorySelect, tagSelect, sortSelect].forEach((element) => {
-    element.addEventListener("input", renderResults);
+    element.addEventListener("input", scheduleRender);
     element.addEventListener("change", renderResults);
   });
 

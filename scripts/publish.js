@@ -9,14 +9,18 @@ const {
   saveTopicQueue,
 } = require("./lib/content-utils");
 const { createArticleFromTopic } = require("./generate-article");
-const { selectNextTopic } = require("./select-topic");
+const { getDailyPublishingPlan, selectTopicBatch } = require("./select-topic");
 const { updateIndexes } = require("./update-indexes");
 const { validateArticle } = require("./validate-article");
 const { appendSummary, endGroup, error, info, setOutput, startGroup } = require("./lib/logger");
 
-function commitChanges(article) {
+function commitChanges(articles) {
   execFileSync("git", ["add", "."], { cwd: ROOT_DIR, stdio: "inherit" });
-  execFileSync("git", ["commit", "-m", `chore(content): publish ${article.slug}`], {
+  const label =
+    articles.length === 1
+      ? `publish ${articles[0].slug}`
+      : `publish ${articles.length} PetZone articles`;
+  execFileSync("git", ["commit", "-m", `chore(content): ${label}`], {
     cwd: ROOT_DIR,
     stdio: "inherit",
   });
@@ -27,76 +31,116 @@ async function publishDailyArticle(options = {}) {
   if (source === "ai" && !process.env.AI_API_KEY) {
     throw new Error("AI_API_KEY is required for live publishing.");
   }
+  const plan = options.plan || getDailyPublishingPlan();
 
   startGroup("Topic selection");
-  const selection = selectNextTopic();
-  info("Selected topic", selection.topic);
+  const selection = selectTopicBatch({ plan });
+  info(
+    "Selected topics",
+    selection.topics.map((topic) => ({
+      keyword: topic.keyword,
+      category: topic.category,
+      intent: topic.intent,
+    }))
+  );
   endGroup();
 
   const existingArticles = loadArticles();
-  const article = await createArticleFromTopic(selection.topic, {
-    source,
-    existingArticles,
-    index: existingArticles.length,
-  });
-  article.publishDate = new Date().toISOString();
-  article.updatedDate = article.publishDate;
+  const publishedArticles = [];
+  const validationResults = [];
 
-  startGroup("Article validation");
-  const validation = validateArticle(article, existingArticles);
-  info("Validation stats", validation.stats);
-  if (!validation.valid) {
-    error("Article validation failed", validation);
+  for (const [index, topic] of selection.topics.entries()) {
+    startGroup(`Generate and validate article ${index + 1}/${selection.topics.length}`);
+    const article = await createArticleFromTopic(topic, {
+      source,
+      existingArticles: [...existingArticles, ...publishedArticles],
+      index: existingArticles.length + publishedArticles.length,
+    });
+    article.publishDate = new Date(Date.now() + index * 1000).toISOString();
+    article.updatedDate = article.publishDate;
+
+    const validation = validateArticle(article, [...existingArticles, ...publishedArticles]);
+    info("Validation stats", {
+      slug: article.slug,
+      category: article.category,
+      ...validation.stats,
+    });
+    if (!validation.valid) {
+      error("Article validation failed", { article: article.slug, validation });
+      endGroup();
+      throw new Error(`Article validation failed for ${article.slug}: ${validation.errors.join(" | ")}`);
+    }
+
+    publishedArticles.push(article);
+    validationResults.push(validation);
+    info("Prepared article", {
+      title: article.title,
+      slug: article.slug,
+      category: article.category,
+      keyword: article.keyword,
+    });
     endGroup();
-    throw new Error(`Article validation failed: ${validation.errors.join(" | ")}`);
   }
-  endGroup();
 
-  startGroup("Persisting article");
-  saveArticle(article);
+  startGroup("Persisting articles");
+  publishedArticles.forEach((article) => saveArticle(article));
   updateIndexes();
   endGroup();
 
   const history = loadPublishingHistory();
   history.updatedAt = new Date().toISOString();
-  history.items.unshift({
-    slug: article.slug,
-    keyword: article.keyword,
-    category: article.category,
-    intent: article.intent || selection.topic.intent,
-    cluster: article.cluster || selection.topic.cluster,
-    publishDate: article.publishDate,
-    source,
-  });
+  const historyEntries = publishedArticles
+    .map((article) => ({
+      slug: article.slug,
+      keyword: article.keyword,
+      category: article.category,
+      intent: article.intent || "",
+      cluster: article.cluster || "",
+      publishDate: article.publishDate,
+      source,
+    }))
+    .sort((left, right) => new Date(right.publishDate).getTime() - new Date(left.publishDate).getTime());
+  history.items = [...historyEntries, ...history.items];
   history.items = history.items.slice(0, 400);
   savePublishingHistory(history);
 
   const queue = loadTopicQueue();
   queue.updatedAt = new Date().toISOString();
+  const selectedKeywords = new Set(publishedArticles.map((article) => article.keyword.toLowerCase()));
   queue.queue = (queue.queue.length ? queue.queue : selection.queueState.queue).filter(
-    (item) => item.keyword !== selection.topic.keyword
+    (item) => !selectedKeywords.has(item.keyword.toLowerCase())
   );
   saveTopicQueue(queue);
 
-  setOutput("article_slug", article.slug);
-  setOutput("article_title", article.title);
-  setOutput("article_category", article.category);
+  const countsByCategory = publishedArticles.reduce((accumulator, article) => {
+    accumulator[article.category] = (accumulator[article.category] || 0) + 1;
+    return accumulator;
+  }, {});
+
+  setOutput("article_count", publishedArticles.length);
+  setOutput("article_slugs", publishedArticles.map((article) => article.slug).join(","));
+  setOutput("article_categories", Object.entries(countsByCategory).map(([key, count]) => `${key}:${count}`).join(","));
   appendSummary([
     "## PetZone Daily Publish",
-    `- Title: ${article.title}`,
-    `- Slug: ${article.slug}`,
-    `- Category: ${article.category}`,
-    `- Keyword: ${article.keyword}`,
-    `- Reading time: ${article.readingTime} minutes`,
-    `- Validation word count: ${validation.stats.wordCount}`,
+    `- Total articles: ${publishedArticles.length}`,
+    `- Cats published: ${countsByCategory.cats || 0}`,
+    `- Dogs published: ${countsByCategory.dogs || 0}`,
+    ...publishedArticles.map(
+      (article, index) =>
+        `- ${index + 1}. ${article.title} | ${article.category} | ${article.slug} | ${article.readingTime} min | ${validationResults[index].stats.wordCount} words`
+    ),
   ]);
 
   if (options.commit) {
-    commitChanges(article);
+    commitChanges(publishedArticles);
   }
 
-  info(`Published ${article.slug}`);
-  return article;
+  info("Published article batch", {
+    count: publishedArticles.length,
+    categories: countsByCategory,
+    slugs: publishedArticles.map((article) => article.slug),
+  });
+  return publishedArticles;
 }
 
 if (require.main === module) {

@@ -2,6 +2,7 @@ import { PETZONE_CONFIG } from "./config.js";
 import { saveNewsletterSubscriber } from "./storageService.js";
 import {
   articlePath,
+  cancelIdleWork,
   categoryPath,
   copyToClipboard,
   escapeHtml,
@@ -9,6 +10,9 @@ import {
   getCurrentDateLabel,
   tagPath,
 } from "./utils.js";
+
+const IMAGE_WIDTH = 1200;
+const IMAGE_HEIGHT = 675;
 
 function activeLinkClass(href) {
   return window.location.pathname.endsWith(href.replace(/^\.\//, "")) ? "is-active" : "";
@@ -28,9 +32,15 @@ function renderArticleBadges(article) {
 export function injectSiteChrome() {
   const headerTarget = document.querySelector("[data-site-header]");
   const footerTarget = document.querySelector("[data-site-footer]");
+  const main = document.querySelector("main");
+
+  if (main && !main.id) {
+    main.id = "page-content";
+  }
 
   if (headerTarget) {
     headerTarget.innerHTML = `
+      <a class="skip-link" href="#page-content">Skip to content</a>
       <section class="news-topline">
         <div class="site-shell news-topline-inner">
           <span>${getCurrentDateLabel()}</span>
@@ -48,12 +58,25 @@ export function injectSiteChrome() {
               .join("")}
           </nav>
           <div class="header-actions">
-            <button id="mobile-nav-toggle" class="mobile-nav-toggle" type="button" aria-expanded="false" aria-label="Open navigation">
-              Menu
+            <button
+              id="mobile-nav-toggle"
+              class="mobile-nav-toggle"
+              type="button"
+              aria-expanded="false"
+              aria-controls="mobile-menu"
+              aria-label="Toggle navigation"
+            >
+              <span class="hamburger-lines" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
+              <span class="mobile-nav-label">Menu</span>
             </button>
           </div>
         </div>
-        <div id="mobile-menu" class="mobile-menu">
+        <div id="mobile-menu-overlay" class="mobile-menu-overlay" hidden></div>
+        <div id="mobile-menu" class="mobile-menu" hidden>
           <div class="site-shell mobile-menu-inner">
             ${PETZONE_CONFIG.navLinks.map((link) => `<a href="${link.href}" class="mobile-link">${link.label}</a>`).join("")}
           </div>
@@ -93,13 +116,191 @@ export function injectSiteChrome() {
 export function bindChromeInteractions() {
   const toggle = document.getElementById("mobile-nav-toggle");
   const mobileMenu = document.getElementById("mobile-menu");
-  if (!toggle || !mobileMenu) {
+  const overlay = document.getElementById("mobile-menu-overlay");
+  if (!toggle || !mobileMenu || !overlay) {
     return;
   }
+
+  const closeMenu = () => {
+    mobileMenu.hidden = true;
+    overlay.hidden = true;
+    mobileMenu.classList.remove("is-open");
+    overlay.classList.remove("is-open");
+    document.body.classList.remove("nav-open");
+    toggle.classList.remove("is-open");
+    toggle.setAttribute("aria-expanded", "false");
+  };
+
+  const openMenu = () => {
+    mobileMenu.hidden = false;
+    overlay.hidden = false;
+    mobileMenu.classList.add("is-open");
+    overlay.classList.add("is-open");
+    document.body.classList.add("nav-open");
+    toggle.classList.add("is-open");
+    toggle.setAttribute("aria-expanded", "true");
+  };
+
   toggle.addEventListener("click", () => {
-    const isOpen = mobileMenu.classList.toggle("is-open");
-    toggle.setAttribute("aria-expanded", String(isOpen));
+    const isOpen = mobileMenu.hidden;
+    if (isOpen) {
+      openMenu();
+      return;
+    }
+    closeMenu();
   });
+
+  overlay.addEventListener("click", closeMenu);
+  mobileMenu.addEventListener("click", (event) => {
+    if (event.target.closest("a")) {
+      closeMenu();
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      closeMenu();
+    }
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 820) {
+      closeMenu();
+    }
+  });
+}
+
+function buildResponsiveImage({
+  src,
+  alt,
+  loading = "lazy",
+  fetchpriority = "auto",
+  sizes = "(max-width: 767px) 100vw, 360px",
+}) {
+  return `
+    <img
+      src="${src}"
+      alt="${escapeHtml(alt)}"
+      loading="${loading}"
+      decoding="async"
+      width="${IMAGE_WIDTH}"
+      height="${IMAGE_HEIGHT}"
+      sizes="${sizes}"
+      ${fetchpriority !== "auto" ? `fetchpriority="${fetchpriority}"` : ""}
+    />
+  `;
+}
+
+function renderNewsMedia(article, options = {}) {
+  return `
+    <a href="${articlePath(article.slug)}" class="media-link news-media">
+      ${buildResponsiveImage({
+        src: article.featuredImage,
+        alt: article.imageAlt || article.title,
+        ...options,
+      })}
+    </a>
+  `;
+}
+
+function scheduleToastRemoval(toast) {
+  let removalHandle = 0;
+  const removeToast = () => {
+    cancelIdleWork(removalHandle);
+    toast.remove();
+  };
+  removalHandle = window.setTimeout(removeToast, 3200);
+  toast.addEventListener("click", removeToast, { once: true });
+}
+
+export function showToast(message) {
+  const root = document.getElementById("toast-root");
+  if (!root) {
+    return;
+  }
+  const toast = document.createElement("div");
+  toast.className = "toast-item";
+  toast.textContent = message;
+  root.append(toast);
+  scheduleToastRemoval(toast);
+}
+
+export function renderLeadCard(article) {
+  return `
+    <article class="lead-card news-card">
+      ${renderNewsMedia(article, {
+        loading: "eager",
+        fetchpriority: "high",
+        sizes: "(max-width: 767px) 100vw, (max-width: 1100px) 92vw, 820px",
+      })}
+      <div class="news-card-body">
+        <div class="card-meta-row">
+          <a class="category-pill ${article.category}" href="${categoryPath(article.category)}">${escapeHtml(article.categoryLabel || article.category)}</a>
+          <span>${formatDate(article.publishDate)}</span>
+          <span>${article.readingTime} min read</span>
+          ${renderArticleBadges(article)}
+        </div>
+        <a href="${articlePath(article.slug)}" class="headline-link">${escapeHtml(article.title)}</a>
+        <p class="card-excerpt">${escapeHtml(article.excerpt)}</p>
+      </div>
+    </article>
+  `;
+}
+
+export function renderCompactCard(article) {
+  return `
+    <article class="compact-card news-card">
+      ${renderNewsMedia(article, {
+        sizes: "(max-width: 767px) 100vw, (max-width: 1100px) 44vw, 260px",
+      })}
+      <div class="news-card-body">
+        <a href="${articlePath(article.slug)}" class="headline-link small-headline">${escapeHtml(article.title)}</a>
+        <div class="card-meta-row compact-meta-row">
+          <a class="category-pill ${article.category}" href="${categoryPath(article.category)}">${escapeHtml(article.categoryLabel || article.category)}</a>
+          <span>${formatDate(article.publishDate)}</span>
+          <span>${article.readingTime} min</span>
+        </div>
+      </div>
+    </article>
+  `;
+}
+
+export function renderGridCard(article) {
+  return `
+    <article class="grid-card news-card">
+      ${renderNewsMedia(article, {
+        sizes: "(max-width: 767px) 100vw, (max-width: 1100px) 46vw, 360px",
+      })}
+      <div class="news-card-body">
+        <div class="card-meta-row">
+          <a class="category-pill ${article.category}" href="${categoryPath(article.category)}">${escapeHtml(article.categoryLabel || article.category)}</a>
+          <span>${formatDate(article.publishDate)}</span>
+          <span>${article.readingTime} min</span>
+          ${renderArticleBadges(article)}
+        </div>
+        <a href="${articlePath(article.slug)}" class="headline-link medium-headline">${escapeHtml(article.title)}</a>
+        <p class="card-excerpt">${escapeHtml(article.excerpt)}</p>
+      </div>
+    </article>
+  `;
+}
+
+export function renderListCard(article) {
+  return `
+    <article class="list-card news-card">
+      ${renderNewsMedia(article, {
+        sizes: "(max-width: 767px) 96px, 104px",
+      })}
+      <div class="news-card-body">
+        <a href="${articlePath(article.slug)}" class="headline-link list-headline">${escapeHtml(article.title)}</a>
+        <div class="card-meta-row compact-meta-row">
+          <a class="category-pill ${article.category}" href="${categoryPath(article.category)}">${escapeHtml(article.categoryLabel || article.category)}</a>
+          <span>${formatDate(article.publishDate)}</span>
+          <span>${article.readingTime} min read</span>
+        </div>
+      </div>
+    </article>
+  `;
 }
 
 export function bindNewsletterForms() {
@@ -127,94 +328,6 @@ export function populateBreakingTicker(articles = []) {
     .slice(0, 6)
     .map((article) => article.title)
     .join(" | ");
-}
-
-export function showToast(message) {
-  const root = document.getElementById("toast-root");
-  if (!root) {
-    return;
-  }
-  const toast = document.createElement("div");
-  toast.className = "toast-item";
-  toast.textContent = message;
-  root.append(toast);
-  window.setTimeout(() => toast.remove(), 3200);
-}
-
-export function renderLeadCard(article) {
-  return `
-    <article class="lead-card news-card">
-      <a href="${articlePath(article.slug)}" class="media-link">
-        <img src="${article.featuredImage}" alt="${escapeHtml(article.imageAlt || article.title)}" loading="eager" />
-      </a>
-      <div class="news-card-body">
-        <div class="card-meta-row">
-          <a class="category-pill ${article.category}" href="${categoryPath(article.category)}">${escapeHtml(article.categoryLabel || article.category)}</a>
-          <span>${formatDate(article.publishDate)}</span>
-          <span>${article.readingTime} min read</span>
-          ${renderArticleBadges(article)}
-        </div>
-        <a href="${articlePath(article.slug)}" class="headline-link">${escapeHtml(article.title)}</a>
-        <p class="card-excerpt">${escapeHtml(article.excerpt)}</p>
-      </div>
-    </article>
-  `;
-}
-
-export function renderCompactCard(article) {
-  return `
-    <article class="compact-card news-card">
-      <a href="${articlePath(article.slug)}" class="media-link">
-        <img src="${article.featuredImage}" alt="${escapeHtml(article.imageAlt || article.title)}" loading="lazy" />
-      </a>
-      <div class="news-card-body">
-        <a href="${articlePath(article.slug)}" class="headline-link small-headline">${escapeHtml(article.title)}</a>
-        <div class="card-meta-row compact-meta-row">
-          <a class="category-pill ${article.category}" href="${categoryPath(article.category)}">${escapeHtml(article.categoryLabel || article.category)}</a>
-          <span>${formatDate(article.publishDate)}</span>
-          <span>${article.readingTime} min</span>
-        </div>
-      </div>
-    </article>
-  `;
-}
-
-export function renderGridCard(article) {
-  return `
-    <article class="grid-card news-card">
-      <a href="${articlePath(article.slug)}" class="media-link">
-        <img src="${article.featuredImage}" alt="${escapeHtml(article.imageAlt || article.title)}" loading="lazy" />
-      </a>
-      <div class="news-card-body">
-        <div class="card-meta-row">
-          <a class="category-pill ${article.category}" href="${categoryPath(article.category)}">${escapeHtml(article.categoryLabel || article.category)}</a>
-          <span>${formatDate(article.publishDate)}</span>
-          <span>${article.readingTime} min</span>
-          ${renderArticleBadges(article)}
-        </div>
-        <a href="${articlePath(article.slug)}" class="headline-link medium-headline">${escapeHtml(article.title)}</a>
-        <p class="card-excerpt">${escapeHtml(article.excerpt)}</p>
-      </div>
-    </article>
-  `;
-}
-
-export function renderListCard(article) {
-  return `
-    <article class="list-card news-card">
-      <a href="${articlePath(article.slug)}" class="media-link">
-        <img src="${article.featuredImage}" alt="${escapeHtml(article.imageAlt || article.title)}" loading="lazy" />
-      </a>
-      <div class="news-card-body">
-        <a href="${articlePath(article.slug)}" class="headline-link list-headline">${escapeHtml(article.title)}</a>
-        <div class="card-meta-row compact-meta-row">
-          <a class="category-pill ${article.category}" href="${categoryPath(article.category)}">${escapeHtml(article.categoryLabel || article.category)}</a>
-          <span>${formatDate(article.publishDate)}</span>
-          <span>${article.readingTime} min read</span>
-        </div>
-      </div>
-    </article>
-  `;
 }
 
 export function renderDenseHeadlineItem(article, index = 0) {

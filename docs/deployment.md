@@ -14,14 +14,18 @@
 - `AI_MODEL`
 - `SITE_BASE_URL`
 
-Set `SITE_BASE_URL` to your final Pages URL, for example `https://yousseflahsani199420.github.io/dogs-and-cats`.
+Set `SITE_BASE_URL` to your final Pages URL, for example `https://petzone.website`.
 
 ## Cron schedule
 
 The workflow lives in `.github/workflows/daily-post.yml`.
 
-- Default schedule: once per day
+- Default schedule: once per day, publishing `2` cat articles and `2` dog articles in each run
 - Manual run: use the Actions tab and trigger `Daily PetZone Post`
+- Optional batch size controls:
+  - `DAILY_POSTS_PER_CATEGORY`
+  - `DAILY_CATS_POSTS`
+  - `DAILY_DOGS_POSTS`
 
 ## Switching AI providers
 

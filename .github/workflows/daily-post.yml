@@ -14,11 +14,12 @@ permissions:
 
 jobs:
   publish-daily-post:
-    name: Generate and publish daily article
+    name: Generate and publish daily articles
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 45
     env:
       CI: true
+      DAILY_POSTS_PER_CATEGORY: 2
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
@@ -37,7 +38,7 @@ jobs:
       - name: Bootstrap indexes if repository is empty
         run: npm run bootstrap
 
-      - name: Publish daily article
+      - name: Publish daily article batch
         id: publish
         run: |
           set -eo pipefail
@@ -65,7 +66,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add .
           git diff --cached --quiet && echo "No content changes to commit" && exit 0
-          git commit -m "chore(content): publish daily PetZone article"
+          git commit -m "chore(content): publish daily PetZone batch"
           git push
 
       - name: Upload automation log

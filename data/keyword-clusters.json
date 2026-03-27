@@ -110,6 +110,39 @@
     "internalLinkGoal": "Build topical authority around cat enrichment ideas with contextual links from every related article."
   },
   {
+    "cluster": "best-litter-box",
+    "primaryKeyword": "best litter box setup for indoor cats for beginners",
+    "supportingKeywords": [
+      "best litter box setup for indoor cats in apartments",
+      "best litter box setup for indoor cats without stress",
+      "best litter box setup for indoor cats for first-time owners",
+      "best litter box setup for indoor cats at home"
+    ],
+    "internalLinkGoal": "Build topical authority around best litter box with contextual links from every related article."
+  },
+  {
+    "cluster": "how-to-keep",
+    "primaryKeyword": "how to keep indoor cats active for beginners",
+    "supportingKeywords": [
+      "how to keep indoor cats active in apartments",
+      "how to keep indoor cats active without stress",
+      "how to keep indoor cats active for first-time owners",
+      "how to keep indoor cats active at home"
+    ],
+    "internalLinkGoal": "Build topical authority around how to keep with contextual links from every related article."
+  },
+  {
+    "cluster": "cat-grooming-routine",
+    "primaryKeyword": "cat grooming routine for long hair cats for beginners",
+    "supportingKeywords": [
+      "cat grooming routine for long hair cats in apartments",
+      "cat grooming routine for long hair cats without stress",
+      "cat grooming routine for long hair cats for first-time owners",
+      "cat grooming routine for long hair cats at home"
+    ],
+    "internalLinkGoal": "Build topical authority around cat grooming routine with contextual links from every related article."
+  },
+  {
     "cluster": "puppy-potty-training",
     "primaryKeyword": "puppy potty training schedule for beginners",
     "supportingKeywords": [
@@ -130,5 +163,27 @@
       "dog exercise ideas at home"
     ],
     "internalLinkGoal": "Build topical authority around dog exercise ideas with contextual links from every related article."
+  },
+  {
+    "cluster": "best-crate-setup",
+    "primaryKeyword": "best crate setup for anxious dogs for beginners",
+    "supportingKeywords": [
+      "best crate setup for anxious dogs in apartments",
+      "best crate setup for anxious dogs without stress",
+      "best crate setup for anxious dogs for first-time owners",
+      "best crate setup for anxious dogs at home"
+    ],
+    "internalLinkGoal": "Build topical authority around best crate setup with contextual links from every related article."
+  },
+  {
+    "cluster": "dog-grooming-routine",
+    "primaryKeyword": "dog grooming routine for heavy shedders for beginners",
+    "supportingKeywords": [
+      "dog grooming routine for heavy shedders in apartments",
+      "dog grooming routine for heavy shedders without stress",
+      "dog grooming routine for heavy shedders for first-time owners",
+      "dog grooming routine for heavy shedders at home"
+    ],
+    "internalLinkGoal": "Build topical authority around dog grooming routine with contextual links from every related article."
   }
 ]

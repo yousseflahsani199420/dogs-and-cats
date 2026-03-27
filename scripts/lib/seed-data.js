@@ -13,6 +13,11 @@ const catHighVolumeBases = [
   "cat health",
   "cat litter",
   "cat toys",
+  "cat anxiety",
+  "cat dental care",
+  "cat weight loss",
+  "cat allergies",
+  "cat play",
 ];
 
 const dogHighVolumeBases = [
@@ -26,6 +31,11 @@ const dogHighVolumeBases = [
   "dog health",
   "dog treats",
   "dog breeds",
+  "dog anxiety",
+  "dog dental care",
+  "dog weight loss",
+  "dog allergies",
+  "dog socialization",
 ];
 
 const highVolumeModifiers = ["tips", "guide", "advice", "routine", "checklist"];
@@ -41,6 +51,11 @@ const catLongTailBases = [
   "how to introduce a new cat",
   "how to help a senior cat drink more water",
   "cat enrichment ideas",
+  "how to stop cat meowing at night",
+  "best litter box setup for indoor cats",
+  "how to keep indoor cats active",
+  "cat grooming routine for long hair cats",
+  "how to help a senior cat gain weight",
 ];
 
 const dogLongTailBases = [
@@ -54,6 +69,11 @@ const dogLongTailBases = [
   "how to introduce a rescue dog",
   "how to help a senior dog with mobility",
   "dog exercise ideas",
+  "how to stop dog jumping on guests",
+  "best crate setup for anxious dogs",
+  "how to keep dogs active",
+  "dog grooming routine for heavy shedders",
+  "how to help a senior dog gain weight",
 ];
 
 const longTailModifiers = [
@@ -77,6 +97,11 @@ const clusterIntentMap = {
   "how-to-help": "health",
   "cat-enrichment-ideas": "behavior",
   "dog-exercise-ideas": "behavior",
+  "best-litter-box": "informational",
+  "how-to-keep": "behavior",
+  "cat-grooming-routine": "health",
+  "best-crate-setup": "training",
+  "dog-grooming-routine": "health",
 };
 
 const modifierIntentMap = {
@@ -257,7 +282,9 @@ function diversifyRecords(records, count) {
 
 function getInitialSeedTopics() {
   const records = getKeywordRecords();
-  return interleave(diversifyRecords(records.cats.longTail, 15), diversifyRecords(records.dogs.longTail, 15), 15);
+  const catSeed = interleave(diversifyRecords(records.cats.longTail, 50), diversifyRecords(records.cats.highVolume, 50), 50);
+  const dogSeed = interleave(diversifyRecords(records.dogs.longTail, 50), diversifyRecords(records.dogs.highVolume, 50), 50);
+  return interleave(catSeed, dogSeed, 100);
 }
 
 function buildTopicQueue(usedKeywords = []) {
