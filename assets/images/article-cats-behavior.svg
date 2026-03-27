@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Cat behavior illustration</title>
+  <desc id="desc">Editorial style cat behavior illustration with scratching post and notes.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#fdf5f4"/>
+      <stop offset="100%" stop-color="#eef7f1"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <rect x="150" y="138" width="420" height="382" rx="36" fill="#ffffff" stroke="#dbe1ea" stroke-width="4"/>
+  <rect x="194" y="188" width="170" height="22" rx="11" fill="#d12f34" opacity=".16"/>
+  <rect x="194" y="236" width="290" height="16" rx="8" fill="#dbe1ea"/>
+  <rect x="194" y="270" width="268" height="16" rx="8" fill="#dbe1ea"/>
+  <rect x="194" y="332" width="284" height="122" rx="20" fill="#f7fafc"/>
+  <rect x="760" y="182" width="68" height="320" rx="34" fill="#c58940"/>
+  <rect x="720" y="474" width="150" height="30" rx="15" fill="#7c4a1d"/>
+  <circle cx="896" cy="248" r="114" fill="#1c7c54" opacity=".12"/>
+  <path d="M871 197c24 0 42 12 55 36l23-41 28 51c17 6 29 19 36 39 9 22 6 47-7 68-18 29-51 46-87 46s-69-17-87-46c-13-21-16-46-7-68 7-19 20-31 38-38l27-50 21 40c13-24 31-37 58-37Z" fill="#15202b"/>
+  <path d="M824 392c44-20 86-20 128 0-8 49-43 80-64 80s-56-31-64-80Z" fill="#15202b"/>
+  <circle cx="875" cy="308" r="10" fill="#ffffff"/>
+  <circle cx="938" cy="308" r="10" fill="#ffffff"/>
+  <path d="M906 336c10 0 18 7 21 16h-42c3-9 11-16 21-16Z" fill="#d12f34"/>
+  <path d="M1030 174l18 36 38 6-28 27 7 38-35-18-34 18 6-38-28-27 38-6Z" fill="#d12f34" opacity=".8"/>
+</svg>

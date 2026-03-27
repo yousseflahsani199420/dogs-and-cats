@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PetZone Admin | Editorial Desk</title>
+    <meta
+      name="description"
+      content="PetZone editorial dashboard with local article management, SEO editing, and visibility into the GitHub Actions publishing workflow."
+    />
+    <meta name="theme-color" content="#111827" />
+    <meta name="robots" content="noindex,nofollow" />
+    <meta property="og:site_name" content="PetZone" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="PetZone Admin | Editorial Desk" />
+    <meta
+      property="og:description"
+      content="PetZone editorial dashboard with local article management, SEO editing, and visibility into the GitHub Actions publishing workflow."
+    />
+    <meta property="og:image" content="assets/images/og-default.svg" />
+    <meta property="og:url" content="https://your-username.github.io/dogs-and-cats-blog/admin.html" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="PetZone Admin | Editorial Desk" />
+    <meta
+      name="twitter:description"
+      content="PetZone editorial dashboard with local article management, SEO editing, and visibility into the GitHub Actions publishing workflow."
+    />
+    <link rel="canonical" href="https://your-username.github.io/dogs-and-cats-blog/admin.html" />
+    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml" />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=Source+Sans+3:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body data-page="admin" class="admin-page">
+    <main class="admin-shell">
+      <aside class="admin-sidebar">
+        <div class="admin-brand">
+          <span class="brand-kicker">PetZone</span>
+          <h1>Editorial Desk</h1>
+          <p>Static-first editorial tools backed by a real GitHub Actions publishing pipeline.</p>
+        </div>
+        <nav class="admin-nav">
+          <button class="admin-nav-link is-active" data-admin-view="overview">Overview</button>
+          <button class="admin-nav-link" data-admin-view="articles">Articles</button>
+          <button class="admin-nav-link" data-admin-view="editor">Editor</button>
+          <button class="admin-nav-link" data-admin-view="automation">Automation</button>
+          <button class="admin-nav-link" data-admin-view="seo">SEO Assets</button>
+        </nav>
+      </aside>
+
+      <div class="admin-content">
+        <header class="admin-topbar">
+          <div>
+            <p class="eyebrow">Admin Dashboard</p>
+            <h2 id="admin-view-title">Overview</h2>
+          </div>
+          <div class="admin-actions">
+            <span id="admin-session-user" class="meta-copy hidden"></span>
+            <button id="admin-new-article" class="button button-primary">New article</button>
+            <button id="admin-export-data" class="button button-secondary">Export JSON</button>
+            <button id="admin-logout" class="button button-secondary">Log out</button>
+          </div>
+        </header>
+
+        <section id="admin-overview-view" class="admin-view"></section>
+        <section id="admin-articles-view" class="admin-view hidden"></section>
+        <section id="admin-editor-view" class="admin-view hidden"></section>
+        <section id="admin-automation-view" class="admin-view hidden"></section>
+        <section id="admin-seo-view" class="admin-view hidden"></section>
+      </div>
+    </main>
+
+    <div id="modal-root"></div>
+    <div id="toast-root" aria-live="polite" aria-atomic="true"></div>
+    <script type="module" src="assets/js/admin.js"></script>
+  </body>
+</html>

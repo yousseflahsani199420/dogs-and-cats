@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Dog food illustration</title>
+  <desc id="desc">Editorial dog food illustration with bowl and nutrition card.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#eef5ff"/>
+      <stop offset="100%" stop-color="#fff8ef"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <rect x="118" y="138" width="366" height="384" rx="34" fill="#ffffff" stroke="#dbe1ea" stroke-width="4"/>
+  <rect x="164" y="186" width="174" height="22" rx="11" fill="#2563eb" opacity=".16"/>
+  <rect x="164" y="234" width="250" height="16" rx="8" fill="#dbe1ea"/>
+  <rect x="164" y="268" width="220" height="16" rx="8" fill="#dbe1ea"/>
+  <rect x="164" y="302" width="238" height="16" rx="8" fill="#dbe1ea"/>
+  <circle cx="852" cy="232" r="138" fill="#dbeafe"/>
+  <path d="M756 310c0-72 58-130 130-130s130 58 130 130v28c0 72-58 130-130 130s-130-58-130-130v-28Z" fill="#15202b"/>
+  <path d="M822 284c18-18 38-27 63-27 18 0 34 6 47 17 13-11 29-17 47-17 8 0 16 1 24 4-11-41-48-71-92-71-40 0-74 25-88 61-1 4-2 9-3 13 1 6 2 13 2 20Z" fill="#b77b43"/>
+  <circle cx="842" cy="316" r="10" fill="#ffffff"/>
+  <circle cx="920" cy="316" r="10" fill="#ffffff"/>
+  <path d="M880 346c11 0 20 8 23 18h-46c3-10 12-18 23-18Z" fill="#d12f34"/>
+  <ellipse cx="782" cy="544" rx="154" ry="70" fill="#2563eb"/>
+  <ellipse cx="782" cy="524" rx="154" ry="56" fill="#8bb9ff"/>
+  <circle cx="718" cy="520" r="22" fill="#ffffff"/>
+  <circle cx="776" cy="508" r="18" fill="#ffffff"/>
+  <circle cx="830" cy="528" r="22" fill="#ffffff"/>
+  <circle cx="884" cy="512" r="18" fill="#ffffff"/>
+</svg>

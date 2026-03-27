@@ -1,3 +1,4 @@
 User-agent: *
-Disallow:
-Sitemap: https://petzone.website/sitemap.xml
+Allow: /
+Disallow: /admin.html
+Sitemap: https://your-username.github.io/dogs-and-cats-blog/sitemap.xml

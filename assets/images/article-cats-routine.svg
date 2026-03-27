@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Cat routine illustration</title>
+  <desc id="desc">Editorial style illustration of a cat routine card with warm premium shapes.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#fdf7ef"/>
+      <stop offset="100%" stop-color="#eef6f1"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <circle cx="970" cy="116" r="82" fill="#f4d6b8"/>
+  <circle cx="230" cy="570" r="148" fill="#d9eadf"/>
+  <rect x="130" y="120" width="410" height="420" rx="38" fill="#ffffff" stroke="#dbe1ea" stroke-width="4"/>
+  <rect x="170" y="170" width="230" height="22" rx="11" fill="#d12f34" opacity=".16"/>
+  <rect x="170" y="215" width="300" height="16" rx="8" fill="#dbe1ea"/>
+  <rect x="170" y="246" width="270" height="16" rx="8" fill="#dbe1ea"/>
+  <rect x="170" y="277" width="248" height="16" rx="8" fill="#dbe1ea"/>
+  <rect x="170" y="336" width="250" height="140" rx="24" fill="#f5f7fa"/>
+  <circle cx="742" cy="350" r="136" fill="#1c7c54" opacity=".12"/>
+  <path d="M739 218c26 0 45 13 58 39l24-44 30 55c18 7 31 20 39 41 9 24 6 50-7 74-18 31-54 50-94 50-40 0-76-19-94-50-13-24-16-50-7-74 8-22 23-35 43-42l28-54 22 43c13-25 32-38 58-38Z" fill="#15202b"/>
+  <ellipse cx="738" cy="444" rx="118" ry="48" fill="#15202b" opacity=".12"/>
+  <path d="M670 462h148c0 46-32 73-74 73s-74-27-74-73Z" fill="#15202b"/>
+  <circle cx="700" cy="341" r="11" fill="#15202b"/>
+  <circle cx="780" cy="341" r="11" fill="#15202b"/>
+  <path d="M740 366c12 0 22 8 25 20h-50c3-12 13-20 25-20Z" fill="#d12f34"/>
+  <path d="M650 562h206" stroke="#15202b" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="890" cy="505" r="62" fill="#d12f34" opacity=".1"/>
+  <path d="M890 472c0-18 14-32 32-32s32 14 32 32-14 32-32 32-32-14-32-32Zm-78 18h32m0 0v32m0-32h32" stroke="#15202b" stroke-width="16" stroke-linecap="round"/>
+</svg>

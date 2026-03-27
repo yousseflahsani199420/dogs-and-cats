@@ -1,0 +1,105 @@
+[
+  {
+    "key": "cats",
+    "label": "Cats",
+    "count": 15,
+    "description": "Cat news, feeding explainers, behavior coverage, and daily home-care reporting.",
+    "leadSlug": "best-food-for-indoor-cats-for-beginners-a-clear-practical-guide",
+    "featuredSlugs": [
+      "best-food-for-indoor-cats-for-beginners-a-clear-practical-guide",
+      "how-to-stop-cat-scratching-furniture-for-beginners-what-actually-delivers-better-results",
+      "kitten-litter-training-for-beginners-a-first-time-owner-guide"
+    ],
+    "trendingSlugs": [
+      "best-food-for-indoor-cats-for-beginners-a-clear-practical-guide",
+      "how-to-stop-cat-scratching-furniture-for-beginners-what-actually-delivers-better-results",
+      "kitten-litter-training-for-beginners-a-first-time-owner-guide",
+      "how-to-calm-a-cat-in-a-carrier-for-beginners-what-to-watch-and-what-to-do-next"
+    ],
+    "recentSlugs": [
+      "best-food-for-indoor-cats-for-beginners-a-clear-practical-guide",
+      "how-to-stop-cat-scratching-furniture-for-beginners-what-actually-delivers-better-results",
+      "kitten-litter-training-for-beginners-a-first-time-owner-guide",
+      "how-to-calm-a-cat-in-a-carrier-for-beginners-what-to-watch-and-what-to-do-next",
+      "best-toys-for-bored-indoor-cats-for-beginners-a-practical-routine-that-sticks",
+      "how-to-reduce-cat-shedding-for-beginners-what-smart-owners-prioritize",
+      "wet-vs-dry-food-for-cats-for-beginners-what-it-usually-means-and-what-helps",
+      "how-to-introduce-a-new-cat-for-beginners-a-clear-practical-guide",
+      "how-to-help-a-senior-cat-drink-more-water-for-beginners-what-actually-delivers-better-resu",
+      "cat-enrichment-ideas-for-beginners-a-first-time-owner-guide",
+      "best-food-for-indoor-cats-in-apartments-what-actually-delivers-better-results",
+      "how-to-stop-cat-scratching-furniture-in-apartments-a-first-time-owner-guide",
+      "kitten-litter-training-in-apartments-what-to-watch-and-what-to-do-next",
+      "how-to-calm-a-cat-in-a-carrier-in-apartments-a-practical-routine-that-sticks",
+      "best-toys-for-bored-indoor-cats-in-apartments-what-smart-owners-prioritize"
+    ],
+    "topTags": [
+      "apartments",
+      "behavior",
+      "best food for",
+      "best toys for",
+      "buying guide",
+      "cat care",
+      "cat enrichment ideas",
+      "cats",
+      "feeding",
+      "first-time owners"
+    ],
+    "intents": [
+      "beginner",
+      "informational"
+    ],
+    "updatedAt": "2026-03-26T10:31:23.325Z"
+  },
+  {
+    "key": "dogs",
+    "label": "Dogs",
+    "count": 15,
+    "description": "Dog news, training explainers, behavior coverage, and daily home-care reporting.",
+    "leadSlug": "best-food-for-active-dogs-for-beginners-a-clear-practical-guide",
+    "featuredSlugs": [
+      "best-food-for-active-dogs-for-beginners-a-clear-practical-guide",
+      "how-to-stop-puppy-biting-for-beginners-what-actually-delivers-better-results"
+    ],
+    "trendingSlugs": [
+      "best-food-for-active-dogs-for-beginners-a-clear-practical-guide",
+      "how-to-stop-puppy-biting-for-beginners-what-actually-delivers-better-results",
+      "puppy-potty-training-schedule-for-beginners-a-first-time-owner-guide",
+      "how-to-calm-a-dog-during-thunderstorms-for-beginners-what-to-watch-and-what-to-do-next"
+    ],
+    "recentSlugs": [
+      "best-food-for-active-dogs-for-beginners-a-clear-practical-guide",
+      "how-to-stop-puppy-biting-for-beginners-what-actually-delivers-better-results",
+      "puppy-potty-training-schedule-for-beginners-a-first-time-owner-guide",
+      "how-to-calm-a-dog-during-thunderstorms-for-beginners-what-to-watch-and-what-to-do-next",
+      "best-toys-for-high-energy-dogs-for-beginners-a-practical-routine-that-sticks",
+      "how-to-reduce-dog-shedding-for-beginners-what-smart-owners-prioritize",
+      "wet-vs-dry-food-for-dogs-for-beginners-what-it-usually-means-and-what-helps",
+      "how-to-introduce-a-rescue-dog-for-beginners-a-clear-practical-guide",
+      "how-to-help-a-senior-dog-with-mobility-for-beginners-what-actually-delivers-better-results",
+      "dog-exercise-ideas-for-beginners-a-first-time-owner-guide",
+      "best-food-for-active-dogs-in-apartments-what-actually-delivers-better-results",
+      "how-to-stop-puppy-biting-in-apartments-a-first-time-owner-guide",
+      "puppy-potty-training-schedule-in-apartments-what-to-watch-and-what-to-do-next",
+      "how-to-calm-a-dog-during-thunderstorms-in-apartments-a-practical-routine-that-sticks",
+      "best-toys-for-high-energy-dogs-in-apartments-what-smart-owners-prioritize"
+    ],
+    "topTags": [
+      "apartments",
+      "behavior",
+      "best food for",
+      "best toys for",
+      "buying guide",
+      "dog care",
+      "dog exercise ideas",
+      "dogs",
+      "feeding",
+      "first-time owners"
+    ],
+    "intents": [
+      "beginner",
+      "informational"
+    ],
+    "updatedAt": "2026-03-25T10:31:23.333Z"
+  }
+]

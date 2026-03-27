@@ -1,0 +1,275 @@
+{
+  "updatedAt": "2026-03-27T10:43:09.259Z",
+  "items": [
+    {
+      "slug": "best-food-for-indoor-cats-for-beginners-a-clear-practical-guide",
+      "keyword": "best food for indoor cats for beginners",
+      "category": "cats",
+      "intent": "",
+      "cluster": "",
+      "publishDate": "2026-03-26T10:31:23.325Z",
+      "source": "seed"
+    },
+    {
+      "slug": "best-food-for-active-dogs-for-beginners-a-clear-practical-guide",
+      "keyword": "best food for active dogs for beginners",
+      "category": "dogs",
+      "intent": "",
+      "cluster": "",
+      "publishDate": "2026-03-25T10:31:23.333Z",
+      "source": "seed"
+    },
+    {
+      "slug": "how-to-stop-cat-scratching-furniture-for-beginners-what-actually-delivers-better-results",
+      "keyword": "how to stop cat scratching furniture for beginners",
+      "category": "cats",
+      "intent": "",
+      "cluster": "",
+      "publishDate": "2026-03-24T10:31:23.337Z",
+      "source": "seed"
+    },
+    {
+      "slug": "how-to-stop-puppy-biting-for-beginners-what-actually-delivers-better-results",
+      "keyword": "how to stop puppy biting for beginners",
+      "category": "dogs",
+      "intent": "",
+      "cluster": "",
+      "publishDate": "2026-03-23T10:31:23.340Z",
+      "source": "seed"
+    },
+    {
+      "slug": "kitten-litter-training-for-beginners-a-first-time-owner-guide",
+      "keyword": "kitten litter training for beginners",
+      "category": "cats",
+      "intent": "",
+      "cluster": "",
+      "publishDate": "2026-03-22T10:31:23.343Z",
+      "source": "seed"
+    },
+    {
+      "slug": "puppy-potty-training-schedule-for-beginners-a-first-time-owner-guide",
+      "keyword": "puppy potty training schedule for beginners",
+      "category": "dogs",
+      "intent": "",
+      "cluster": "",
+      "publishDate": "2026-03-21T10:31:23.347Z",
+      "source": "seed"
+    },
+    {
+      "slug": "how-to-calm-a-cat-in-a-carrier-for-beginners-what-to-watch-and-what-to-do-next",
+      "keyword": "how to calm a cat in a carrier for beginners",
+      "category": "cats",
+      "intent": "",
+      "cluster": "",
+      "publishDate": "2026-03-20T10:31:23.351Z",
+      "source": "seed"
+    },
+    {
+      "slug": "how-to-calm-a-dog-during-thunderstorms-for-beginners-what-to-watch-and-what-to-do-next",
+      "keyword": "how to calm a dog during thunderstorms for beginners",
+      "category": "dogs",
+      "intent": "",
+      "cluster": "",
+      "publishDate": "2026-03-19T10:31:23.354Z",
+      "source": "seed"
+    },
+    {
+      "slug": "best-toys-for-bored-indoor-cats-for-beginners-a-practical-routine-that-sticks",
+      "keyword": "best toys for bored indoor cats for beginners",
+      "category": "cats",
+      "intent": "",
+      "cluster": "",
+      "publishDate": "2026-03-18T10:31:23.358Z",
+      "source": "seed"
+    },
+    {
+      "slug": "best-toys-for-high-energy-dogs-for-beginners-a-practical-routine-that-sticks",
+      "keyword": "best toys for high energy dogs for beginners",
+      "category": "dogs",
+      "intent": "",
+      "cluster": "",
+      "publishDate": "2026-03-17T10:31:23.362Z",
+      "source": "seed"
+    },
+    {
+      "slug": "how-to-reduce-cat-shedding-for-beginners-what-smart-owners-prioritize",
+      "keyword": "how to reduce cat shedding for beginners",
+      "category": "cats",
+      "intent": "",
+      "cluster": "",
+      "publishDate": "2026-03-16T10:31:23.367Z",
+      "source": "seed"
+    },
+    {
+      "slug": "how-to-reduce-dog-shedding-for-beginners-what-smart-owners-prioritize",
+      "keyword": "how to reduce dog shedding for beginners",
+      "category": "dogs",
+      "intent": "",
+      "cluster": "",
+      "publishDate": "2026-03-15T10:31:23.374Z",
+      "source": "seed"
+    },
+    {
+      "slug": "wet-vs-dry-food-for-cats-for-beginners-what-it-usually-means-and-what-helps",
+      "keyword": "wet vs dry food for cats for beginners",
+      "category": "cats",
+      "intent": "",
+      "cluster": "",
+      "publishDate": "2026-03-14T10:31:23.381Z",
+      "source": "seed"
+    },
+    {
+      "slug": "wet-vs-dry-food-for-dogs-for-beginners-what-it-usually-means-and-what-helps",
+      "keyword": "wet vs dry food for dogs for beginners",
+      "category": "dogs",
+      "intent": "",
+      "cluster": "",
+      "publishDate": "2026-03-13T10:31:23.386Z",
+      "source": "seed"
+    },
+    {
+      "slug": "how-to-introduce-a-new-cat-for-beginners-a-clear-practical-guide",
+      "keyword": "how to introduce a new cat for beginners",
+      "category": "cats",
+      "intent": "",
+      "cluster": "",
+      "publishDate": "2026-03-12T10:31:23.392Z",
+      "source": "seed"
+    },
+    {
+      "slug": "how-to-introduce-a-rescue-dog-for-beginners-a-clear-practical-guide",
+      "keyword": "how to introduce a rescue dog for beginners",
+      "category": "dogs",
+      "intent": "",
+      "cluster": "",
+      "publishDate": "2026-03-11T10:31:23.398Z",
+      "source": "seed"
+    },
+    {
+      "slug": "how-to-help-a-senior-cat-drink-more-water-for-beginners-what-actually-delivers-better-resu",
+      "keyword": "how to help a senior cat drink more water for beginners",
+      "category": "cats",
+      "intent": "",
+      "cluster": "",
+      "publishDate": "2026-03-10T10:31:23.404Z",
+      "source": "seed"
+    },
+    {
+      "slug": "how-to-help-a-senior-dog-with-mobility-for-beginners-what-actually-delivers-better-results",
+      "keyword": "how to help a senior dog with mobility for beginners",
+      "category": "dogs",
+      "intent": "",
+      "cluster": "",
+      "publishDate": "2026-03-09T10:31:23.410Z",
+      "source": "seed"
+    },
+    {
+      "slug": "cat-enrichment-ideas-for-beginners-a-first-time-owner-guide",
+      "keyword": "cat enrichment ideas for beginners",
+      "category": "cats",
+      "intent": "",
+      "cluster": "",
+      "publishDate": "2026-03-08T10:31:23.419Z",
+      "source": "seed"
+    },
+    {
+      "slug": "dog-exercise-ideas-for-beginners-a-first-time-owner-guide",
+      "keyword": "dog exercise ideas for beginners",
+      "category": "dogs",
+      "intent": "",
+      "cluster": "",
+      "publishDate": "2026-03-07T10:31:23.429Z",
+      "source": "seed"
+    },
+    {
+      "slug": "best-food-for-indoor-cats-in-apartments-what-actually-delivers-better-results",
+      "keyword": "best food for indoor cats in apartments",
+      "category": "cats",
+      "intent": "",
+      "cluster": "",
+      "publishDate": "2026-03-06T10:31:23.440Z",
+      "source": "seed"
+    },
+    {
+      "slug": "best-food-for-active-dogs-in-apartments-what-actually-delivers-better-results",
+      "keyword": "best food for active dogs in apartments",
+      "category": "dogs",
+      "intent": "",
+      "cluster": "",
+      "publishDate": "2026-03-05T10:31:23.449Z",
+      "source": "seed"
+    },
+    {
+      "slug": "how-to-stop-cat-scratching-furniture-in-apartments-a-first-time-owner-guide",
+      "keyword": "how to stop cat scratching furniture in apartments",
+      "category": "cats",
+      "intent": "",
+      "cluster": "",
+      "publishDate": "2026-03-04T10:31:23.461Z",
+      "source": "seed"
+    },
+    {
+      "slug": "how-to-stop-puppy-biting-in-apartments-a-first-time-owner-guide",
+      "keyword": "how to stop puppy biting in apartments",
+      "category": "dogs",
+      "intent": "",
+      "cluster": "",
+      "publishDate": "2026-03-03T10:31:23.471Z",
+      "source": "seed"
+    },
+    {
+      "slug": "kitten-litter-training-in-apartments-what-to-watch-and-what-to-do-next",
+      "keyword": "kitten litter training in apartments",
+      "category": "cats",
+      "intent": "",
+      "cluster": "",
+      "publishDate": "2026-03-02T10:31:23.479Z",
+      "source": "seed"
+    },
+    {
+      "slug": "puppy-potty-training-schedule-in-apartments-what-to-watch-and-what-to-do-next",
+      "keyword": "puppy potty training schedule in apartments",
+      "category": "dogs",
+      "intent": "",
+      "cluster": "",
+      "publishDate": "2026-03-01T10:31:23.487Z",
+      "source": "seed"
+    },
+    {
+      "slug": "how-to-calm-a-cat-in-a-carrier-in-apartments-a-practical-routine-that-sticks",
+      "keyword": "how to calm a cat in a carrier in apartments",
+      "category": "cats",
+      "intent": "",
+      "cluster": "",
+      "publishDate": "2026-02-28T10:31:23.495Z",
+      "source": "seed"
+    },
+    {
+      "slug": "how-to-calm-a-dog-during-thunderstorms-in-apartments-a-practical-routine-that-sticks",
+      "keyword": "how to calm a dog during thunderstorms in apartments",
+      "category": "dogs",
+      "intent": "",
+      "cluster": "",
+      "publishDate": "2026-02-27T10:31:23.505Z",
+      "source": "seed"
+    },
+    {
+      "slug": "best-toys-for-bored-indoor-cats-in-apartments-what-smart-owners-prioritize",
+      "keyword": "best toys for bored indoor cats in apartments",
+      "category": "cats",
+      "intent": "",
+      "cluster": "",
+      "publishDate": "2026-02-26T10:31:23.513Z",
+      "source": "seed"
+    },
+    {
+      "slug": "best-toys-for-high-energy-dogs-in-apartments-what-smart-owners-prioritize",
+      "keyword": "best toys for high energy dogs in apartments",
+      "category": "dogs",
+      "intent": "",
+      "cluster": "",
+      "publishDate": "2026-02-25T10:31:23.525Z",
+      "source": "seed"
+    }
+  ]
+}

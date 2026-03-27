@@ -1,0 +1,30 @@
+{
+  "name": "petzone-news",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static Hespress-inspired pets news platform with GitHub Actions AI publishing and file-based content.",
+  "engines": {
+    "node": ">=18.17.0"
+  },
+  "scripts": {
+    "build": "node ./scripts/update-indexes.js",
+    "serve": "node ./scripts/dev-server.mjs",
+    "bootstrap": "node ./scripts/update-indexes.js --seed-if-empty",
+    "seed": "node ./scripts/update-indexes.js --seed",
+    "select-topic": "node ./scripts/select-topic.js",
+    "generate-article": "node ./scripts/generate-article.js",
+    "generate-image-prompt": "node ./scripts/generate-image-prompt.js",
+    "validate-article": "node ./scripts/validate-article.js",
+    "publish:daily": "node ./scripts/publish.js",
+    "publish:daily:commit": "node ./scripts/publish.js --commit"
+  },
+  "keywords": [
+    "pets",
+    "cats",
+    "dogs",
+    "static-site",
+    "github-pages",
+    "seo"
+  ],
+  "license": "MIT"
+}

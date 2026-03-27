@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Dog routine illustration</title>
+  <desc id="desc">Editorial dog routine illustration with leash and checklist.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#f7faff"/>
+      <stop offset="100%" stop-color="#fdf7ef"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <circle cx="224" cy="116" r="84" fill="#dbeafe"/>
+  <rect x="132" y="148" width="394" height="374" rx="34" fill="#ffffff" stroke="#dbe1ea" stroke-width="4"/>
+  <rect x="176" y="194" width="182" height="22" rx="11" fill="#2563eb" opacity=".15"/>
+  <rect x="176" y="244" width="260" height="16" rx="8" fill="#dbe1ea"/>
+  <rect x="176" y="278" width="226" height="16" rx="8" fill="#dbe1ea"/>
+  <rect x="176" y="312" width="248" height="16" rx="8" fill="#dbe1ea"/>
+  <circle cx="854" cy="300" r="146" fill="#2563eb" opacity=".12"/>
+  <path d="M742 402c0-97 69-168 151-168 71 0 129 53 137 124l34 17-28 50-36-18c-20 42-60 70-107 70-42 0-80-20-109-52l-54 40-26-36 38-27c0-1 0-1 0 0Z" fill="#15202b"/>
+  <circle cx="816" cy="312" r="10" fill="#ffffff"/>
+  <circle cx="883" cy="312" r="10" fill="#ffffff"/>
+  <path d="M850 338c10 0 18 6 22 16h-44c4-10 12-16 22-16Z" fill="#d12f34"/>
+  <path d="M950 240l44-52" stroke="#2563eb" stroke-width="16" stroke-linecap="round"/>
+  <circle cx="1018" cy="160" r="38" fill="#2563eb"/>
+  <circle cx="1018" cy="160" r="16" fill="#ffffff"/>
+</svg>

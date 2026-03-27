@@ -1,0 +1,11 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#F8FAFC"/>
+  <rect x="72" y="72" width="1056" height="486" rx="36" fill="#111827"/>
+  <text x="120" y="240" fill="#F9FAFB" font-family="Georgia, serif" font-size="92" font-weight="700">PetZone</text>
+  <text x="120" y="330" fill="#CBD5E1" font-family="Arial, sans-serif" font-size="34">Cats &amp; Dogs Daily</text>
+  <text x="120" y="410" fill="#E5E7EB" font-family="Arial, sans-serif" font-size="28">Static pet news platform with SEO-first publishing automation.</text>
+  <circle cx="940" cy="220" r="44" fill="#D12F34"/>
+  <circle cx="1030" cy="220" r="44" fill="#D12F34"/>
+  <circle cx="985" cy="160" r="40" fill="#D12F34"/>
+  <path d="M900 356C900 302.98 942.98 260 996 260H1004C1057.02 260 1100 302.98 1100 356C1100 402.392 1062.39 440 1016 440H984C937.608 440 900 402.392 900 356Z" fill="#F9FAFB"/>
+</svg>

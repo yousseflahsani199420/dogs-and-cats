@@ -1,0 +1,10 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1280" height="720" fill="#EEF2F7"/>
+  <rect x="110" y="120" width="1060" height="480" rx="42" fill="#FFFFFF"/>
+  <rect x="170" y="180" width="940" height="360" rx="28" fill="#111827"/>
+  <circle cx="500" cy="310" r="34" fill="#D12F34"/>
+  <circle cx="780" cy="310" r="34" fill="#D12F34"/>
+  <circle cx="640" cy="250" r="30" fill="#D12F34"/>
+  <path d="M420 430C420 356.307 479.307 297 553 297H727C800.693 297 860 356.307 860 430C860 495.722 806.722 549 741 549H539C473.278 549 420 495.722 420 430Z" fill="#F8FAFC"/>
+  <text x="365" y="630" fill="#475569" font-family="Arial, sans-serif" font-size="34">PetZone featured story image placeholder</text>
+</svg>

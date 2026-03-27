@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search PetZone News</title>
+    <meta
+      name="description"
+      content="Search PetZone News articles by keyword, category, and tags for fast cat and dog content discovery."
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="robots" content="noindex,follow" />
+    <meta property="og:site_name" content="PetZone" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Search PetZone News" />
+    <meta
+      property="og:description"
+      content="Search PetZone News articles by keyword, category, and tags for fast cat and dog content discovery."
+    />
+    <meta property="og:image" content="assets/images/og-default.svg" />
+    <meta property="og:url" content="https://your-username.github.io/dogs-and-cats-blog/search.html" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Search PetZone News" />
+    <meta
+      name="twitter:description"
+      content="Search PetZone News articles by keyword, category, and tags for fast cat and dog content discovery."
+    />
+    <link rel="canonical" href="https://your-username.github.io/dogs-and-cats-blog/search.html" />
+    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml" />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=Source+Sans+3:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body data-page="search">
+    <div data-site-header></div>
+    <main class="page-shell">
+      <div class="site-shell section-tight">
+        <section class="search-page-header">
+          <div>
+            <p class="eyebrow">Search</p>
+            <h1 class="page-title">Find cat and dog stories fast</h1>
+            <p class="muted-copy">
+              Live search covers article titles, excerpts, headings, tags, and category filters.
+            </p>
+          </div>
+        </section>
+
+        <section class="search-toolbar">
+          <div class="toolbar-grid">
+            <div>
+              <label class="input-label" for="search-input">Search</label>
+              <input id="search-input" type="search" class="text-input" placeholder="Search feeding, training, health, behavior..." />
+            </div>
+            <div>
+              <label class="input-label" for="search-category">Category</label>
+              <select id="search-category" class="select-input">
+                <option value="all">All</option>
+                <option value="cats">Cats</option>
+                <option value="dogs">Dogs</option>
+              </select>
+            </div>
+            <div>
+              <label class="input-label" for="search-tag">Tag</label>
+              <select id="search-tag" class="select-input">
+                <option value="all">All tags</option>
+              </select>
+            </div>
+            <div>
+              <label class="input-label" for="search-sort">Sort</label>
+              <select id="search-sort" class="select-input">
+                <option value="relevance">Best match</option>
+                <option value="newest">Newest</option>
+                <option value="readingTime">Reading time</option>
+              </select>
+            </div>
+          </div>
+        </section>
+
+        <section class="section-tight">
+          <div class="results-meta-row">
+            <div id="search-meta" class="meta-copy">Loading search index...</div>
+          </div>
+          <div id="search-results" class="news-grid news-loading">
+            <div class="loading-card grid-loading"></div>
+            <div class="loading-card grid-loading"></div>
+            <div class="loading-card grid-loading"></div>
+            <div class="loading-card grid-loading"></div>
+          </div>
+          <div id="search-empty" class="empty-state hidden"></div>
+        </section>
+      </div>
+    </main>
+    <div data-site-footer></div>
+    <div id="toast-root" aria-live="polite" aria-atomic="true"></div>
+    <script type="module" src="assets/js/searchPage.js"></script>
+  </body>
+</html>

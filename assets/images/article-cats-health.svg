@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Cat health illustration</title>
+  <desc id="desc">Editorial cat health illustration with clipboard and wellness icons.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#eef7f4"/>
+      <stop offset="100%" stop-color="#fdf6ef"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <rect x="132" y="130" width="356" height="416" rx="34" fill="#ffffff" stroke="#dbe1ea" stroke-width="4"/>
+  <rect x="232" y="104" width="156" height="62" rx="18" fill="#15202b"/>
+  <rect x="184" y="206" width="170" height="18" rx="9" fill="#1c7c54" opacity=".18"/>
+  <rect x="184" y="248" width="240" height="16" rx="8" fill="#dbe1ea"/>
+  <rect x="184" y="282" width="220" height="16" rx="8" fill="#dbe1ea"/>
+  <rect x="184" y="316" width="248" height="16" rx="8" fill="#dbe1ea"/>
+  <circle cx="846" cy="274" r="146" fill="#2563eb" opacity=".11"/>
+  <path d="M729 323c0-60 48-108 108-108s108 48 108 108-48 108-108 108-108-48-108-108Z" fill="#ffffff"/>
+  <path d="M791 323h92m-46-46v92" stroke="#d12f34" stroke-width="26" stroke-linecap="round"/>
+  <path d="M666 512c24-66 88-104 171-104s146 38 170 104H666Z" fill="#15202b"/>
+  <circle cx="1018" cy="180" r="70" fill="#f6dfc9"/>
+  <path d="M987 180h62m-31-31v62" stroke="#15202b" stroke-width="16" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,48 @@
+export const PETZONE_CONFIG = {
+  siteName: "PetZone",
+  tagline: "Cats & Dogs Daily",
+  siteUrl: "https://your-username.github.io/dogs-and-cats-blog",
+  ogImage: "assets/images/og-default.svg",
+  defaultAuthor: {
+    name: "PetZone Editorial Team",
+    role: "Pet care editors",
+    bio: "Independent pet journalists and researchers covering practical care, food, behavior, and health explainers for cat and dog owners.",
+  },
+  categories: [
+    {
+      key: "cats",
+      label: "Cats",
+      description: "Cat health, indoor routines, kitten basics, litter habits, and behavior guidance.",
+      colorClass: "cats",
+    },
+    {
+      key: "dogs",
+      label: "Dogs",
+      description: "Dog training, puppy care, feeding plans, exercise ideas, and behavior guidance.",
+      colorClass: "dogs",
+    },
+  ],
+  navLinks: [
+    { label: "Home", href: "index.html" },
+    { label: "Cats", href: "categories/cats/" },
+    { label: "Dogs", href: "categories/dogs/" },
+    { label: "Search", href: "search.html" },
+    { label: "About", href: "about.html" },
+    { label: "Contact", href: "contact.html" },
+  ],
+  repoPointers: {
+    workflow: ".github/workflows/daily-post.yml",
+    publishScript: "scripts/publish.js",
+    generatorScript: "scripts/generate-article.js",
+    providerScript: "scripts/lib/ai-provider.js",
+    keywordsFile: "data/keywords.json",
+    historyFile: "data/publishing-history.json",
+  },
+  demoAdmin: {
+    username: "yousseflahsani",
+    passwordHash: "9e0abfbeedb087d28328788e6fba837557147c8bd6c724cc55c351ae3071b871",
+  },
+  newsletterStorageKey: "petzone-newsletter-subscribers",
+  adminStorageKey: "petzone-admin-articles",
+  adminSessionKey: "petzone-admin-session",
+};

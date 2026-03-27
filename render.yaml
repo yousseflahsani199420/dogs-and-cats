@@ -1,9 +1,0 @@
-services:
-  - type: static_site
-    name: dogs-cats-blog
-    runtime: static
-    buildCommand: chmod +x build.sh && ./build.sh
-    staticPublishPath: ./public
-    envVars:
-      - key: HUGO_VERSION
-        value: 0.146.0
