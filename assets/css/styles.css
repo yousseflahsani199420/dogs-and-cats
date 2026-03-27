@@ -261,17 +261,13 @@ button {
 .brand-logo {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
   margin: 0;
-  font-size: 1.8rem;
-  line-height: 1;
-  letter-spacing: -0.03em;
-  text-transform: uppercase;
 }
 
-.brand-logo img {
-  width: 34px;
-  height: 34px;
+.brand-logo-image {
+  width: auto;
+  height: 56px;
+  max-width: min(44vw, 190px);
 }
 
 .brand-link {
@@ -385,6 +381,48 @@ button {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 14px;
+}
+
+.hero-carousel-shell {
+  display: grid;
+  gap: 10px;
+  align-content: start;
+}
+
+.hero-carousel-frame .lead-card {
+  animation: heroLeadSwap 0.45s ease;
+}
+
+.hero-carousel-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.hero-carousel-dot {
+  width: 12px;
+  height: 12px;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: var(--border-strong);
+  transition: width 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
+}
+
+.hero-carousel-dot:hover {
+  background: var(--accent);
+  transform: translateY(-1px);
+}
+
+.hero-carousel-dot.is-active {
+  width: 32px;
+  background: var(--accent);
+}
+
+.hero-carousel-dot:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
 }
 
 .content-with-sidebar {
@@ -961,8 +999,22 @@ button {
 }
 
 .admin-page {
-  background: #0b1120;
-  color: #e5e7eb;
+  --surface: #fffdf8;
+  --surface-muted: #f8f2e8;
+  --surface-soft: #efe4d1;
+  --surface-dark: #17372e;
+  --border: #dbcfbf;
+  --border-strong: #cdbca6;
+  --ink: #1e241f;
+  --muted: #5f645d;
+  --muted-soft: #7d827a;
+  --accent: #c76a35;
+  --accent-dark: #a34f22;
+  --accent-soft: #f6dfd1;
+  background:
+    radial-gradient(circle at top left, rgba(199, 106, 53, 0.08), transparent 24%),
+    linear-gradient(180deg, #faf6ef 0%, #f1e8db 100%);
+  color: var(--ink);
 }
 
 .admin-shell {
@@ -971,32 +1023,82 @@ button {
   min-height: 100vh;
 }
 
+.admin-page .button-primary {
+  background: var(--accent);
+  color: #fff;
+}
+
+.admin-page .button-primary:hover {
+  background: var(--accent-dark);
+}
+
+.admin-page .button-secondary {
+  background: rgba(255, 253, 248, 0.9);
+  color: var(--ink);
+  border-color: var(--border-strong);
+}
+
+.admin-page .button-secondary:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.admin-page .text-input,
+.admin-page .select-input,
+.admin-page .text-area {
+  background: rgba(255, 253, 248, 0.96);
+  border-color: var(--border);
+  color: var(--ink);
+}
+
+.admin-page .text-input:focus,
+.admin-page .select-input:focus,
+.admin-page .text-area:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(199, 106, 53, 0.14);
+}
+
 .admin-auth-shell {
   min-height: 100vh;
   display: grid;
   place-items: center;
   padding: 24px;
   background:
-    radial-gradient(circle at top left, rgba(37, 99, 235, 0.18), transparent 32%),
-    radial-gradient(circle at top right, rgba(209, 47, 52, 0.16), transparent 28%),
-    #020617;
+    radial-gradient(circle at top left, rgba(199, 106, 53, 0.18), transparent 30%),
+    radial-gradient(circle at bottom right, rgba(23, 55, 46, 0.18), transparent 32%),
+    linear-gradient(180deg, #f8f1e7 0%, #efe3d1 100%);
 }
 
 .admin-auth-card {
   width: min(460px, 100%);
   padding: 28px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--border);
   border-radius: 22px;
-  background: rgba(15, 23, 42, 0.96);
-  color: #e5e7eb;
-  box-shadow: 0 24px 60px rgba(2, 6, 23, 0.46);
+  background: rgba(255, 253, 248, 0.96);
+  color: var(--ink);
+  box-shadow: 0 24px 60px rgba(74, 52, 31, 0.14);
 }
 
 .admin-auth-card h1 {
   margin: 0 0 10px;
   font-size: clamp(2rem, 4vw, 2.4rem);
   line-height: 1.1;
-  color: #fff;
+  color: var(--ink);
+}
+
+.admin-auth-logo,
+.admin-brand-logo {
+  display: block;
+  width: auto;
+  height: 56px;
+}
+
+.admin-auth-logo {
+  margin-bottom: 14px;
+}
+
+.admin-brand-logo {
+  margin-bottom: 10px;
 }
 
 .admin-auth-form {
@@ -1009,16 +1111,18 @@ button {
   margin: 0;
   padding: 10px 12px;
   border-radius: 12px;
-  background: rgba(209, 47, 52, 0.14);
-  border: 1px solid rgba(209, 47, 52, 0.28);
-  color: #fecaca;
+  background: #fde9df;
+  border: 1px solid #efb6a0;
+  color: #8c3417;
   font-weight: 700;
 }
 
 .admin-sidebar {
   padding: 22px 18px;
   border-right: 1px solid rgba(255, 255, 255, 0.08);
-  background: #111827;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.04), transparent),
+    #17372e;
 }
 
 .admin-brand {
@@ -1032,7 +1136,7 @@ button {
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.18em;
-  color: #94a3b8;
+  color: #d8e5dd;
 }
 
 .admin-brand h1 {
@@ -1043,7 +1147,7 @@ button {
 
 .admin-brand p {
   margin: 0;
-  color: #94a3b8;
+  color: #bfd0c7;
 }
 
 .admin-nav {
@@ -1054,12 +1158,13 @@ button {
 .admin-nav-link {
   min-height: 44px;
   padding: 0 14px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: var(--radius-small);
-  background: transparent;
-  color: #cbd5e1;
+  background: rgba(255, 255, 255, 0.04);
+  color: #edf4f0;
   text-align: left;
   font-weight: 800;
+  transition: background-color 0.18s ease, border-color 0.18s ease, transform 0.18s ease;
 }
 
 .admin-nav-link:hover,
@@ -1067,6 +1172,7 @@ button {
   background: var(--accent);
   border-color: var(--accent);
   color: #fff;
+  transform: translateY(-1px);
 }
 
 .admin-content {
@@ -1084,7 +1190,7 @@ button {
 .admin-topbar h2 {
   margin: 6px 0 0;
   font-size: 2rem;
-  color: #fff;
+  color: var(--ink);
 }
 
 .admin-actions {
@@ -1103,11 +1209,11 @@ button {
 .editor-panel,
 .table-panel,
 .modal-card {
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--border);
   border-radius: var(--radius);
-  background: #111827;
-  color: #e5e7eb;
-  box-shadow: var(--shadow-soft);
+  background: rgba(255, 253, 248, 0.92);
+  color: var(--ink);
+  box-shadow: 0 14px 30px rgba(74, 52, 31, 0.08);
 }
 
 .dashboard-grid {
@@ -1121,13 +1227,13 @@ button {
 }
 
 .dashboard-card .stat-label {
-  color: #94a3b8;
+  color: var(--muted);
   font-weight: 700;
 }
 
 .dashboard-card .stat-value {
   margin-top: 8px;
-  color: #fff;
+  color: var(--ink);
 }
 
 .editor-layout {
@@ -1177,8 +1283,9 @@ button {
   align-items: center;
   gap: 8px;
   padding: 8px 10px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid var(--border);
   border-radius: 999px;
+  background: var(--surface-muted);
 }
 
 .table-scroll {
@@ -1193,7 +1300,7 @@ button {
 .admin-table th,
 .admin-table td {
   padding: 10px 8px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid var(--border);
   text-align: left;
   vertical-align: top;
 }
@@ -1202,7 +1309,7 @@ button {
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  color: #94a3b8;
+  color: var(--muted);
 }
 
 .status-pill {
@@ -1212,28 +1319,28 @@ button {
   min-height: 24px;
   padding: 0 8px;
   border-radius: 999px;
-  background: rgba(37, 99, 235, 0.18);
-  color: #bfdbfe;
+  background: #efe4d1;
+  color: #7f552f;
   font-size: 12px;
   font-weight: 800;
   text-transform: uppercase;
 }
 
 .status-pill.published {
-  background: rgba(16, 185, 129, 0.18);
-  color: #a7f3d0;
+  background: #dff2e6;
+  color: #21633f;
 }
 
 .status-pill.draft {
-  background: rgba(245, 158, 11, 0.18);
-  color: #fde68a;
+  background: #fce9bf;
+  color: #8a6110;
 }
 
 .image-preview {
   overflow: hidden;
   border-radius: var(--radius-small);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  background: #0f172a;
+  border: 1px solid var(--border);
+  background: var(--surface-muted);
 }
 
 .image-preview img {
@@ -1252,7 +1359,7 @@ button {
   height: 8px;
   overflow: hidden;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.08);
+  background: var(--surface-soft);
 }
 
 .score-fill {
@@ -1268,7 +1375,7 @@ button {
   align-items: center;
   justify-content: center;
   padding: 18px;
-  background: rgba(15, 23, 42, 0.72);
+  background: rgba(31, 36, 31, 0.42);
   z-index: 50;
 }
 
@@ -1377,6 +1484,18 @@ button {
 @keyframes shimmer {
   to {
     transform: translateX(100%);
+  }
+}
+
+@keyframes heroLeadSwap {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -1727,15 +1846,15 @@ button {
 .admin-inline-stat {
   padding: 14px;
   border-radius: var(--radius-small);
-  background: #0f172a;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--surface-muted);
+  border: 1px solid var(--border);
 }
 
 .admin-inline-stat strong {
   display: block;
   margin-top: 8px;
   font-size: 1.4rem;
-  color: #fff;
+  color: var(--ink);
 }
 
 .editor-layout {
@@ -1762,7 +1881,7 @@ button {
   justify-content: space-between;
   gap: 10px;
   padding-bottom: 8px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid var(--border);
   font-size: 13px;
 }
 

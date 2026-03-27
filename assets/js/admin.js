@@ -36,6 +36,7 @@ function renderLoginGate() {
   shell.innerHTML = `
     <section class="admin-auth-shell">
       <article class="admin-auth-card">
+        <img src="assets/images/logo-full.svg" alt="PetZone" class="admin-auth-logo" width="188" height="60" />
         <p class="eyebrow">Admin Login</p>
         <h1>Editorial Desk Access</h1>
         <p class="muted-copy">

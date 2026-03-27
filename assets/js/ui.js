@@ -39,9 +39,8 @@ export function injectSiteChrome() {
       </section>
       <header class="main-header">
         <div class="site-shell main-header-inner">
-          <a href="index.html" class="brand-logo">
-            <img src="assets/images/logo-mark.svg" alt="PetZone logo" width="34" height="34" />
-            <span>PetZone</span>
+          <a href="index.html" class="brand-logo" aria-label="PetZone home">
+            <img src="assets/images/logo-full.svg" alt="PetZone" class="brand-logo-image" width="190" height="60" />
           </a>
           <nav class="nav-links" aria-label="Primary navigation">
             ${PETZONE_CONFIG.navLinks

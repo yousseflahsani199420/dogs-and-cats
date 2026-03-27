@@ -1,0 +1,66 @@
+<svg width="760" height="240" viewBox="0 0 760 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="fullDog" x1="58" y1="48" x2="120" y2="150" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFD86A" />
+      <stop offset="0.55" stop-color="#FFB33E" />
+      <stop offset="1" stop-color="#FF8616" />
+    </linearGradient>
+    <linearGradient id="fullCat" x1="137" y1="61" x2="187" y2="138" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFEEC2" />
+      <stop offset="0.58" stop-color="#FFD68B" />
+      <stop offset="1" stop-color="#FFBC63" />
+    </linearGradient>
+    <linearGradient id="fullPaw" x1="92" y1="160" x2="156" y2="221" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFD767" />
+      <stop offset="1" stop-color="#FF8C19" />
+    </linearGradient>
+    <linearGradient id="zoneText" x1="456" y1="60" x2="640" y2="173" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFC655" />
+      <stop offset="1" stop-color="#FF8E20" />
+    </linearGradient>
+  </defs>
+  <g transform="translate(12 8)">
+    <path
+      d="M44 135C22 113 21 79 43 56C65 33 99 34 119 51C139 34 173 33 195 56C217 79 216 113 194 135"
+      stroke="#D45A00"
+      stroke-width="12"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M63 123C49 115 41 102 41 87C41 60 62 41 91 41C114 41 130 52 138 67C143 76 145 85 145 94C145 122 125 145 95 145C83 145 71 138 63 123Z"
+      fill="url(#fullDog)"
+      stroke="#B94800"
+      stroke-width="6"
+      stroke-linejoin="round"
+    />
+    <path d="M67 67C73 56 82 47 95 45C85 49 79 61 79 72" fill="#FFBE4B" stroke="#B94800" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M106 96C106 88 113 84 122 84H135C148 84 155 93 155 105C155 118 144 129 130 129C117 129 106 117 106 106V96Z" fill="#FFF8EE" />
+    <circle cx="111" cy="89" r="5.2" fill="#6F350F" />
+    <ellipse cx="131" cy="100" rx="10" ry="8.5" fill="#935028" />
+    <path d="M138 109C132 115 123 115 116 111" stroke="#8C4D25" stroke-width="4" stroke-linecap="round" />
+    <path
+      d="M126 136C126 111 145 92 171 92C195 92 211 107 211 127C211 147 196 161 175 161H155C139 161 126 151 126 136Z"
+      fill="url(#fullCat)"
+      stroke="#C45400"
+      stroke-width="6"
+      stroke-linejoin="round"
+    />
+    <path d="M140 102L150 87C158 79 167 83 167 94V106" fill="#FFC6A5" stroke="#C45400" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M175 103L185 89C192 81 201 85 201 96L200 108" fill="#FFC6A5" stroke="#C45400" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+    <circle cx="162" cy="110" r="5" fill="#6F350F" />
+    <circle cx="186" cy="111" r="5" fill="#6F350F" />
+    <path d="M174 122C171 126 166 126 163 122" stroke="#D06759" stroke-width="4" stroke-linecap="round" />
+    <path d="M158 121H148" stroke="#E9A28B" stroke-width="2.6" stroke-linecap="round" />
+    <path d="M158 127H146" stroke="#E9A28B" stroke-width="2.6" stroke-linecap="round" />
+    <path d="M190 121H200" stroke="#E9A28B" stroke-width="2.6" stroke-linecap="round" />
+    <path d="M190 127H202" stroke="#E9A28B" stroke-width="2.6" stroke-linecap="round" />
+    <ellipse cx="126" cy="196" rx="27" ry="22" fill="url(#fullPaw)" stroke="#B94800" stroke-width="8" />
+    <ellipse cx="84" cy="173" rx="13" ry="16" transform="rotate(-21 84 173)" fill="#D7670D" stroke="#B94800" stroke-width="6" />
+    <ellipse cx="113" cy="159" rx="13" ry="16" transform="rotate(-8 113 159)" fill="#D7670D" stroke="#B94800" stroke-width="6" />
+    <ellipse cx="143" cy="159" rx="13" ry="16" transform="rotate(8 143 159)" fill="#D7670D" stroke="#B94800" stroke-width="6" />
+    <ellipse cx="172" cy="173" rx="13" ry="16" transform="rotate(21 172 173)" fill="#D7670D" stroke="#B94800" stroke-width="6" />
+  </g>
+  <text x="252" y="162" fill="#B04300" font-family="Trebuchet MS, Verdana, Arial, sans-serif" font-size="108" font-weight="700" letter-spacing="-2">Pet</text>
+  <text x="460" y="162" fill="url(#zoneText)" font-family="Trebuchet MS, Verdana, Arial, sans-serif" font-size="108" font-weight="700" letter-spacing="-2">Zone</text>
+</svg>

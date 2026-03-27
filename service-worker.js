@@ -1,4 +1,4 @@
-const CACHE_NAME = "petzone-static-v2";
+const CACHE_NAME = "petzone-static-v3";
 const PRECACHE = [
   "./",
   "./index.html",
@@ -9,7 +9,9 @@ const PRECACHE = [
   "./terms.html",
   "./faq.html",
   "./assets/css/styles.css",
+  "./assets/images/logo-full.svg",
   "./assets/images/logo-mark.svg",
+  "./assets/images/favicon.svg",
   "./assets/images/placeholder-pet.svg",
 ];
 

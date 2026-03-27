@@ -1,10 +1,88 @@
-<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="128" height="128" rx="28" fill="#111827"/>
-  <circle cx="42" cy="46" r="12" fill="#D12F34"/>
-  <circle cx="86" cy="46" r="12" fill="#D12F34"/>
-  <circle cx="64" cy="34" r="11" fill="#D12F34"/>
-  <path d="M29 76C29 59.9837 41.9837 47 58 47H70C86.0163 47 99 59.9837 99 76V77.5C99 90.4787 88.4787 101 75.5 101H52.5C39.5213 101 29 90.4787 29 77.5V76Z" fill="#F9FAFB"/>
-  <circle cx="52" cy="72" r="5" fill="#111827"/>
-  <circle cx="76" cy="72" r="5" fill="#111827"/>
-  <path d="M64 78L57 87H71L64 78Z" fill="#D12F34"/>
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="petzoneDog" x1="68" y1="62" x2="132" y2="166" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFD86A" />
+      <stop offset="0.55" stop-color="#FFB33E" />
+      <stop offset="1" stop-color="#FF8616" />
+    </linearGradient>
+    <linearGradient id="petzoneCat" x1="146" y1="76" x2="198" y2="154" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFEEC2" />
+      <stop offset="0.58" stop-color="#FFD68B" />
+      <stop offset="1" stop-color="#FFBC63" />
+    </linearGradient>
+    <linearGradient id="petzonePaw" x1="94" y1="182" x2="159" y2="246" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFD767" />
+      <stop offset="1" stop-color="#FF8C19" />
+    </linearGradient>
+  </defs>
+  <path
+    d="M50 150C27 126 26 88 49 63C72 38 107 39 128 57C149 39 184 38 207 63C230 88 229 126 206 150"
+    stroke="#D45A00"
+    stroke-width="13"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <path
+    d="M69 135C53 126 44 112 44 95C44 66 67 45 99 45C123 45 140 57 149 74C154 84 156 94 156 103C156 133 134 159 102 159C89 159 77 151 69 135Z"
+    fill="url(#petzoneDog)"
+    stroke="#B94800"
+    stroke-width="7"
+    stroke-linejoin="round"
+  />
+  <path
+    d="M74 88C84 82 95 79 108 79C120 79 130 82 138 89"
+    stroke="#FFCA58"
+    stroke-width="6"
+    stroke-linecap="round"
+  />
+  <path
+    d="M67 72C73 60 83 51 97 49C86 53 79 66 79 79"
+    fill="#FFBE4B"
+    stroke="#B94800"
+    stroke-width="7"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <path
+    d="M112 104C112 95 120 90 130 90H144C158 90 166 100 166 113C166 127 154 140 139 140C124 140 112 125 112 112V104Z"
+    fill="#FFF8EE"
+  />
+  <circle cx="117" cy="96" r="5.8" fill="#6F350F" />
+  <ellipse cx="139" cy="108" rx="11" ry="9.5" fill="#935028" />
+  <path d="M147 118C141 124 131 125 123 121" stroke="#8C4D25" stroke-width="4.5" stroke-linecap="round" />
+  <path
+    d="M134 149C134 122 155 100 183 100C209 100 226 117 226 139C226 160 210 176 188 176H165C148 176 134 165 134 149Z"
+    fill="url(#petzoneCat)"
+    stroke="#C45400"
+    stroke-width="7"
+    stroke-linejoin="round"
+  />
+  <path
+    d="M149 110L160 93C168 84 178 89 178 100V114"
+    fill="#FFC6A5"
+    stroke="#C45400"
+    stroke-width="7"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <path
+    d="M186 112L197 95C204 86 214 91 213 101L212 117"
+    fill="#FFC6A5"
+    stroke="#C45400"
+    stroke-width="7"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <circle cx="173" cy="119" r="5.5" fill="#6F350F" />
+  <circle cx="199" cy="120" r="5.5" fill="#6F350F" />
+  <path d="M186 132C183 136 177 136 174 132" stroke="#D06759" stroke-width="4.5" stroke-linecap="round" />
+  <path d="M168 132H157" stroke="#E9A28B" stroke-width="3" stroke-linecap="round" />
+  <path d="M168 138H155" stroke="#E9A28B" stroke-width="3" stroke-linecap="round" />
+  <path d="M204 132H215" stroke="#E9A28B" stroke-width="3" stroke-linecap="round" />
+  <path d="M204 138H217" stroke="#E9A28B" stroke-width="3" stroke-linecap="round" />
+  <ellipse cx="128" cy="216" rx="29" ry="24" fill="url(#petzonePaw)" stroke="#B94800" stroke-width="8" />
+  <ellipse cx="83" cy="190" rx="14" ry="18" transform="rotate(-21 83 190)" fill="#D7670D" stroke="#B94800" stroke-width="7" />
+  <ellipse cx="114" cy="175" rx="14" ry="18" transform="rotate(-8 114 175)" fill="#D7670D" stroke="#B94800" stroke-width="7" />
+  <ellipse cx="146" cy="175" rx="14" ry="18" transform="rotate(8 146 175)" fill="#D7670D" stroke="#B94800" stroke-width="7" />
+  <ellipse cx="177" cy="190" rx="14" ry="18" transform="rotate(21 177 190)" fill="#D7670D" stroke="#B94800" stroke-width="7" />
 </svg>
