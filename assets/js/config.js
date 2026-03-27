@@ -36,11 +36,18 @@ export const PETZONE_CONFIG = {
   ],
   repoPointers: {
     workflow: ".github/workflows/daily-post.yml",
+    rebuildWorkflow: ".github/workflows/rebuild-from-content.yml",
     publishScript: "scripts/publish.js",
     generatorScript: "scripts/generate-article.js",
     providerScript: "scripts/lib/ai-provider.js",
     keywordsFile: "data/keywords.json",
     historyFile: "data/publishing-history.json",
+  },
+  githubPublishDefaults: {
+    owner: "yousseflahsani199420",
+    repo: "dogs-and-cats",
+    branch: "main",
+    contentDir: "content/posts",
   },
   demoAdmin: {
     username: "yousseflahsani",
@@ -49,4 +56,6 @@ export const PETZONE_CONFIG = {
   newsletterStorageKey: "petzone-newsletter-subscribers",
   adminStorageKey: "petzone-admin-articles",
   adminSessionKey: "petzone-admin-session",
+  githubPublishConfigKey: "petzone-github-publish-config",
+  githubPublishTokenKey: "petzone-github-publish-token",
 };

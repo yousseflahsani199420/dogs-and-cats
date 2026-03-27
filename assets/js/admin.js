@@ -1,7 +1,21 @@
 import { PETZONE_CONFIG } from "./config.js";
 import { clearArticleCache, getAllArticles, getArticleBySlug, getPublishingHistory, getTopicQueue } from "./contentService.js";
+import { getActionsUrl, publishArticleToGitHub, testGitHubConnection } from "./githubPublisher.js";
 import { setPageMeta } from "./seo.js";
-import { clearAdminSession, deleteAdminArticle, getAdminArticles, getAdminSession, isAdminLoggedIn, setAdminSession, upsertAdminArticle } from "./storageService.js";
+import {
+  clearAdminSession,
+  clearGitHubPublishToken,
+  deleteAdminArticle,
+  getAdminArticles,
+  getAdminSession,
+  getGitHubPublishConfig,
+  getGitHubPublishToken,
+  isAdminLoggedIn,
+  saveGitHubPublishConfig,
+  saveGitHubPublishToken,
+  setAdminSession,
+  upsertAdminArticle,
+} from "./storageService.js";
 import { showToast } from "./ui.js";
 import { articlePath, byId, escapeHtml, estimateReadingTimeFromHtml, formatDate, slugify } from "./utils.js";
 
@@ -14,6 +28,12 @@ const state = {
     query: "",
     status: "all",
     category: "all",
+  },
+  github: {
+    config: getGitHubPublishConfig(),
+    hasToken: Boolean(getGitHubPublishToken()),
+    statusMessage: "",
+    statusTone: "muted",
   },
   editing: null,
 };
@@ -40,7 +60,7 @@ function renderLoginGate() {
         <p class="eyebrow">Admin Login</p>
         <h1>Editorial Desk Access</h1>
         <p class="muted-copy">
-          Sign in with the configured demo credentials to manage PetZone content locally.
+          Sign in with the configured credentials to manage local content and publish selected stories to GitHub.
         </p>
         <form id="admin-login-form" class="admin-auth-form">
           <div>
@@ -83,6 +103,47 @@ function renderLoginGate() {
   });
 }
 
+function syncGitHubState() {
+  state.github.config = getGitHubPublishConfig();
+  state.github.hasToken = Boolean(getGitHubPublishToken());
+}
+
+function setGitHubStatus(message = "", tone = "muted") {
+  state.github.statusMessage = message;
+  state.github.statusTone = tone;
+  const node = byId("github-publish-status");
+  if (node) {
+    node.textContent = message;
+    node.dataset.tone = tone;
+  }
+}
+
+function getGitHubStatusFallback() {
+  const config = getGitHubPublishConfig();
+  if (!config.owner || !config.repo || !config.branch) {
+    return "Add your GitHub repo details below to publish admin articles to the live repository.";
+  }
+  if (!getGitHubPublishToken()) {
+    return `Target ready: ${config.owner}/${config.repo}@${config.branch}. Add a GitHub token for this browser session to publish.`;
+  }
+  return `Target ready: ${config.owner}/${config.repo}@${config.branch}. Content pushes will trigger ${PETZONE_CONFIG.repoPointers.rebuildWorkflow}.`;
+}
+
+function readGitHubConfigFromForm() {
+  const form = byId("github-publish-form");
+  if (!form) {
+    return getGitHubPublishConfig();
+  }
+
+  const data = new FormData(form);
+  return {
+    owner: data.get("owner")?.toString().trim() || "",
+    repo: data.get("repo")?.toString().trim() || "",
+    branch: data.get("branch")?.toString().trim() || "main",
+    contentDir: data.get("contentDir")?.toString().trim() || PETZONE_CONFIG.githubPublishDefaults.contentDir,
+  };
+}
+
 function hydrateSessionUi() {
   const session = getAdminSession();
   const label = byId("admin-session-user");
@@ -96,6 +157,7 @@ function emptyArticle() {
   const now = new Date().toISOString();
   return {
     id: `local-${Date.now()}`,
+    originalSlug: "",
     title: "",
     slug: "",
     keyword: "",
@@ -408,7 +470,10 @@ function renderArticlesView() {
 
       if (button.dataset.adminAction === "edit") {
         const fullArticle = article.content ? article : await getArticleBySlug(article.slug);
-        state.editing = structuredClone(fullArticle || article);
+        state.editing = structuredClone({
+          ...(fullArticle || article),
+          originalSlug: article.slug,
+        });
         setView("editor");
         renderEditor();
       }
@@ -586,7 +651,9 @@ function renderEditor() {
         <div class="button-row">
           <button class="button button-primary" type="submit">Save article</button>
           <button id="preview-editor-article" class="button button-secondary" type="button">Preview</button>
+          <button id="publish-editor-github" class="button button-secondary" type="button">Publish to GitHub</button>
         </div>
+        <p class="muted-copy">Drafts stay local. Only articles marked as published are sent to GitHub.</p>
       </form>
 
       <aside class="editor-side-stack">
@@ -679,26 +746,102 @@ function renderEditor() {
     articleData.id = articleData.id || articleData.slug;
     articleData.publishDate = articleData.publishDate || new Date().toISOString();
     articleData.canonicalUrl = articlePath(articleData.slug);
+    articleData.originalSlug = articleData.originalSlug || state.editing?.originalSlug || articleData.slug;
     upsertAdminArticle(articleData);
+    state.editing = structuredClone({
+      ...articleData,
+      originalSlug: articleData.slug,
+    });
     clearArticleCache();
     await refreshData();
     setView("articles");
     renderArticlesView();
-    showToast("Article saved to local admin storage.");
+    showToast("Article saved locally.");
   });
 
   byId("preview-editor-article").addEventListener("click", async () => {
     const articleData = captureEditorState();
     articleData.slug = slugify(articleData.slug || articleData.title);
     articleData.id = articleData.id || articleData.slug;
+    articleData.originalSlug = articleData.originalSlug || state.editing?.originalSlug || articleData.slug;
     upsertAdminArticle(articleData);
+    state.editing = structuredClone({
+      ...articleData,
+      originalSlug: articleData.slug,
+    });
     clearArticleCache();
     await refreshData();
     window.open(`article.html?slug=${articleData.slug}`, "_blank", "noopener");
   });
+
+  byId("publish-editor-github").addEventListener("click", async () => {
+    const articleData = captureEditorState();
+    articleData.slug = slugify(articleData.slug || articleData.title);
+    articleData.id = articleData.id || articleData.slug;
+    articleData.publishDate = articleData.publishDate || new Date().toISOString();
+    articleData.originalSlug = articleData.originalSlug || state.editing?.originalSlug || articleData.slug;
+
+    if (articleData.status !== "published") {
+      showToast("Set the article status to Published before sending it to GitHub.");
+      return;
+    }
+
+    syncGitHubState();
+    const config = getGitHubPublishConfig();
+    const token = getGitHubPublishToken();
+    if (!config.owner || !config.repo || !config.branch || !token) {
+      setView("automation");
+      renderAutomation();
+      showToast("Add your GitHub publishing settings in Automation first.");
+      return;
+    }
+
+    const button = byId("publish-editor-github");
+    button.disabled = true;
+    button.textContent = "Publishing...";
+
+    try {
+      const result = await publishArticleToGitHub(articleData, {
+        config,
+        token,
+        previousSlug: articleData.originalSlug,
+      });
+
+      const savedArticle = {
+        ...articleData,
+        source: "github-admin",
+        canonicalUrl: result.article.canonicalUrl,
+        originalSlug: result.article.slug,
+        remoteCommitSha: result.commitSha,
+        remotePublishedAt: new Date().toISOString(),
+      };
+
+      upsertAdminArticle(savedArticle);
+      state.editing = structuredClone(savedArticle);
+      clearArticleCache();
+      await refreshData();
+      setView("editor");
+      renderEditor();
+      setGitHubStatus(
+        `Published ${result.article.slug} to ${config.owner}/${config.repo}@${config.branch}. GitHub Actions will rebuild the site from ${PETZONE_CONFIG.repoPointers.rebuildWorkflow}.`,
+        "good"
+      );
+      showToast("Published to GitHub. The rebuild workflow should start shortly.");
+    } catch (error) {
+      console.error(error);
+      setGitHubStatus(`GitHub publish failed: ${error.message}`, "bad");
+      showToast(`GitHub publish failed: ${error.message}`);
+      button.disabled = false;
+      button.textContent = "Publish to GitHub";
+    }
+  });
 }
 
 function renderAutomation() {
+  syncGitHubState();
+  const config = state.github.config;
+  const tokenSaved = state.github.hasToken;
+  const actionsUrl = getActionsUrl(config);
   byId("admin-automation-view").innerHTML = `
     <section class="admin-card table-panel">
       <div class="section-header">
@@ -721,6 +864,45 @@ function renderAutomation() {
       <p class="muted-copy">
         Daily publishing runs on GitHub Actions, not in this browser. The workflow selects a topic, generates the article with a server-side API key, validates it, updates indexes, and pushes the result back to the repository.
       </p>
+    </section>
+
+    <section class="admin-card table-panel">
+      <div class="section-header">
+        <h3 class="section-title">GitHub API publishing</h3>
+      </div>
+      <form id="github-publish-form" class="editor-section">
+        <div class="field-grid three-col">
+          <div>
+            <label class="input-label" for="github-owner">Owner</label>
+            <input id="github-owner" name="owner" class="text-input" value="${escapeHtml(config.owner || "")}" />
+          </div>
+          <div>
+            <label class="input-label" for="github-repo">Repository</label>
+            <input id="github-repo" name="repo" class="text-input" value="${escapeHtml(config.repo || "")}" />
+          </div>
+          <div>
+            <label class="input-label" for="github-branch">Branch</label>
+            <input id="github-branch" name="branch" class="text-input" value="${escapeHtml(config.branch || "main")}" />
+          </div>
+        </div>
+        <div class="field-grid two-col">
+          <div>
+            <label class="input-label" for="github-content-dir">Content directory</label>
+            <input id="github-content-dir" name="contentDir" class="text-input" value="${escapeHtml(config.contentDir || PETZONE_CONFIG.githubPublishDefaults.contentDir)}" />
+          </div>
+          <div>
+            <label class="input-label" for="github-token">GitHub token</label>
+            <input id="github-token" type="password" class="text-input" placeholder="${tokenSaved ? "Token saved for this browser session" : "Paste a fine-grained token"}" autocomplete="off" />
+          </div>
+        </div>
+        <p class="muted-copy">Use a fine-grained token with repository Contents read/write access. The token stays only in this browser session and is never written into the public site code.</p>
+        <div class="button-row">
+          <button id="github-save-settings" class="button button-primary" type="submit">Save settings</button>
+          <button id="github-test-connection" class="button button-secondary" type="button">Test connection</button>
+          ${actionsUrl ? `<a class="button button-secondary" href="${actionsUrl}" target="_blank" rel="noreferrer">Open Actions</a>` : ""}
+        </div>
+        <p id="github-publish-status" class="meta-copy" data-tone="${escapeHtml(state.github.statusTone || "muted")}">${escapeHtml(state.github.statusMessage || getGitHubStatusFallback())}</p>
+      </form>
     </section>
 
     <section class="admin-card table-panel">
@@ -751,6 +933,46 @@ function renderAutomation() {
       </div>
     </section>
   `;
+
+  byId("github-publish-form").addEventListener("submit", (event) => {
+    event.preventDefault();
+    const configPayload = readGitHubConfigFromForm();
+    const token = byId("github-token").value.trim();
+    saveGitHubPublishConfig(configPayload);
+    if (token) {
+      saveGitHubPublishToken(token);
+      byId("github-token").value = "";
+    }
+    syncGitHubState();
+    setGitHubStatus(getGitHubStatusFallback(), "muted");
+    renderAutomation();
+    showToast("GitHub publishing settings saved.");
+  });
+
+  byId("github-test-connection").addEventListener("click", async () => {
+    const configPayload = readGitHubConfigFromForm();
+    const token = byId("github-token").value.trim() || getGitHubPublishToken();
+    if (!token) {
+      setGitHubStatus("Paste a GitHub token first, then test the connection.", "bad");
+      return;
+    }
+
+    try {
+      const result = await testGitHubConnection(configPayload, token);
+      saveGitHubPublishConfig(configPayload);
+      saveGitHubPublishToken(token);
+      byId("github-token").value = "";
+      syncGitHubState();
+      setGitHubStatus(`Connected to ${result.fullName}. Default branch: ${result.defaultBranch}. Content pushes will rebuild the site automatically.`, "good");
+      renderAutomation();
+      showToast("GitHub connection verified.");
+    } catch (error) {
+      console.error(error);
+      setGitHubStatus(`GitHub connection failed: ${error.message}`, "bad");
+      renderAutomation();
+      showToast(`GitHub connection failed: ${error.message}`);
+    }
+  });
 }
 
 function renderSeo() {
@@ -793,7 +1015,7 @@ async function refreshData() {
 async function initAdmin() {
   setPageMeta({
     title: "PetZone Admin | Editorial Desk",
-    description: "Manage local PetZone content and monitor the GitHub Actions automation pipeline.",
+    description: "Manage local PetZone content, publish to GitHub, and monitor the automation pipeline.",
     canonical: "/admin.html",
   });
 
@@ -828,6 +1050,7 @@ async function initAdmin() {
   });
 
   byId("admin-logout").addEventListener("click", () => {
+    clearGitHubPublishToken();
     clearAdminSession();
     window.location.reload();
   });

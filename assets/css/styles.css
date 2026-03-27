@@ -1097,6 +1097,11 @@ button {
   color: var(--accent);
 }
 
+.admin-page .button:disabled {
+  opacity: 0.64;
+  cursor: wait;
+}
+
 .admin-page .text-input,
 .admin-page .select-input,
 .admin-page .text-area {
@@ -1169,6 +1174,14 @@ button {
   border: 1px solid #efb6a0;
   color: #8c3417;
   font-weight: 700;
+}
+
+#github-publish-status[data-tone="good"] {
+  color: #1d6a40;
+}
+
+#github-publish-status[data-tone="bad"] {
+  color: #9b2f1e;
 }
 
 .admin-sidebar {

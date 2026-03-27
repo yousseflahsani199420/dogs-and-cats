@@ -14,6 +14,27 @@ function writeStorage(key, value) {
   localStorage.setItem(key, JSON.stringify(value));
 }
 
+function readSessionValue(key, fallback = "") {
+  try {
+    return sessionStorage.getItem(key) ?? fallback;
+  } catch (error) {
+    console.warn(`Session storage read failed for ${key}`, error);
+    return fallback;
+  }
+}
+
+function writeSessionValue(key, value) {
+  try {
+    if (value) {
+      sessionStorage.setItem(key, value);
+      return;
+    }
+    sessionStorage.removeItem(key);
+  } catch (error) {
+    console.warn(`Session storage write failed for ${key}`, error);
+  }
+}
+
 export function getAdminArticles() {
   return readStorage(PETZONE_CONFIG.adminStorageKey, []);
 }
@@ -96,4 +117,30 @@ export function setAdminLoggedIn(isLoggedIn) {
     return;
   }
   clearAdminSession();
+}
+
+export function getGitHubPublishConfig() {
+  return {
+    ...PETZONE_CONFIG.githubPublishDefaults,
+    ...readStorage(PETZONE_CONFIG.githubPublishConfigKey, {}),
+  };
+}
+
+export function saveGitHubPublishConfig(config = {}) {
+  writeStorage(PETZONE_CONFIG.githubPublishConfigKey, {
+    ...PETZONE_CONFIG.githubPublishDefaults,
+    ...config,
+  });
+}
+
+export function getGitHubPublishToken() {
+  return readSessionValue(PETZONE_CONFIG.githubPublishTokenKey, "");
+}
+
+export function saveGitHubPublishToken(token = "") {
+  writeSessionValue(PETZONE_CONFIG.githubPublishTokenKey, token.trim());
+}
+
+export function clearGitHubPublishToken() {
+  writeSessionValue(PETZONE_CONFIG.githubPublishTokenKey, "");
 }
